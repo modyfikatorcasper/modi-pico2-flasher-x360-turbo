@@ -8,23 +8,90 @@ The agent should publish only end-user release material here.
 
 `modyfikatorcasper/modi-pico2-flasher-x360-turbo`
 
+## FINAL USER EXPERIENCE — NON-NEGOTIABLE
+
+The public release must be a **ready-to-use package**.
+
+The user must **NOT** need to compile J-Runner locally, install a .NET SDK, download NuGet packages, run MSBuild, use Python, or understand the build process.
+
+Target user flow:
+
+1. download the release package;
+2. flash the included MODI UF2 to Pico 2 / RP2350;
+3. run `MODI-Setup.exe`;
+4. installer automatically prepares `JRunner.MODI.exe`;
+5. launch it and use the flasher.
+
+No developer environment. No local source build. No manual dependency setup.
+
+### Preferred technical model
+
+To avoid redistributing third-party files whose redistribution status is unclear, `MODI-Setup.exe` should work as a **one-click binary patcher/installer**, not as a local source compiler.
+
+Preferred behaviour:
+
+- automatically detect a compatible J-Runner with Extras 3.4.0.7 installation; OR
+- automatically download the exact pinned official upstream J-Runner release from its official source when legally/technically appropriate;
+- verify version and SHA256;
+- copy the original so it remains untouched;
+- apply only the MODI-owned binary patch/resources needed for the integration;
+- create a ready `JRunner.MODI.exe`;
+- create a shortcut if appropriate;
+- finish with a clear `Ready / Gotowe` state.
+
+Fallback may allow the user to select `JRunner.exe` manually, but the user must never compile anything.
+
+The current Beta installer that downloads an SDK and performs a local source build is **transitional and is NOT acceptable as the final public release UX**.
+
+## Ready release package
+
+In addition to individual advanced downloads, prepare one obvious package:
+
+`MODI-Pico2-Flasher-X360-TURBO-vX.Y.Z.zip`
+
+It should contain only end-user files such as:
+
+- `MODI-Setup.exe`
+- `MODI-Pico2-Flasher-X360-TURBO.uf2`
+- `START-HERE-PL.txt`
+- `START-HERE-EN.txt`
+- `SHA256SUMS.txt`
+- required notices/licenses
+
+The user should be able to download one ZIP, extract it and start.
+
 ## Upload only what users need
 
 Public release contents should be limited to:
 
-- `MODI-Setup.exe`
-- `MODI-Pico2-Flasher-X360-TURBO.uf2`
+- ready `MODI-Setup.exe`
+- ready `MODI-Pico2-Flasher-X360-TURBO.uf2`
+- one ready end-user ZIP package
 - `SHA256SUMS.txt`
 - user documentation
 - release notes / changelog
-- visual assets: logo, High Speed → TURBO GIF, real application screenshot, wiring graphics
+- visual assets: logo, **one High Speed → TURBO GIF**, real application screenshot, wiring graphics
 - original third-party license texts / notices required by redistributed components
 - a clear link or matching archive containing the GPL-compliant corresponding source for the distributed firmware UF2
+
+## Media policy
+
+Keep the public GitHub clean.
+
+Use:
+
+- one static MODI TURBO logo;
+- one `HIGH SPEED → TURBO` GIF.
+
+Do **not** keep the duplicate 1080p MP4 transition video in the repository/page. The MP4 is for social/video editing, not necessary for the GitHub product page.
+
+The GIF should be optimized for web/GitHub size if possible while keeping the branding readable.
 
 ## DO NOT upload
 
 - full J-Runner source tree
-- full modified J-Runner package
+- application development source code
+- full modified J-Runner package unless redistribution has been explicitly cleared
 - development workspace
 - internal source dumps
 - build cache
@@ -39,18 +106,7 @@ Public release contents should be limited to:
 - third-party DLLs whose redistribution rights are not confirmed
 - test render presented as a real application screenshot
 
-## J-Runner distribution model
-
-The public repository should distribute **MODI Setup**, not a repackaged full third-party J-Runner bundle.
-
-MODI Setup should continue to:
-
-1. ask the user for their compatible J-Runner installation;
-2. validate it;
-3. obtain pinned build dependencies;
-4. build the MODI integration locally;
-5. produce `JRunner.MODI.exe` next to the original;
-6. leave `JRunner.exe` unchanged.
+The only source that must remain available publicly is source required by applicable licenses, especially the corresponding source for the distributed GPL-derived firmware.
 
 ## Firmware source rule
 
@@ -65,9 +121,18 @@ The README and each release must link to the corresponding source.
 
 ## Required release QA before v1.0
 
-Perform at least one smoke test using the exact public `MODI-Setup.exe`:
+Perform at least one smoke test using the exact final public `MODI-Setup.exe` and exact release package:
 
-`Setup → JRunner.MODI.exe → device detect → READ → WRITE known-good image → READ BACK / compare → console boot → next operation without restarting J-Runner`
+`fresh PC/folder → Setup → ready JRunner.MODI.exe → device detect → READ → WRITE known-good image → READ BACK / compare → console boot → next operation without restarting J-Runner`
+
+Also verify:
+
+- no SDK is downloaded or required;
+- no compiler is required;
+- no source tree is created for the user;
+- original `JRunner.exe` remains unchanged;
+- final ZIP contains everything a normal user needs;
+- hashes match uploaded release assets.
 
 Do not treat previous hardware benchmarks as a new installer benchmark.
 
