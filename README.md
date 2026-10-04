@@ -1,149 +1,130 @@
 # MODI Pico 2 Flasher X360 TURBO
 
+**Fast low-cost Xbox 360 NAND & eMMC flasher for RP2350 / Pico 2 with J-Runner integration.**  
+Corona, Trinity and Fat wiring diagrams. One MODI header. One SPI workflow. Public Beta.
+
 [🇵🇱 Polski](README_PL.md) · **🇬🇧 English**
 
-> **High-Speed Xbox 360 NAND & eMMC Service Tool**  
-> Low-cost RP2350 hardware · J-Runner with Extras integration · repair-first community project
-
-> **RELEASE STATUS:** [0.9.1 Beta is public](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/tag/v0.9.1-beta). Offline one-click installation and integration checks pass. The user confirmed successful hardware tests on 2026-10-04. A genuine application screenshot remains pending.
+[![Open MODI Pico 2 Flasher X360 TURBO](assets/buttons/open-modi-flasher.svg)](https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/)
 
 ## Download
 
-**[DOWNLOAD UF2](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO.uf2)**
-
-[DOWNLOAD COMPLETE PACKAGE](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip)
-
-[MANUAL](docs/INSTALL.md)
+**[DOWNLOAD UF2](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO.uf2)**  
+[DOWNLOAD COMPLETE PACKAGE](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip)  
+[OPEN PROJECT PAGE](https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/) · [MANUAL](docs/INSTALL.md) · [WIRING](docs/WIRING.md)
 
 ![MODI Pico 2 Flasher X360 TURBO](assets/logo/modi-turbo.png)
 
-![HIGH SPEED → TURBO](assets/gif/high-speed-to-turbo.gif)
+## Xbox 360 flasher built for speed and service
 
+**MODI Pico 2 Flasher X360 TURBO** is an independent Xbox 360 NAND and eMMC service flasher built around inexpensive **RP2350 / Pico 2-class hardware**.
 
----
+It is designed for console repair, NAND backup, flash recovery and RGH service work while keeping the user workflow simple. Flash the UF2, run the installation package, connect the flasher and use the MODI integration with J-Runner.
 
-## What is MODI Pico 2 Flasher X360 TURBO?
-
-MODI Pico 2 Flasher X360 TURBO is an independent community project built around an inexpensive **RP2350 / Pico 2-class board** for fast Xbox 360 NAND and eMMC service work.
-
-When Xbox 360 RGH servicing began, reading and writing NAND could take tens of minutes with early interfaces such as LPT. USB programmers changed that dramatically. Today, inexpensive high-performance microcontrollers make it possible to rethink the workflow again.
-
-This project started with one question: **how far can a low-cost RP2350 board be pushed while keeping reliable, byte-for-byte verified flashing?**
-
-I learned from the Xbox 360 repair and modding community when I was beginning as a repair technician. After years of hardware servicing and diagnostics, this project is my way of giving something back: practical tools, documentation and knowledge that help people repair hardware instead of throwing it away.
-
-## Verified hardware results
+### Tested hardware results
 
 | Memory / tested range | READ | WRITE |
 |---|---:|---:|
 | 16 MB NAND | ~19 s | ~24 s |
-| Jasper Big Block — tested 64 MiB + spare range | 76.890–76.955 s | 90.171 s |
-| Corona eMMC — tested 48 MiB range | 56.198–57.792 s | 48.310 s |
+| Jasper Big Block, tested 64 MiB + spare | 76.890–76.955 s | 90.171 s |
+| Corona eMMC, tested 48 MiB | 56.198–57.792 s | 48.310 s |
 
-**Measured on tested hardware. Actual performance can vary depending on motherboard, wiring quality, USB host and system configuration.** These are hardware results from MODI Flasher testing, not installer benchmarks.
+Measured on tested hardware. Actual performance can vary with motherboard revision, wiring, USB host and system configuration.
 
-We currently describe MODI as **one of the fastest low-cost Xbox 360 flashing solutions we have tested**. A broader public comparison will be required before making any absolute “world’s fastest” claim.
+We currently describe MODI as **one of the fastest low-cost Xbox 360 flashing solutions we have tested**. A broader public comparison would be needed before making an absolute worldwide speed claim.
 
-## Why repair-first?
+## One header. One SPI workflow.
 
-The primary purpose of this tool is **hardware service, backup, recovery and repair**. A damaged or corrupted NAND/eMMC can make a console impossible to repair without the correct hardware tools.
+The MODI-side wiring stays consistent across the supported Xbox 360 service diagrams.
 
-**Right to Repair:** we support the principle that owners and independent technicians should have practical access to tools and technical knowledge needed to diagnose, maintain and repair their hardware.
+**GP0 = SPI_MISO**  
+**GP1 = SPI_SS_N**  
+**GP2 = SPI_CLK**  
+**GP3 = SPI_MOSI**  
+**GP4 = SMC_DBG_EN**  
+**GP5 = SMC_RST_XDK_N**  
+**GND = GND**
 
-The project is not an official Microsoft/Xbox product. Users are responsible for how they use the tool and for compliance with applicable law.
+On our seven-position RP2350-Plus header, moving down from USB:
 
-## Low-cost hardware
+**orange GP0 → brown GP1 → yellow GND → red GP2 → black GP3 → blue GP4 → green GP5**
 
-The project targets inexpensive Pico 2 / RP2350-class development boards. The core board can often be found for roughly **USD $5–6**, depending on supplier and region. This refers to the **development board only** and does not include wiring, adapters, shipping or accessories.
+Wiring diagrams:
+
+- [Corona](assets/wiring/wiring-corona-rp2350-plus.png)
+- [Trinity](assets/wiring/wiring-trinity-rp2350-plus.png)
+- [Falcon / Fat](assets/wiring/wiring-falcon-rp2350-plus.png)
+- [Full wiring manual](docs/WIRING.md)
+
+Always verify the motherboard revision and pads before connecting hardware.
 
 ## Quick start
 
-1. Download and extract **MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip** from the matching GitHub Release.
-2. Put the Pico 2 / supported RP2350 board into **BOOTSEL** mode and copy the UF2 to the exposed drive.
-3. Wire the flasher to the supported Xbox 360 NAND/eMMC points for your motherboard.
-4. Run **MODI-Setup.exe** from the extracted package.
-5. Select the detected **J-Runner with Extras 3.4.0.7** installation or use **Wybierz JRunner.exe** once.
-6. Click **Zainstaluj MODI TURBO**. Setup patches a verified copy offline and creates ready `JRunner.MODI.exe`; the original stays unchanged.
+1. Download `MODI-Pico2-Flasher-X360-TURBO.uf2` or the complete release package.
+2. Put the Pico 2 / RP2350 board into **BOOTSEL** mode and copy the UF2.
+3. Wire the flasher using the correct motherboard diagram.
+4. Run **MODI-Setup.exe**.
+5. Select or detect the supported **J-Runner with Extras 3.4.0.7** installation.
+6. Click **Install MODI TURBO**. The original J-Runner remains unchanged.
 7. Connect MODI Pico 2 Flasher X360 TURBO.
-8. **READ → BACKUP → COMPARE/VERIFY before any WRITE.**
+8. Use **READ → BACKUP → COMPARE/VERIFY** before any write operation.
 
-Detailed guide: [Installation](docs/INSTALL.md) · [Polski](docs/INSTALL_PL.md)
+Detailed guide: [Installation EN](docs/INSTALL.md) · [Instalacja PL](docs/INSTALL_PL.md)
 
-## Pinout / wiring
+## Why MODI?
 
-[MODI wiring manual — EN](docs/WIRING.md) · [Polski](docs/WIRING_PL.md)
+Early Xbox 360 NAND workflows could take tens of minutes on older interfaces such as LPT. USB programmers improved that dramatically. Modern low-cost microcontrollers make another step possible.
 
-**GP0 = SPI_MISO · GP1 = SPI_SS_N · GP2 = SPI_CLK · GP3 = SPI_MOSI · GP4 = SMC_DBG_EN · GP5 = SMC_RST_XDK_N · GND = GND.**
+MODI was built around a simple goal: **make fast Xbox 360 flash service accessible with cheap hardware without turning the setup into a developer project.**
 
-On our seven-position RP2350-Plus header, down from USB: **orange GP0 → brown GP1 → yellow GND → red GP2 → black GP3 → blue GP4 → green GP5**.
+The project is focused on:
 
-Diagrams: [Corona](assets/wiring/wiring-corona-rp2350-plus.png) · [Trinity](assets/wiring/wiring-trinity-rp2350-plus.png) · [Falcon / Fat](assets/wiring/wiring-falcon-rp2350-plus.png). Verify motherboard revision and pads before connecting. Our Corona 4 GB implementation uses the same SPI route.
+- Xbox 360 NAND service
+- Corona eMMC service
+- Jasper Big Block
+- RGH repair workflows
+- NAND backup and recovery
+- J-Runner integration
+- Right to Repair
 
-## Downloads
+## Low-cost hardware
 
-Public releases should contain only the files an end user needs:
+The project targets inexpensive RP2350 / Pico 2-class boards. The core development board can often be found for roughly **USD $5–6**, depending on region and supplier. This price refers to the board only and excludes wiring, adapters and shipping.
 
-- one end-user ZIP containing `MODI-Setup.exe`, UF2 and START-HERE PL/EN
-- `MODI-Pico2-Flasher-X360-TURBO.uf2`
-- `SHA256SUMS.txt`
-- documentation / release notes
-- corresponding firmware source or a clear GPL-compliant link to it
-
-**Do not publish the full modified J-Runner tree, development workspace, private dumps, CPU keys, caches or third-party DLLs with unclear redistribution rights.**
-
-## J-Runner integration
-
-MODI integration adds device recognition, a MODI information panel, separate READ / WRITE / VERIFY timing, correct NAND/eMMC operation labeling, and connection cleanup/re-detection while preserving standard J-Runner workflows.
-
-The integration is an **independent community integration** and is not an official J-Runner with Extras feature.
-
-Future goal: after broader hardware testing, we would be happy to propose optional native MODI Pico 2 support upstream. Acceptance is entirely up to the upstream maintainers.
-
-## MODI FLASHSHIP — What's Next
+## MODI FLASHSHIP
 
 | Feature | Status |
 |---|---|
-| Audio / Sonus | 🔜 **COMING SOON** — hardware testing in progress |
+| Audio / Sonus | 🔜 **COMING SOON** |
 | DirtyJTAG / glitch-chip programmer | 💡 **PLANNED** |
 | UART / COM monitor | 💡 **PLANNED** |
 | HANA diagnostics | 🔬 **RESEARCH** |
 | Native upstream J-Runner support | 🧩 **PROPOSED** |
 
-Roadmap details: [MODI FLASHSHIP](docs/FLASHSHIP.md) · [Polski](docs/FLASHSHIP_PL.md)
+Roadmap: [MODI FLASHSHIP](docs/FLASHSHIP.md) · [Polski](docs/FLASHSHIP_PL.md)
 
 ## Credits
 
-This project exists because of years of work by the Xbox 360 service and homebrew community.
+This project builds on years of Xbox 360 service and homebrew work.
 
-Special thanks to:
+Special thanks to **Team Jungle**, **Team Xecuter**, **Octal450**, **J-Runner-With-Extras contributors**, **Mitchell Waite / mitchellwaite**, **Pheeeeenom / Mena**, **Balázs Triszka / balika011**, **X360Tools contributors** and everyone who documented Xbox 360 NAND, eMMC, RGH/JTAG and board-level repair.
 
-- **Team Jungle** and **Team Xecuter** — original J-Runner / Xbox 360 tooling heritage.
-- **Octal450** — J-Runner with Extras and years of continued development.
-- **J-Runner-With-Extras organization and all contributors**, including recent/current development contributors such as **Mitchell Waite / mitchellwaite**.
-- **Pheeeeenom / Mena** — contribution to the current J-Runner with Extras release/distribution ecosystem.
-- **Balázs Triszka / balika011** — original PicoFlasher work.
-- **X360Tools contributors** — continued PicoFlasher development.
-- Everyone who documented Xbox 360 repair, NAND, eMMC, RGH/JTAG and board-level service knowledge over the years.
-
-MODI integration / project: **MODI Diagnostic Lab · Modyfikator89**.
+MODI integration / project direction: **MODI Diagnostic Lab · Modyfikator89**.
 
 Full acknowledgements: [CREDITS.md](CREDITS.md)
 
-## Licensing and source availability
+## Firmware source and licensing
 
-Original third-party license texts must remain unchanged. Polish translations, where provided, are informational convenience translations only.
+The distributed MODI UF2 includes firmware derived from PicoFlasher work. Matching corresponding firmware source and required third-party notices remain available with the release for license compliance.
 
-The MODI firmware is derived from GPL-licensed PicoFlasher work. A distributed modified UF2 must therefore have its corresponding source available in a GPL-compliant form. The main release repository should stay clean; firmware source may live in a dedicated source repository or matching source archive and must be linked clearly from each release.
+[Download firmware source / compliance archive](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-SOURCE-v0.9.1.zip)
 
-See: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)
+See also: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)
 
-## Independent project / disclaimer
+## Independent project
 
-**Independent fan-made community project.** MODI Pico 2 Flasher X360 TURBO and MODI Diagnostic Lab are not affiliated with, sponsored by, endorsed by or approved by Microsoft or Xbox. Xbox and related names/trademarks belong to their respective owners and are used only to identify compatible hardware and document technical/service procedures.
+**Independent fan-made community project.** MODI Pico 2 Flasher X360 TURBO and MODI Diagnostic Lab are not affiliated with, sponsored by, endorsed by or approved by Microsoft or Xbox. Xbox and related trademarks belong to their respective owners and are used only to identify compatible hardware and document technical/service procedures.
 
-Full disclaimer: [DISCLAIMER.md](DISCLAIMER.md)
+[Full disclaimer](DISCLAIMER.md) · [Release status and hashes](docs/RELEASE_STATUS.md)
 
-
-[Release status and hashes](docs/RELEASE_STATUS.md)
-
-<sub>[Firmware source / license compliance](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-SOURCE-v0.9.1.zip)</sub>
+**Project page:** https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/
