@@ -24,58 +24,49 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Add SEO metadata to deployed page
-        shell: python
         run: |
+          python3 - <<'PY'
           from pathlib import Path
           p = Path('index.html')
           s = p.read_text(encoding='utf-8')
-          old = '''<title>MODI Pico 2 Flasher X360 TURBO</title>
-<meta name="description" content="MODI Pico 2 Flasher X360 TURBO is a fast low-cost Xbox 360 NAND and eMMC service flasher built around Pico 2 / RP2350. PL/EN.">
-<link rel="canonical" href="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/">
-<meta property="og:title" content="MODI Pico 2 Flasher X360 TURBO">
-<meta property="og:description" content="High-speed Xbox 360 NAND & eMMC service tool. RP2350 · J-Runner integration · repair-first.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/">
-<meta property="og:image" content="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/assets/logo/modi-turbo.png">'''
-          new = '''<title>MODI Pico 2 Flasher X360 TURBO | Xbox 360 NAND & eMMC Flasher</title>
-<meta name="description" content="Free Xbox 360 NAND and eMMC flasher for RP2350 / Pico 2 with J-Runner integration. ~19 s 16 MB NAND read, wiring for Corona, Trinity and Fat.">
-<meta name="keywords" content="Xbox 360 flasher, Xbox 360 NAND flasher, PicoFlasher, Pico 2 flasher, RP2350 Xbox 360, Xbox 360 RGH, J-Runner, Corona eMMC, Trinity NAND, Falcon NAND, Jasper Big Block, NAND programmer, MODI Flasher">
-<meta name="author" content="MODI Diagnostic Lab / Modyfikator89">
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<link rel="canonical" href="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="sitemap" type="application/xml" href="sitemap.xml">
-<meta property="og:title" content="MODI Pico 2 Flasher X360 TURBO | Xbox 360 NAND & eMMC Flasher">
-<meta property="og:description" content="Fast, low-cost Xbox 360 NAND and eMMC flasher for RP2350 / Pico 2. ~19 s 16 MB NAND read, J-Runner integration and ready wiring diagrams.">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="MODI Diagnostic Lab">
-<meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="pl_PL">
-<meta property="og:url" content="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/">
-<meta property="og:image" content="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/assets/logo/modi-turbo.png">
-<meta property="og:image:alt" content="MODI Pico 2 Flasher X360 TURBO">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="MODI Pico 2 Flasher X360 TURBO">
-<meta name="twitter:description" content="Free RP2350 / Pico 2 Xbox 360 NAND & eMMC flasher with J-Runner integration. ~19 s 16 MB NAND read on tested hardware.">
-<meta name="twitter:image" content="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/assets/logo/modi-turbo.png">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "MODI Pico 2 Flasher X360 TURBO",
-  "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "Windows",
-  "description": "Xbox 360 NAND and eMMC service flasher for RP2350 / Pico 2 with J-Runner integration.",
-  "url": "https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/",
-  "downloadUrl": "https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/tag/v0.9.1-beta",
-  "softwareVersion": "0.9.1 Beta",
-  "author": {"@type": "Organization", "name": "MODI Diagnostic Lab / Modyfikator89"},
-  "isAccessibleForFree": true
-}
-</script>'''
+          old = '\n'.join([
+              '<title>MODI Pico 2 Flasher X360 TURBO</title>',
+              '<meta name="description" content="MODI Pico 2 Flasher X360 TURBO is a fast low-cost Xbox 360 NAND and eMMC service flasher built around Pico 2 / RP2350. PL/EN.">',
+              '<link rel="canonical" href="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/">',
+              '<meta property="og:title" content="MODI Pico 2 Flasher X360 TURBO">',
+              '<meta property="og:description" content="High-speed Xbox 360 NAND & eMMC service tool. RP2350 · J-Runner integration · repair-first.">',
+              '<meta property="og:type" content="website">',
+              '<meta property="og:url" content="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/">',
+              '<meta property="og:image" content="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/assets/logo/modi-turbo.png">'
+          ])
+          new = '\n'.join([
+              '<title>MODI Pico 2 Flasher X360 TURBO | Xbox 360 NAND & eMMC Flasher</title>',
+              '<meta name="description" content="Free Xbox 360 NAND and eMMC flasher for RP2350 / Pico 2 with J-Runner integration. ~19 s 16 MB NAND read, wiring for Corona, Trinity and Fat.">',
+              '<meta name="keywords" content="Xbox 360 flasher, Xbox 360 NAND flasher, PicoFlasher, Pico 2 flasher, RP2350 Xbox 360, Xbox 360 RGH, J-Runner, Corona eMMC, Trinity NAND, Falcon NAND, Jasper Big Block, NAND programmer, MODI Flasher">',
+              '<meta name="author" content="MODI Diagnostic Lab / Modyfikator89">',
+              '<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">',
+              '<link rel="canonical" href="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/">',
+              '<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">',
+              '<link rel="sitemap" type="application/xml" href="sitemap.xml">',
+              '<meta property="og:title" content="MODI Pico 2 Flasher X360 TURBO | Xbox 360 NAND & eMMC Flasher">',
+              '<meta property="og:description" content="Fast, low-cost Xbox 360 NAND and eMMC flasher for RP2350 / Pico 2. ~19 s 16 MB NAND read, J-Runner integration and ready wiring diagrams.">',
+              '<meta property="og:type" content="website">',
+              '<meta property="og:site_name" content="MODI Diagnostic Lab">',
+              '<meta property="og:locale" content="en_US">',
+              '<meta property="og:locale:alternate" content="pl_PL">',
+              '<meta property="og:url" content="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/">',
+              '<meta property="og:image" content="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/assets/logo/modi-turbo.png">',
+              '<meta property="og:image:alt" content="MODI Pico 2 Flasher X360 TURBO">',
+              '<meta name="twitter:card" content="summary_large_image">',
+              '<meta name="twitter:title" content="MODI Pico 2 Flasher X360 TURBO">',
+              '<meta name="twitter:description" content="Free RP2350 / Pico 2 Xbox 360 NAND & eMMC flasher with J-Runner integration. ~19 s 16 MB NAND read on tested hardware.">',
+              '<meta name="twitter:image" content="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/assets/logo/modi-turbo.png">',
+              '<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"MODI Pico 2 Flasher X360 TURBO","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows","description":"Xbox 360 NAND and eMMC service flasher for RP2350 / Pico 2 with J-Runner integration.","url":"https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/","downloadUrl":"https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/tag/v0.9.1-beta","softwareVersion":"0.9.1 Beta","author":{"@type":"Organization","name":"MODI Diagnostic Lab / Modyfikator89"},"isAccessibleForFree":true}</script>'
+          ])
           if old not in s:
               raise SystemExit('Expected head block not found; refusing blind SEO rewrite.')
           p.write_text(s.replace(old, new, 1), encoding='utf-8')
+          PY
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
