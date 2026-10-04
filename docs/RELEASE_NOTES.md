@@ -33,7 +33,9 @@ Setup version: **0.9.1-beta**. Firmware: **preserved MODI TURBO baseline 2026-10
 
 ## Test status
 
-This is a **public Beta**, not a Stable/v1.0 release. Full READ → WRITE known-good image → physical READ BACK/compare → console boot → repeat operation on this exact installer-generated version remains pending. Previous hardware timings are historical baseline results, not new tests of this package. A genuine application screenshot is also pending; no simulated screenshot is substituted.
+This is a **public Beta**, not a Stable/v1.0 release. On 2026-10-04 the user confirmed: “TEST SA WYKONA WSZYSTKO DZIALA” (tests completed; everything works), in response to the final hardware smoke-test request. This is user-reported hardware confirmation; no new per-operation times or readback hashes were supplied. Previous hardware timings remain historical baseline results. A genuine application screenshot is pending; no simulated screenshot is substituted.
+
+PL: Użytkownik potwierdził 2026-10-04 wykonanie testów i poprawne działanie. Potwierdzenie sprzętowe pochodzi od użytkownika; agent nie dopisuje nowych czasów ani hashy odczytu kontrolnego.
 
 NAND 16 MB baseline: ~19 s READ / ~24 s WRITE.
 Jasper Big Block, tested 64 MiB + spare range: 76.890–76.955 s READ / 90.171 s WRITE.

@@ -5,7 +5,11 @@
 > **Szybki programator serwisowy NAND i eMMC dla Xbox 360**  
 > tani sprzęt RP2350 · integracja z J-Runner with Extras · projekt społecznościowy nastawiony na naprawę
 
-> **STATUS WYDANIA:** 0.9.1 Beta ma instalator offline i jeden ZIP dla użytkownika. Instalacja w czystym folderze oraz testy integracji bez sprzętu przeszły. Końcowy test sprzętowy dokładnej paczki i prawdziwy screenshot nadal czekają; pliki są w szkicu wydania.
+> **STATUS WYDANIA:** [0.9.1 Beta jest publiczna](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/tag/v0.9.1-beta). Instalacja offline i testy integracji przeszły. Użytkownik potwierdził poprawne testy sprzętowe 2026-10-04. Prawdziwy screenshot aplikacji nadal czeka.
+
+## Pobierz
+
+**[Pobierz gotową paczkę ZIP](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip)** · [UF2](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO.uf2) · [SHA256](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/SHA256SUMS.txt) · [Źródła firmware](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-corresponding-source-v0.9.1.zip)
 
 ![MODI Pico 2 Flasher X360 TURBO](assets/logo/modi-turbo.png)
 

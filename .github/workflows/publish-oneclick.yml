@@ -67,7 +67,7 @@ jobs:
           pathlib.Path('publication.json').write_text(json.dumps({'draft':False,'prerelease':True,'make_latest':'false','name':'MODI Pico 2 Flasher X360 TURBO — 0.9.1 Beta','body':pathlib.Path('public-release-notes.md').read_text()}))
           print('PASS final package and unchanged binaries. Official upstream r7 executable matches the installer SHA256 pin.')
           PY
-      - name: Update reviewed draft package assets and publish Beta
+      - name: Publish verified Beta or synchronize release notes
         shell: bash
         run: |
           if [ "$(gh api "repos/$GH_REPO/releases/403135328" --jq .draft)" = "true" ]; then

@@ -10,7 +10,9 @@
 - Actual final application launch and MODI Turbo device recognition.
 - Matching GPL firmware source supplied separately with unchanged source bytes.
 - Static logo and one GIF retained; duplicate MP4 removed from the repository.
-- Full physical final-package smoke test and genuine screenshot remain pending before v1.0.
+- Public 0.9.1 Beta ZIP, Setup, UF2, matching firmware source and verified SHA256 downloads.
+- Hardware tests confirmed by the user on 2026-10-04; no new timing values supplied.
+- GitHub Pages deployment succeeded; genuine screenshot remains pending.
 
 
 ## v0.9.0 Beta — planned public release
@@ -37,5 +39,5 @@ These are historical tested-hardware results, not installer benchmarks.
 
 ### Before v1.0
 
-A final hardware smoke test must be performed using the exact public MODI Setup build and resulting `JRunner.MODI.exe`.
+User confirmation of successful hardware tests was received on 2026-10-04 for the final test request. Keep provenance review and genuine screenshot open; do not treat this Beta as Stable.
 
