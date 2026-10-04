@@ -2,25 +2,38 @@
 
 Use this checklist before publishing a public release.
 
+## Final package UX
+
+- [ ] The public release is a **ready-to-use one-click package**.
+- [ ] User does **not** need to install/download a .NET SDK.
+- [ ] User does **not** need NuGet, MSBuild, Python or any compiler.
+- [ ] User does **not** perform a local source build.
+- [ ] `MODI-Setup.exe` automatically prepares a ready `JRunner.MODI.exe` from a verified compatible upstream J-Runner copy.
+- [ ] Original `JRunner.exe` remains unchanged.
+- [ ] A single end-user ZIP exists: `MODI-Pico2-Flasher-X360-TURBO-vX.Y.Z.zip`.
+- [ ] ZIP contains Setup, UF2, START-HERE PL/EN, hashes and required notices.
+
 ## Files
 
-- [ ] `MODI-Setup.exe` is the final tested build.
-- [x] `MODI-Pico2-Flasher-X360-TURBO.uf2` matches the documented firmware version.
+- [ ] `MODI-Setup.exe` is the final tested one-click build.
+- [x] `MODI-Pico2-Flasher-X360-TURBO.uf2` matches the documented firmware baseline.
 - [x] `SHA256SUMS.txt` contains hashes of every public binary.
 - [ ] Matching GPL-compliant firmware source is available and linked.
-- [x] No full J-Runner package is included.
-- [x] No development workspace/source tree is included, except firmware source where legally required.
+- [ ] Final one-click ZIP is uploaded and hashed.
+- [x] No full J-Runner package is included unless redistribution is explicitly cleared.
+- [x] No application development workspace/source tree is included.
 - [x] No private dumps, CPU keys, customer files, build cache, SDK or NuGet cache are included.
 - [x] No third-party DLL with unclear redistribution rights is included.
 
 ## Documentation
 
-- [x] English README is current.
-- [x] Polish README is current.
-- [ ] Polish installation manual is complete.
-- [ ] English installation manual is complete.
+- [x] English README exists.
+- [x] Polish README exists.
+- [ ] README EN/PL is updated to describe the final **one-click installer**, not the transitional local-build Beta.
+- [ ] Polish installation manual describes the final one-click flow.
+- [ ] English installation manual describes the final one-click flow.
 - [x] FLASHSHIP roadmap is current.
-- [x] Audio / Sonus is still marked `COMING SOON` unless real hardware testing is complete.
+- [x] Audio / Sonus is marked `COMING SOON` unless real hardware testing is complete.
 - [x] Credits are visible.
 - [x] Disclaimer is visible.
 - [ ] Original third-party license texts remain unchanged.
@@ -32,14 +45,18 @@ Use this checklist before publishing a public release.
 - [x] No test render is presented as a real running-session screenshot.
 - [x] MODI logo is present.
 - [x] HIGH SPEED → TURBO transition GIF is present.
+- [ ] Duplicate transition MP4 is removed from the GitHub product page/repository; keep MP4 for external video/social editing only.
+- [ ] GIF is reasonably optimized for web size.
 - [ ] Visual style matches MODI MAPS language but uses neon green / black / dark grey.
 
 ## Final hardware smoke test
 
-Using the exact public `MODI-Setup.exe`:
+Using the exact final public ZIP and `MODI-Setup.exe`:
 
-- [ ] select compatible J-Runner 3.4.0.7
-- [ ] build/install `JRunner.MODI.exe`
+- [ ] start from a clean test folder / fresh-user scenario
+- [ ] installer obtains/detects compatible J-Runner 3.4.0.7 automatically or with one simple file selection
+- [ ] no compiler/SDK/source build occurs
+- [ ] ready `JRunner.MODI.exe` is created/installed
 - [ ] original `JRunner.exe` remains unchanged
 - [ ] MODI Flasher is detected
 - [ ] READ succeeds
@@ -54,32 +71,23 @@ Using the exact public `MODI-Setup.exe`:
 - [x] Hardware benchmarks are clearly labelled as tested-hardware results.
 - [x] No installer benchmark claim is implied.
 - [x] No “world's fastest” claim unless backed by a public current comparison.
-- [ ] Current safe wording is used: “one of the fastest low-cost Xbox 360 flashing solutions we have tested.”
-- [ ] ~$5–6 wording clearly refers to the core development board only.
+- [x] Current safe wording is used: “one of the fastest low-cost Xbox 360 flashing solutions we have tested.”
+- [x] ~$5–6 wording clearly refers to the core development board only.
 
 ## Release integrity
 
-- [ ] GitHub Release hash matches `SHA256SUMS.txt` exactly.
-- [x] Release notes list firmware and MODI Setup versions.
+- [ ] GitHub Release hashes match `SHA256SUMS.txt` exactly.
+- [ ] Release notes list final Setup and firmware versions.
 - [ ] Release notes link the exact corresponding firmware source.
 - [ ] Changelog is updated.
+- [ ] Direct download buttons point to the final public release assets.
 
-## Staging result — 2026-10-04
+## Current staging state — 2026-10-04
 
-Draft Beta release created: [MODI Pico 2 Flasher X360 TURBO — 0.9.0 Beta](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/tag/untagged-e616676bca8f529a3867).
-GitHub Actions staging succeeded. GitHub-reported SHA256 digests for Setup,
-UF2 and the matching source archive equal the local hashes. Media and document
-Git blob hashes were verified against main. Binaries are draft assets; main
-contains documentation/media/required notices and release automation only.
+A draft `v0.9.0-beta` release exists with staged Setup, UF2, hashes, licenses and corresponding firmware source.
 
-Still open: genuine screenshot (capture tool timeout), final hardware smoke test
-of the exact installer-generated executable, and upstream GPLv2-header/GPLv3-
-LICENSE provenance review. Original notices are retained without relicensing.
-The Setup embedded MIT/MODI source patch remains necessary for local building;
-separate J-Runner sources are not published.
+Important: the currently staged Setup still uses the earlier local-build model. It is a **transitional Beta candidate**, not the desired final user experience.
 
-PL: Szkic Beta jest utworzony; hashe plików na GitHubie są zgodne. Czekają
-prawdziwy screenshot, końcowy test sprzętowy dokładnej wersji z instalatora
-oraz wyjaśnienie rozbieżności GPLv2/GPLv3 upstream. Główne repo nie zawiera
-osobnych źródeł J-Runnera ani workspace'u.
+Before public release, replace it with the one-click installer/patcher described in `AGENT-HANDOFF.md`, then update README/manuals and perform the exact final-package hardware smoke test.
 
+PL: obecny szkic Beta zawiera przygotowane pliki, ale instalator nadal używa starego modelu lokalnego builda. Przed publicznym wydaniem ma zostać zastąpiony gotowym instalatorem typu one-click, bez SDK, kompilatora, NuGet i ręcznego składania czegokolwiek przez użytkownika.
