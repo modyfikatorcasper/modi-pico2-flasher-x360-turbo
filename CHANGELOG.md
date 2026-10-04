@@ -2,6 +2,12 @@
 
 ## v0.9.1 Beta — 2026-10-04
 
+- Clean four-asset release: UF2 first, complete installation ZIP, one SOURCE/compliance ZIP, SHA256SUMS.txt.
+- License notices packaged inside archives; standalone Setup and legal assets removed.
+- Firmware source inputs and dependency archives preserved byte-for-byte; Setup/UF2 not rebuilt.
+- UF2 → complete package → manual download order; source link in footer.
+- Explicit four-file publication allowlist replaces obsolete wildcard staging.
+
 - Offline one-click compiled-IL patcher; no end-user build tooling.
 - One ready ZIP with Setup, unchanged TURBO UF2, START-HERE PL/EN, hashes and notices.
 - Official upstream J-Runner 3.4.0 r7 link and exact original SHA256 pin.

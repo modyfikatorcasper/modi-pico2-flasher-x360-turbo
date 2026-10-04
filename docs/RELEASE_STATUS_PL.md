@@ -11,3 +11,7 @@ Publikacja i weryfikacja hashy przeszły. Oficjalny J-Runner r7 pobrany podczas 
 Prawdziwy screenshot pozostaje do dodania po timeoutach przechwytywania okna. Przegląd odziedziczonej rozbieżności nagłówków GPLv2 i pliku LICENSE GPLv3 firmware pozostaje otwarty; oryginalne teksty oraz komplet źródeł są zachowane.
 
 [Pliki, hashe i pełny status](RELEASE_STATUS.md) · [Audyt dystrybucji](DISTRIBUTION_AUDIT.md).
+
+## Uporządkowane pobieranie
+
+Wydanie zawiera dokładnie cztery pliki: UF2, pełny ZIP instalacyjny, jeden ZIP SOURCE oraz SHA256SUMS.txt. Licencje są wewnątrz odpowiednich archiwów. Setup i UF2 są identyczne bajt po bajcie; nie zmieniono kodu NAND/eMMC ani czasów. W archiwum SOURCE zachowano komplet firmware i źródłowe zależności wraz z oryginalnymi licencjami. Nie opublikowano źródeł aplikacji MODI.

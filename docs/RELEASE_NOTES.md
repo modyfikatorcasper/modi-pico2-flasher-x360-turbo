@@ -1,24 +1,18 @@
 # MODI Pico 2 Flasher X360 TURBO — 0.9.1 Beta
 
-## Pobierz / Download
+## Download
 
-**[Jedna gotowa paczka ZIP / Complete end-user package](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip)**
+### 1. Flash your Pico 2
+[Download MODI Pico 2 TURBO UF2](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO.uf2)
 
-W ZIP-ie: instalator offline, UF2, START-HERE PL/EN, SHA256 i wymagane licencje.
-The ZIP includes the offline installer, UF2, START-HERE PL/EN, SHA256 and required notices.
+### 2. Install MODI J-Runner integration
+[Download complete installation package](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip)
 
-Setup wykrywa zgodnego J-Runnera with Extras 3.4.0.7 lub pozwala wskazać jego oryginalny JRunner.exe. Tworzy gotowy JRunner.MODI.exe, zachowując oryginał oraz istniejące pliki pomocnicze. Użytkownik nie potrzebuje kompilatora, SDK, NuGet, Python ani Internetu do instalacji MODI. Wymagana jest pełna oficjalna instalacja J-Runnera z folderami common i xeBuild.
+The installation ZIP contains MODI-Setup.exe, the unchanged UF2, START-HERE PL/EN, internal SHA256 checks and required binary notices/licenses. Setup works offline with a complete, verified J-Runner with Extras 3.4.0.7 installation and creates JRunner.MODI.exe while preserving the original. No compiler, SDK, NuGet, Python or application source build is needed.
 
-Setup detects a compatible J-Runner with Extras 3.4.0.7 installation or accepts its original executable once. It creates ready JRunner.MODI.exe and preserves the original and support files. Installation is offline and requires no compiler, SDK, NuGet or Python. The complete official upstream installation with common and xeBuild folders is required.
+PL: Wgraj UF2 na Pico 2 w BOOTSEL, następnie rozpakuj pełną paczkę i uruchom MODI-Setup.exe. Instalator wykorzystuje Twoją pełną, zgodną instalację J-Runnera. Binaria Setup i UF2 oraz kod NAND/eMMC i czasy pozostają bez zmian.
 
-[Oficjalny J-Runner 3.4.0 r7 / Official upstream base](https://github.com/J-Runner-With-Extras/J-Runner-with-Extras/releases/tag/V3.4.0-r7)
-
-## Oddzielne pliki / Advanced downloads
-
-- [MODI-Setup.exe](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Setup.exe)
-- [Pico 2 TURBO UF2](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO.uf2)
-- [SHA256SUMS.txt](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/SHA256SUMS.txt)
-- [Odpowiadające źródła firmware / Matching firmware source](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-corresponding-source-v0.9.1.zip)
+[Manual EN](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/blob/main/docs/INSTALL.md) · [Instrukcja PL](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/blob/main/docs/INSTALL_PL.md) · [Official J-Runner 3.4.0 r7 base](https://github.com/J-Runner-With-Extras/J-Runner-with-Extras/releases/tag/V3.4.0-r7)
 
 Setup version: **0.9.1-beta**. Firmware: **preserved MODI TURBO baseline 2026-10-04**, unchanged from the validated baseline. No new speed tuning is introduced by this packaging release.
 
@@ -42,14 +36,22 @@ Jasper Big Block, tested 64 MiB + spare range: 76.890–76.955 s READ / 90.171 s
 Corona eMMC, tested 48 MiB: 56.198–57.792 s READ / 48.310 s WRITE.
 Results vary with hardware and wiring.
 
+## Advanced / source compliance
+
+[Download corresponding firmware source](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-SOURCE-v0.9.1.zip)
+
+One SOURCE ZIP contains complete modified firmware, matching SDK/TinyUSB source archives, build inputs and instructions, original license texts and notices. It contains no MODI Setup, JRunner.MODI or private application/integration source.
+
+[SHA256SUMS.txt](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/SHA256SUMS.txt)
+
 ## Integrity
 
-| File | SHA256 |
+| Asset | SHA256 |
 |---|---|
-| `MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip` | `D37B4C6449D128150F5E4F697130A18D66D28C7A4AC0FC0B0A4A443DB452BA4C` |
-| `MODI-Setup.exe` | `40EC3430563DA2FC5B261A8D2BC3F62E6684D9CCB02453A2FFCCA03420CA2C2D` |
 | `MODI-Pico2-Flasher-X360-TURBO.uf2` | `FAFACB8FDF912B9B335013B7B653942A347564DF5A9AB62D1BBE895BDCCBDD53` |
-| `MODI-Pico2-Flasher-X360-TURBO-corresponding-source-v0.9.1.zip` | `042CAC51B051FD565C6AAAB0629FA50098E2082A01972BCE74746BDD9A84FFE8` |
+| `MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip` | `E18BF9E6EAD0353842920D88362749FD1B4F5FFE8976DD11ADE7A37151240D53` |
+| `MODI-Pico2-Flasher-X360-TURBO-SOURCE-v0.9.1.zip` | `9E26CB674949012C1C9B9E65BB68E91EE3FB98F4955EC90549143C9513A407D4` |
+| `SHA256SUMS.txt` | `26089A402C0BF5877EBD56052ECE53E440B942939F7E8E99F162A6B0971DA181` |
 
 ## Licenses and credits
 

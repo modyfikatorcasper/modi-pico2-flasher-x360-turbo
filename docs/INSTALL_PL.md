@@ -6,7 +6,7 @@
 
 Windows z .NET Framework 4.8, pełna oficjalna instalacja J-Runner with Extras 3.4.0.7 oraz Pico 2 / zgodna płytka RP2350. Foldery `common` i `xeBuild` muszą zostać obok oryginalnego `JRunner.exe`.
 
-Pobierz [gotową paczkę MODI ZIP](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip) oraz [oficjalną bazę J-Runner 3.4.0 r7](https://github.com/J-Runner-With-Extras/J-Runner-with-Extras/releases/tag/V3.4.0-r7).
+Wgraj [UF2 na Pico 2](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO.uf2), potem pobierz [pełną paczkę MODI ZIP](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip) oraz [oficjalną bazę J-Runner 3.4.0 r7](https://github.com/J-Runner-With-Extras/J-Runner-with-Extras/releases/tag/V3.4.0-r7).
 
 ## Instalacja
 

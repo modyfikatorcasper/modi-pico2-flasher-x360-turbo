@@ -93,3 +93,13 @@ Hardware checkboxes above record the user's 2026-10-04 reply to the final test r
 Release publication and all binary/archive digests: PASS (run 37224245574). Official upstream r7 executable matches the installer pin. GitHub Pages deployment: PASS (run 37224245466).
 
 GIF check: 81 identical frames and durations; original retained. MP4 removed from main/product page. Genuine screenshot remains pending after capture timeouts; no render is substituted. Inherited firmware license-version provenance review remains open.
+
+## Clean four-asset distribution — 2026-10-04
+
+- [x] Exactly UF2, installation ZIP, one SOURCE ZIP and SHA256SUMS.txt are allowed by publication workflow.
+- [x] Standalone Setup and license/notice assets are removed after the matching SOURCE ZIP is uploaded and hash-verified.
+- [x] Setup and UF2 bytes are unchanged; firmware source and original dependency source archives are preserved byte-for-byte.
+- [x] Installation ZIP contains binaries, START-HERE PL/EN, internal hashes and required notices; no development source/scripts/SDK/debug files.
+- [x] SOURCE ZIP contains firmware inputs, required source dependencies, build instructions and original notices; no application/integration source.
+- [x] README and Pages use UF2 → complete package → manual; source compliance has a small footer link.
+- [x] Obsolete staging workflow using a wildcard is removed; publication uses an explicit four-file allowlist.

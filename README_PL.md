@@ -9,7 +9,11 @@
 
 ## Pobierz
 
-**[Pobierz gotową paczkę ZIP](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip)** · [UF2](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO.uf2) · [SHA256](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/SHA256SUMS.txt) · [Źródła firmware](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-corresponding-source-v0.9.1.zip)
+**[POBIERZ UF2](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO.uf2)**
+
+[POBIERZ PEŁNĄ PACZKĘ](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip)
+
+[INSTRUKCJA](docs/INSTALL_PL.md)
 
 ![MODI Pico 2 Flasher X360 TURBO](assets/logo/modi-turbo.png)
 
@@ -122,7 +126,6 @@ Zobacz: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)
 Pełny disclaimer: [DISCLAIMER.md](DISCLAIMER.md)
 
 
-## Stan paczki i źródła firmware
+[Status wydania i hashe](docs/RELEASE_STATUS_PL.md)
 
-[Status wydania i hashe](docs/RELEASE_STATUS_PL.md) · [Odpowiadające źródła firmware](docs/FIRMWARE_SOURCE.md)
-
+<sub>[Firmware source / license compliance](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-SOURCE-v0.9.1.zip)</sub>

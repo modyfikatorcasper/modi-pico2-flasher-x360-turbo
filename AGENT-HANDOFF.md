@@ -41,7 +41,7 @@ Preferred behaviour:
 
 Fallback may allow the user to select `JRunner.exe` manually, but the user must never compile anything.
 
-The current Beta installer that downloads an SDK and performs a local source build is **transitional and is NOT acceptable as the final public release UX**.
+The final 0.9.1 Beta installer is an offline compiled patcher. It requires no SDK, compiler, NuGet, Python or local source build; preserve the tested Setup and UF2 bytes during packaging cleanup.
 
 ## Ready release package
 
@@ -60,19 +60,18 @@ It should contain only end-user files such as:
 
 The user should be able to download one ZIP, extract it and start.
 
-## Upload only what users need
+## Public release asset policy — exactly four files
 
-Public release contents should be limited to:
+1. `MODI-Pico2-Flasher-X360-TURBO.uf2` — primary download.
+2. `MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip` — complete installation package.
+3. `MODI-Pico2-Flasher-X360-TURBO-SOURCE-v0.9.1.zip` — firmware source/license compliance only.
+4. `SHA256SUMS.txt`.
 
-- ready `MODI-Setup.exe`
-- ready `MODI-Pico2-Flasher-X360-TURBO.uf2`
-- one ready end-user ZIP package
-- `SHA256SUMS.txt`
-- user documentation
-- release notes / changelog
-- visual assets: logo, **one High Speed → TURBO GIF**, real application screenshot, wiring graphics
-- original third-party license texts / notices required by redistributed components
-- a clear link or matching archive containing the GPL-compliant corresponding source for the distributed firmware UF2
+Setup is inside the installation ZIP, never a separate release asset. Required licenses/notices are inside installation and SOURCE ZIPs, never individual assets. Documentation and visual assets belong to the repository/page. No release-directory wildcard uploads.
+
+SOURCE contains complete modified firmware, required SDK/TinyUSB source material, original notices, build inputs/instructions and SHA256-SOURCE.txt. No Setup, JRunner.MODI or private application/integration source.
+
+README/landing page buttons: DOWNLOAD UF2 → DOWNLOAD COMPLETE PACKAGE → MANUAL. A small bottom text link provides Firmware source / license compliance.
 
 ## Media policy
 
