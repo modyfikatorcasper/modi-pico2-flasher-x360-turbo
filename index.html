@@ -2,99 +2,128 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0d0b">
 <title>MODI Pico 2 Flasher X360 TURBO</title>
-<meta name="description" content="MODI Pico 2 Flasher X360 TURBO — low-cost high-speed Xbox 360 NAND and eMMC service flasher with J-Runner integration. PL/EN.">
+<meta name="description" content="MODI Pico 2 Flasher X360 TURBO — fast low-cost Xbox 360 NAND and eMMC service flasher built around Pico 2 / RP2350. PL/EN.">
+<link rel="canonical" href="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/">
+<meta property="og:title" content="MODI Pico 2 Flasher X360 TURBO">
+<meta property="og:description" content="High-speed Xbox 360 NAND & eMMC service tool. RP2350 · J-Runner integration · repair-first.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/">
+<meta property="og:image" content="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/assets/logo/modi-turbo.png">
 <style>
-:root{color-scheme:dark;--bg:#070b09;--panel:#0e1712;--panel2:#111d16;--edge:#263a2d;--text:#eef7f1;--muted:#9fb4a6;--accent:#74ff7b;--accent2:#34d65a;--danger:#ff6268;--warn:#ffd166;--mono:Consolas,ui-monospace,monospace}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:radial-gradient(circle at 50% -10%,#112519 0,#070b09 38%);color:var(--text);font:16px/1.58 system-ui,-apple-system,Segoe UI,sans-serif}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1200px;margin:auto;padding:0 24px}header{position:sticky;top:0;z-index:10;background:#070b09eF;border-bottom:1px solid var(--edge);backdrop-filter:blur(12px)}header .wrap{min-height:74px;display:flex;align-items:center;gap:16px}.brand{display:flex;align-items:center;gap:11px;white-space:nowrap}.mark{border:1px solid var(--accent);box-shadow:0 0 20px #74ff7b22;color:var(--accent);font:800 22px var(--mono);padding:4px 9px}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:.14em;text-transform:uppercase}nav{display:flex;gap:8px;flex:1;justify-content:center;flex-wrap:wrap}nav a,.lang button,.button{border:1px solid var(--edge);background:#111a14;color:var(--text);padding:8px 12px;border-radius:6px;font-size:13px;cursor:pointer}.lang{display:flex;gap:6px}.lang button.active,.button.primary{border-color:var(--accent);background:var(--accent);color:#071009;font-weight:750}.hero{padding:64px 0 44px;text-align:center}.eyebrow{font:700 12px var(--mono);letter-spacing:.16em;color:var(--accent);text-transform:uppercase}.hero h1{font-size:clamp(36px,7vw,78px);line-height:.98;letter-spacing:-.055em;margin:16px 0 18px}.hero h1 span{color:var(--accent);text-shadow:0 0 30px #74ff7b33}.hero p{max-width:820px;margin:0 auto 24px;color:var(--muted);font-size:18px}.badge-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:22px}.badge{border:1px solid var(--edge);background:#0d1510;padding:7px 10px;border-radius:999px;color:var(--muted);font:12px var(--mono)}.badge strong{color:var(--accent)}.section{padding:40px 0;border-top:1px solid var(--edge)}.section h2{font-size:30px;margin:0 0 8px}.section .lead{color:var(--muted);max-width:820px;margin:0 0 22px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:linear-gradient(180deg,#111d16,#0c140f);border:1px solid var(--edge);border-radius:10px;padding:20px;box-shadow:0 8px 30px #0003}.card h3{margin:0 0 10px}.metric{font:800 clamp(30px,4vw,47px) var(--mono);color:var(--accent);letter-spacing:-.05em}.metric small{font:600 13px var(--mono);color:var(--muted)}.card p{color:var(--muted);margin:8px 0 0}.story{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}.story blockquote{margin:0;border-left:3px solid var(--accent);padding:18px 22px;background:#0d1510;color:var(--muted)}.story .card strong{color:var(--text)}.steps{counter-reset:s;display:grid;gap:10px}.step{counter-increment:s;display:flex;gap:14px;align-items:flex-start;border:1px solid var(--edge);background:#0d1510;padding:14px;border-radius:8px}.step:before{content:counter(s);width:32px;height:32px;display:grid;place-items:center;border:1px solid var(--accent);color:var(--accent);font:800 14px var(--mono);border-radius:5px;flex:0 0 auto}.roadmap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.road{border:1px solid var(--edge);background:#0c140f;padding:17px;border-radius:8px}.status{font:700 11px var(--mono);letter-spacing:.08em;color:var(--accent)}.road p{margin:7px 0 0;color:var(--muted)}.notice{border:1px solid #685d2d;border-left:4px solid var(--warn);background:#201d10;padding:15px 18px;border-radius:7px;color:#eadfb7}.downloads{display:flex;gap:10px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none!important}.button.disabled{opacity:.5;pointer-events:none}.credits{columns:2;column-gap:28px}.credits p{break-inside:avoid;color:var(--muted)}footer{padding:30px 0 48px;border-top:1px solid var(--edge);color:var(--muted);font-size:13px}.hidden{display:none!important}@media(max-width:850px){header .wrap{flex-wrap:wrap;padding-top:10px;padding-bottom:10px}nav{order:3;flex-basis:100%;justify-content:flex-start;overflow:auto;flex-wrap:nowrap}.hero{padding-top:38px}.grid{grid-template-columns:1fr}.story{grid-template-columns:1fr}.roadmap{grid-template-columns:1fr}.credits{columns:1}}@media(max-width:560px){.wrap{padding:0 15px}.brand small{display:none}.hero h1{font-size:40px}.hero p{font-size:16px}.lang{margin-left:auto}.section h2{font-size:25px}}
-.project-logo{display:block;width:min(100%,1050px);height:auto;margin:20px auto}.transition{display:block;width:min(100%,960px);height:auto;margin:20px auto}.project-video{display:block;width:min(100%,960px);margin:20px auto;background:#000} </style>
+:root{color-scheme:dark;--bg:#0a0d0b;--surface:#111613;--surface2:#151c17;--surface3:#0d120f;--line:#2b362e;--line2:#415046;--text:#edf2ee;--muted:#9fac9f;--green:#b2f85b;--green2:#83dc31;--greenDim:#1d2b16;--amber:#f2c777;--danger:#ff6b72;--mono:Consolas,'SFMono-Regular',ui-monospace,monospace;--sans:Inter,'Segoe UI',Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:108px}body{margin:0;background:radial-gradient(circle at 50% -10%,#162116 0,#0a0d0b 36%,#090b0a 100%);color:var(--text);font:16px/1.58 var(--sans)}a{color:var(--green);text-decoration:none}a:hover{text-decoration:underline}button,a{touch-action:manipulation}.wrap{max-width:1220px;margin:auto;padding:0 30px}.site-header{position:sticky;top:0;z-index:50;background:#0a0d0bf2;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.header-inner{min-height:82px;display:flex;align-items:center;gap:18px}.brand{display:flex;align-items:center;gap:12px;color:var(--text);font-weight:800;letter-spacing:.08em;white-space:nowrap}.brand:hover{text-decoration:none}.brand-mark{display:grid;place-items:center;width:42px;height:42px;border:1px solid var(--green);color:var(--green);font:800 23px var(--mono);box-shadow:0 0 26px #b2f85b1d}.brand-sub{display:block;color:var(--muted);font-size:9px;letter-spacing:.16em;margin-top:4px}.nav{display:flex;gap:7px;flex:1;justify-content:center;overflow:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a,.lang button{min-height:42px;border:1px solid var(--line);background:#111713;color:var(--text);border-radius:5px;padding:9px 12px;font:13px var(--sans);white-space:nowrap}.nav a:hover{border-color:var(--green);background:#172116;text-decoration:none}.lang{display:flex;gap:6px}.lang button{cursor:pointer}.lang button.active{background:var(--green);border-color:var(--green);color:#102007;font-weight:800}.hero{padding:48px 0 32px}.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);gap:30px;align-items:center}.eyebrow{font:700 12px/1.5 var(--mono);letter-spacing:.13em;color:var(--green);text-transform:uppercase}.hero h1{font-size:clamp(38px,6.2vw,72px);line-height:.98;letter-spacing:-.055em;margin:13px 0 17px}.hero h1 span{color:var(--green);text-shadow:0 0 30px #b2f85b22}.hero-copy{max-width:700px;color:var(--muted);font-size:18px;margin:0}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;border:1px solid var(--line2);border-radius:5px;color:var(--text);background:#111713;font-weight:750;letter-spacing:.025em;text-decoration:none!important}.button.primary{background:var(--green);border-color:var(--green);color:#102007}.button:hover{border-color:var(--green);filter:brightness(1.06)}.button .arrow{font-size:20px;margin-left:10px}.hero-panel{background:linear-gradient(180deg,#151d17,#0f1511);border:1px solid var(--line);border-radius:10px;padding:16px;box-shadow:0 20px 70px #0006}.hero-panel img{display:block;width:100%;height:auto;border-radius:5px}.stats-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:28px}.stat{border:1px solid var(--line);background:#101511;border-radius:7px;padding:15px}.stat b{display:block;color:var(--green);font:800 26px/1 var(--mono);letter-spacing:-.04em}.stat span{display:block;color:var(--muted);font:11px var(--mono);margin-top:7px;letter-spacing:.04em}.section{padding:38px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:20px}.section h2{font-size:29px;line-height:1.2;margin:5px 0 0}.section-head p{color:var(--muted);max-width:720px;margin:0}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);background:linear-gradient(180deg,#141b16,#101511);border-radius:8px;padding:20px}.card h3{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}.metric{font:800 clamp(30px,4vw,47px)/1 var(--mono);color:var(--green);letter-spacing:-.05em;margin:12px 0 3px}.metric small{font:600 12px var(--mono);color:var(--muted);letter-spacing:0}.turbo{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:18px;align-items:center}.gif-card{border:1px solid var(--line);background:#060806;border-radius:9px;overflow:hidden}.gif-card img{width:100%;display:block;height:auto}.turbo-copy{border-left:3px solid var(--green);padding:5px 0 5px 20px}.turbo-copy h3{font-size:24px;margin:0 0 10px}.turbo-copy p{color:var(--muted);margin:0 0 14px}.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{border:1px solid #3d4e38;background:#151e13;color:#b8c7b9;padding:6px 9px;border-radius:999px;font:11px var(--mono)}.chip.live{color:var(--green)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;counter-reset:step}.step{counter-increment:step;border:1px solid var(--line);background:#101511;border-radius:7px;padding:17px}.step:before{content:'0' counter(step);display:block;color:var(--green);font:700 12px var(--mono);margin-bottom:12px}.step b{display:block;margin-bottom:6px}.step p{margin:0;color:var(--muted);font-size:13px}.story{display:grid;grid-template-columns:1.12fr .88fr;gap:16px}.quote{border:1px solid var(--line);border-left:3px solid var(--green);background:#111713;border-radius:7px;padding:23px;color:var(--muted);font-size:16px}.why-card{border:1px solid var(--line);background:#111713;border-radius:7px;padding:23px}.why-card strong{font-size:18px}.why-card p{color:var(--muted);margin:10px 0 0}.roadmap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.road{border:1px solid var(--line);background:#101511;border-radius:7px;padding:17px}.status{font:700 10px var(--mono);letter-spacing:.09em;color:var(--green)}.road h3{margin:7px 0 3px;font-size:16px}.road p{margin:0;color:var(--muted);font-size:13px}.credits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.credit{border:1px solid var(--line);background:#101511;border-radius:7px;padding:16px}.credit b{display:block;margin-bottom:4px}.credit span{color:var(--muted);font-size:13px}.notice{border:1px solid #5e5430;border-left:3px solid var(--amber);background:#1b190f;color:#ddd0a7;border-radius:6px;padding:14px 16px;margin-top:18px;font-size:13px}.footer{border-top:1px solid var(--line);padding:26px 0 38px;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer a{color:#b8c7b9}.mobile-download{display:none}.download-bar{display:flex;gap:10px;flex-wrap:wrap}.release-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid #3b4c36;background:#121b11;color:var(--muted);border-radius:999px;padding:7px 10px;font:11px var(--mono);margin-top:16px}.release-pill i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}
+@media(max-width:900px){.wrap{padding:0 20px}.header-inner{flex-wrap:wrap;padding:10px 0}.nav{order:3;flex-basis:100%;justify-content:flex-start}.lang{margin-left:auto}.hero-grid{grid-template-columns:1fr}.hero-panel{max-width:720px}.stats-strip{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr 1fr}.turbo{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.story{grid-template-columns:1fr}.credits{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){html{scroll-padding-top:128px}.wrap{padding:0 15px}.brand{font-size:14px}.brand-mark{width:37px;height:37px;font-size:20px}.brand-sub{font-size:8px}.hero{padding-top:30px}.hero h1{font-size:40px}.hero-copy{font-size:16px}.hero-actions .button{flex:1 1 100%}.hero-panel{padding:10px}.stats-strip{grid-template-columns:1fr 1fr}.stat{padding:13px}.stat b{font-size:23px}.section{padding:31px 0}.section-head{display:block}.section-head p{margin-top:8px}.grid3,.steps,.credits,.roadmap{grid-template-columns:1fr}.turbo-copy{padding-left:15px}.mobile-download{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;padding-bottom:env(safe-area-inset-bottom)}.mobile-download .button{width:100%;box-shadow:0 8px 28px #000a}.footer{padding-bottom:92px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-<header><div class="wrap">
-  <div class="brand"><span class="mark">MODI</span><span><strong>Pico 2 Flasher X360</strong><small>Diagnostic Lab · TURBO</small></span></div>
-  <nav><a href="#speed" data-en="Speed" data-pl="Prędkość">Speed</a><a href="#why" data-en="Why" data-pl="Dlaczego">Why</a><a href="#start" data-en="Quick start" data-pl="Start">Quick start</a><a href="#flashship">FLASHSHIP</a><a href="#credits" data-en="Credits" data-pl="Podziękowania">Credits</a></nav>
-  <div class="lang"><button id="en" class="active">EN</button><button id="pl">PL</button></div>
-</div></header>
-
-<main>
-<section class="hero wrap">
-  <img class="project-logo" src="assets/logo/modi-turbo.png" alt="MODI Pico 2 Flasher X360 TURBO">
-  <div class="eyebrow">RP2350 · NAND · BIG BLOCK · eMMC · J-RUNNER</div>
-  <h1>MODI Pico 2 Flasher <span>X360 TURBO</span></h1>
-  <p data-en="A low-cost high-speed Xbox 360 NAND & eMMC service tool built around Pico 2 / RP2350 and designed around repair, backup and recovery." data-pl="Tani i szybki programator serwisowy NAND i eMMC dla Xbox 360, oparty na Pico 2 / RP2350 i zaprojektowany z myślą o naprawie, backupie i odzyskiwaniu danych.">A low-cost high-speed Xbox 360 NAND & eMMC service tool built around Pico 2 / RP2350 and designed around repair, backup and recovery.</p>
-  <div class="badge-row"><span class="badge"><strong>~19 s</strong> READ 16 MB</span><span class="badge"><strong>~24 s</strong> WRITE 16 MB</span><span class="badge">RIGHT TO REPAIR</span><span class="badge">PL / EN</span></div>
-</section>
-
-<section class="section"><div class="wrap">
-<h2>HIGH SPEED → TURBO</h2>
-<img class="transition" src="assets/gif/high-speed-to-turbo.gif" alt="MODI High Speed to TURBO branding animation" loading="lazy" width="960" height="540">
-<video class="project-video" controls preload="none" aria-label="MODI High Speed to TURBO 1080p video"><source src="assets/video/high-speed-to-turbo-1080p.mp4" type="video/mp4"></video>
-<p class="lead" data-en="Project branding animation; not a measured flashing session. Beta release preparation is in progress. Final installer hardware QA and a genuine application screenshot remain pending." data-pl="Animacja identyfikacji projektu; nie przedstawia mierzonej sesji flashowania. Trwa przygotowanie wydania Beta. Końcowy test sprzętowy wersji z instalatora oraz prawdziwy screenshot aplikacji czekają.">Project branding animation; not a measured flashing session. Beta release preparation is in progress. Final installer hardware QA and a genuine application screenshot remain pending.</p>
-<a class="button" href="docs/RELEASE_STATUS.md">Release status EN</a> <a class="button" href="docs/RELEASE_STATUS_PL.md">Stan wydania PL</a>
-</div></section>
-
-<section id="speed" class="section"><div class="wrap">
-  <h2 data-en="Verified hardware results" data-pl="Potwierdzone wyniki sprzętowe">Verified hardware results</h2>
-  <p class="lead" data-en="Measured on tested hardware. Actual results vary by board, wiring, USB host and configuration. These are hardware results, not installer benchmarks." data-pl="Wyniki uzyskane na testowanym sprzęcie. Rzeczywiste czasy zależą od płyty, połączeń, hosta USB i konfiguracji. To wyniki sprzętowe, nie benchmark instalatora.">Measured on tested hardware. Actual results vary by board, wiring, USB host and configuration. These are hardware results, not installer benchmarks.</p>
-  <div class="grid">
-    <div class="card"><h3>16 MB NAND</h3><div class="metric">~19 s <small>READ</small></div><div class="metric">~24 s <small>WRITE</small></div></div>
-    <div class="card"><h3>Jasper Big Block</h3><div class="metric">76.9 s <small>READ</small></div><div class="metric">90.2 s <small>WRITE</small></div><p data-en="Tested 64 MiB + spare range." data-pl="Testowany zakres 64 MiB + spare.">Tested 64 MiB + spare range.</p></div>
-    <div class="card"><h3>Corona eMMC</h3><div class="metric">56–58 s <small>READ</small></div><div class="metric">48.3 s <small>WRITE</small></div><p data-en="Tested relevant 48 MiB range." data-pl="Testowany właściwy zakres 48 MiB.">Tested relevant 48 MiB range.</p></div>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top"><span class="brand-mark">M</span><span>MODI<span class="brand-sub">DIAGNOSTIC LAB · X360 TURBO</span></span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#performance" data-en="Speed" data-pl="Prędkość">Speed</a>
+      <a href="#start" data-en="Quick start" data-pl="Szybki start">Quick start</a>
+      <a href="#story" data-en="Why" data-pl="Dlaczego">Why</a>
+      <a href="#flashship">FLASHSHIP</a>
+      <a href="#credits" data-en="Credits" data-pl="Podziękowania">Credits</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="pl" type="button">PL</button><button id="en" type="button">EN</button>
+    </div>
   </div>
-</div></section>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">RP2350 · NAND · BIG BLOCK · eMMC · J-RUNNER</div>
+          <h1>MODI Pico 2 Flasher <span>X360 TURBO</span></h1>
+          <p class="hero-copy" data-en="A fast, low-cost Xbox 360 NAND & eMMC service tool built around Pico 2 / RP2350 — designed for repair, backup and recovery." data-pl="Szybki i tani programator serwisowy NAND i eMMC dla Xbox 360 oparty na Pico 2 / RP2350 — stworzony do napraw, backupu i odzyskiwania danych.">A fast, low-cost Xbox 360 NAND & eMMC service tool built around Pico 2 / RP2350 — designed for repair, backup and recovery.</p>
+          <div class="release-pill"><i></i><span data-en="0.9 Beta · final one-click package in QA" data-pl="0.9 Beta · finalna paczka one-click w QA">0.9 Beta · final one-click package in QA</span></div>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases"><span data-en="DOWNLOAD / RELEASES" data-pl="POBIERZ / WYDANIA">DOWNLOAD / RELEASES</span><span class="arrow">→</span></a>
+            <a class="button" href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/blob/main/docs/INSTALL_PL.md"><span data-en="MANUAL" data-pl="INSTRUKCJA">MANUAL</span></a>
+          </div>
+        </div>
+        <div class="hero-panel"><img src="assets/logo/modi-turbo.png" alt="MODI Pico 2 Flasher X360 TURBO logo"></div>
+      </div>
+      <div class="stats-strip" aria-label="Project highlights">
+        <div class="stat"><b>~19 s</b><span>16 MB NAND · READ</span></div>
+        <div class="stat"><b>~24 s</b><span>16 MB NAND · WRITE</span></div>
+        <div class="stat"><b>RP2350</b><span>PICO 2 PLATFORM</span></div>
+        <div class="stat"><b>~$5–6</b><span data-en="CORE BOARD" data-pl="PŁYTKA BAZOWA">CORE BOARD</span></div>
+      </div>
+    </div>
+  </section>
 
-<section id="why" class="section"><div class="wrap">
-  <h2 data-en="Why we built it" data-pl="Dlaczego to zrobiliśmy">Why we built it</h2>
-  <div class="story">
-    <blockquote data-en="When Xbox 360 RGH servicing began, NAND operations could take tens of minutes with early interfaces such as LPT. USB programmers changed that. Today a low-cost RP2350 board gives us another chance to rethink the workflow." data-pl="Kiedy rozwijała się scena RGH, operacje NAND na starszych interfejsach, takich jak LPT, potrafiły trwać dziesiątki minut. Programatory USB zmieniły sytuację. Dzisiaj tania płytka RP2350 daje kolejną szansę, żeby przemyśleć ten workflow od nowa.">When Xbox 360 RGH servicing began, NAND operations could take tens of minutes with early interfaces such as LPT. USB programmers changed that. Today a low-cost RP2350 board gives us another chance to rethink the workflow.</blockquote>
-    <div class="card"><strong data-en="Giving back to the community" data-pl="Coś od siebie dla społeczności">Giving back to the community</strong><p data-en="I learned from this community when I was beginning as a repair technician. After years of hardware service and diagnostics, this project is my way of giving something back: useful tools, documentation and knowledge for repair." data-pl="Kiedy zaczynałem jako serwisant, korzystałem z wiedzy tej społeczności. Po latach pracy ze sprzętem i diagnostyką chcę oddać coś od siebie: użyteczne narzędzie, dokumentację i wiedzę do napraw.">I learned from this community when I was beginning as a repair technician. After years of hardware service and diagnostics, this project is my way of giving something back: useful tools, documentation and knowledge for repair.</p></div>
-  </div>
-  <div class="notice" style="margin-top:18px" data-en="Repair-first project. Independent community tool. Not affiliated with Microsoft or Xbox. Users are responsible for how they use the tool and for compliance with applicable law." data-pl="Projekt nastawiony na naprawę. Niezależne narzędzie społecznościowe. Bez powiązania z Microsoft lub Xbox. Użytkownik odpowiada za sposób użycia narzędzia i zgodność z prawem.">Repair-first project. Independent community tool. Not affiliated with Microsoft or Xbox. Users are responsible for how they use the tool and for compliance with applicable law.</div>
-</div></section>
+  <section class="section" id="performance"><div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">TESTED HARDWARE</div><h2 data-en="Speed that changed the workflow" data-pl="Prędkość, która zmienia workflow">Speed that changed the workflow</h2></div><p data-en="Measured on tested hardware. Real times vary with motherboard, wiring, USB host and system configuration." data-pl="Wyniki z testowanego sprzętu. Rzeczywiste czasy zależą od płyty, połączeń, hosta USB i konfiguracji.">Measured on tested hardware. Real times vary with motherboard, wiring, USB host and system configuration.</p></div>
+    <div class="grid3">
+      <article class="card"><h3>16 MB NAND</h3><div class="metric">~19 s <small>READ</small></div><div class="metric">~24 s <small>WRITE</small></div></article>
+      <article class="card"><h3>Jasper Big Block</h3><div class="metric">76.9 s <small>READ</small></div><div class="metric">90.2 s <small>WRITE</small></div><p data-en="Tested 64 MiB + spare range." data-pl="Testowany zakres 64 MiB + spare.">Tested 64 MiB + spare range.</p></article>
+      <article class="card"><h3>Corona eMMC</h3><div class="metric">56–58 s <small>READ</small></div><div class="metric">48.3 s <small>WRITE</small></div><p data-en="Tested relevant 48 MiB range." data-pl="Testowany właściwy zakres 48 MiB.">Tested relevant 48 MiB range.</p></article>
+    </div>
+  </div></section>
 
-<section id="start" class="section"><div class="wrap">
-  <h2 data-en="Quick start" data-pl="Szybki start">Quick start</h2>
-  <div class="steps">
-    <div class="step"><div data-en="Download the matching MODI Pico 2 TURBO UF2 from the GitHub Release." data-pl="Pobierz zgodny MODI Pico 2 TURBO UF2 z GitHub Release.">Download the matching MODI Pico 2 TURBO UF2 from the GitHub Release.</div></div>
-    <div class="step"><div data-en="Enter BOOTSEL mode and copy the UF2 to the Pico 2 / supported RP2350 board." data-pl="Uruchom BOOTSEL i skopiuj UF2 na Pico 2 / zgodną płytkę RP2350.">Enter BOOTSEL mode and copy the UF2 to the Pico 2 / supported RP2350 board.</div></div>
-    <div class="step"><div data-en="Wire the flasher to the correct service points for the target motherboard and flash type." data-pl="Podłącz flasher do właściwych punktów serwisowych dla danej płyty i typu pamięci.">Wire the flasher to the correct service points for the target motherboard and flash type.</div></div>
-    <div class="step"><div data-en="Run MODI Setup, point it at compatible J-Runner with Extras 3.4.0.7, then use the locally created JRunner.MODI.exe." data-pl="Uruchom MODI Setup, wskaż zgodny J-Runner with Extras 3.4.0.7 i użyj lokalnie utworzonego JRunner.MODI.exe.">Run MODI Setup, point it at compatible J-Runner with Extras 3.4.0.7, then use the locally created JRunner.MODI.exe.</div></div>
-    <div class="step"><div><strong>READ → BACKUP → COMPARE / VERIFY → WRITE</strong></div></div>
-  </div>
-  <div class="downloads" style="margin-top:18px"><a class="button disabled" href="#">MODI-Setup.exe — release pending</a><a class="button disabled" href="#">TURBO UF2 — release pending</a><a class="button" href="docs/INSTALL.md">Manual EN</a><a class="button" href="docs/INSTALL_PL.md">Manual PL</a></div>
-</div></section>
+  <section class="section"><div class="wrap">
+    <div class="turbo">
+      <div class="gif-card"><img src="assets/gif/high-speed-to-turbo.gif" alt="MODI High Speed to Turbo animation" loading="lazy"></div>
+      <div class="turbo-copy"><div class="eyebrow">HIGH SPEED → TURBO</div><h3 data-en="One project. One visual identity." data-pl="Jeden projekt. Jedna identyfikacja.">One project. One visual identity.</h3><p data-en="The GitHub page keeps one lightweight visual transition. The 1080p video stays outside the product page for social and editing use." data-pl="Na stronie GitHub zostaje jedna animacja przejścia. Film 1080p zostaje poza stroną produktu — do sociali i montażu.">The GitHub page keeps one lightweight visual transition. The 1080p video stays outside the product page for social and editing use.</p><div class="chips"><span class="chip live">MODI TURBO</span><span class="chip">NAND</span><span class="chip">eMMC</span><span class="chip">RIGHT TO REPAIR</span></div></div>
+    </div>
+  </div></section>
 
-<section id="flashship" class="section"><div class="wrap">
-  <div class="eyebrow">MODI FLASHSHIP</div><h2 data-en="What's Next" data-pl="Co dalej">What's Next</h2>
-  <p class="lead" data-en="Future features stay separated from Stable so they do not destabilize core NAND/eMMC service work." data-pl="Funkcje przyszłościowe pozostają oddzielone od Stable, żeby nie destabilizować podstawowej obsługi NAND/eMMC.">Future features stay separated from Stable so they do not destabilize core NAND/eMMC service work.</p>
-  <div class="roadmap">
-    <div class="road"><div class="status">🔜 COMING SOON</div><h3>Audio / Sonus</h3><p data-en="Hardware testing in progress." data-pl="Trwają testy sprzętowe.">Hardware testing in progress.</p></div>
-    <div class="road"><div class="status">💡 PLANNED</div><h3>DirtyJTAG / Glitch Chip Programmer</h3></div>
-    <div class="road"><div class="status">💡 PLANNED</div><h3>UART / COM Monitor</h3></div>
-    <div class="road"><div class="status">🔬 RESEARCH</div><h3>HANA Diagnostics</h3></div>
-    <div class="road"><div class="status">🧩 PROPOSED</div><h3>Native J-Runner upstream support</h3><p data-en="Future proposal only; no upstream endorsement is implied." data-pl="Wyłącznie przyszłościowa propozycja; bez sugerowania poparcia upstream.">Future proposal only; no upstream endorsement is implied.</p></div>
-  </div>
-</div></section>
+  <section class="section" id="start"><div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">QUICK START</div><h2 data-en="Download. Flash. Connect. Repair." data-pl="Pobierz. Wgraj. Podłącz. Naprawiaj.">Download. Flash. Connect. Repair.</h2></div><p data-en="Final public release is being prepared as a ready-to-use one-click package — no compiler or SDK for the end user." data-pl="Finalne publiczne wydanie jest przygotowywane jako gotowa paczka one-click — bez kompilatora i SDK po stronie użytkownika.">Final public release is being prepared as a ready-to-use one-click package — no compiler or SDK for the end user.</p></div>
+    <div class="steps">
+      <article class="step"><b data-en="Get the release" data-pl="Pobierz wydanie">Get the release</b><p data-en="Download the final MODI package and matching Pico 2 UF2 from Releases." data-pl="Pobierz finalną paczkę MODI i zgodny plik UF2 z Releases.">Download the final MODI package and matching Pico 2 UF2 from Releases.</p></article>
+      <article class="step"><b>BOOTSEL → UF2</b><p data-en="Put Pico 2 into BOOTSEL and copy the firmware file." data-pl="Uruchom Pico 2 w BOOTSEL i skopiuj firmware.">Put Pico 2 into BOOTSEL and copy the firmware file.</p></article>
+      <article class="step"><b data-en="Connect hardware" data-pl="Podłącz sprzęt">Connect hardware</b><p data-en="Use the correct service points for the target NAND/eMMC type." data-pl="Użyj właściwych punktów serwisowych dla danego NAND/eMMC.">Use the correct service points for the target NAND/eMMC type.</p></article>
+      <article class="step"><b>READ → BACKUP → VERIFY</b><p data-en="Always create and verify a backup before any write operation." data-pl="Przed zapisem zawsze wykonaj i zweryfikuj backup.">Always create and verify a backup before any write operation.</p></article>
+    </div>
+    <div class="download-bar" style="margin-top:16px"><a class="button primary" href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases" data-en="OPEN RELEASES" data-pl="OTWÓRZ WYDANIA">OPEN RELEASES</a><a class="button" href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/blob/main/docs/INSTALL_PL.md" data-en="POLISH MANUAL" data-pl="INSTRUKCJA PL">POLISH MANUAL</a><a class="button" href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/blob/main/docs/INSTALL.md">MANUAL EN</a></div>
+  </div></section>
 
-<section id="credits" class="section"><div class="wrap">
-  <h2 data-en="Credits" data-pl="Podziękowania">Credits</h2>
-  <div class="credits">
-    <p><strong>Team Jungle / Team Xecuter</strong><br><span data-en="Historical J-Runner / Xbox 360 tooling heritage." data-pl="Historyczne fundamenty narzędzi J-Runner / Xbox 360.">Historical J-Runner / Xbox 360 tooling heritage.</span></p>
-    <p><strong>Octal450</strong><br>J-Runner with Extras</p>
-    <p><strong>J-Runner-With-Extras organization & contributors</strong><br>Mitchell Waite / mitchellwaite · Pheeeeenom / Mena · community contributors</p>
-    <p><strong>Balázs Triszka / balika011</strong><br>Original PicoFlasher</p>
-    <p><strong>X360Tools contributors</strong><br>PicoFlasher development</p>
-    <p><strong>MODI Diagnostic Lab / Modyfikator89</strong><br>MODI integration & project direction</p>
-  </div>
-  <p class="lead" data-en="Credits do not imply endorsement or affiliation." data-pl="Podziękowania nie oznaczają oficjalnego wsparcia ani powiązania.">Credits do not imply endorsement or affiliation.</p>
-</div></section>
+  <section class="section" id="story"><div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">WHY MODI</div><h2 data-en="Built to give something back" data-pl="Zrobione, żeby oddać coś społeczności">Built to give something back</h2></div></div>
+    <div class="story"><div class="quote" data-en="When Xbox 360 RGH servicing was young, NAND operations on early interfaces such as LPT could take tens of minutes. USB programmers changed that. Today an inexpensive RP2350 board lets us rethink the workflow again." data-pl="Kiedy scena RGH dopiero się rozwijała, operacje NAND na starszych interfejsach, takich jak LPT, potrafiły trwać dziesiątki minut. Programatory USB zmieniły sytuację. Dzisiaj tani RP2350 pozwala przemyśleć ten workflow jeszcze raz.">When Xbox 360 RGH servicing was young, NAND operations on early interfaces such as LPT could take tens of minutes. USB programmers changed that. Today an inexpensive RP2350 board lets us rethink the workflow again.</div><div class="why-card"><strong data-en="Repair first" data-pl="Najpierw naprawa">Repair first</strong><p data-en="I learned from this community when I was starting as a repair technician. After years of hardware service and diagnostics, this project is my way of giving back: practical tools, documentation and knowledge that help keep hardware repairable." data-pl="Kiedy zaczynałem jako serwisant, korzystałem z wiedzy tej społeczności. Po latach napraw i diagnostyki chcę oddać coś od siebie: praktyczne narzędzia, dokumentację i wiedzę, które pomagają naprawiać sprzęt.">I learned from this community when I was starting as a repair technician. After years of hardware service and diagnostics, this project is my way of giving back: practical tools, documentation and knowledge that help keep hardware repairable.</p></div></div>
+    <div class="notice" data-en="Independent community project. Not affiliated with, sponsored by or endorsed by Microsoft or Xbox. Users are responsible for how they use the tool and for compliance with applicable law." data-pl="Niezależny projekt społecznościowy. Bez powiązania, sponsoringu ani oficjalnego wsparcia Microsoft lub Xbox. Użytkownik odpowiada za sposób użycia narzędzia i zgodność z prawem.">Independent community project. Not affiliated with, sponsored by or endorsed by Microsoft or Xbox. Users are responsible for how they use the tool and for compliance with applicable law.</div>
+  </div></section>
+
+  <section class="section" id="flashship"><div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">MODI FLASHSHIP</div><h2 data-en="What's next" data-pl="Co dalej">What's next</h2></div><p data-en="Future functions stay separate from Stable so they never destabilize core NAND/eMMC service work." data-pl="Funkcje przyszłościowe pozostają oddzielone od Stable, żeby nie destabilizować podstawowej obsługi NAND/eMMC.">Future functions stay separate from Stable so they never destabilize core NAND/eMMC service work.</p></div>
+    <div class="roadmap">
+      <article class="road"><div class="status">🔜 COMING SOON</div><h3>Audio / Sonus</h3><p data-en="Hardware testing in progress." data-pl="Trwają testy sprzętowe.">Hardware testing in progress.</p></article>
+      <article class="road"><div class="status">💡 PLANNED</div><h3>DirtyJTAG / Glitch Chip Programmer</h3></article>
+      <article class="road"><div class="status">💡 PLANNED</div><h3>UART / COM Monitor</h3></article>
+      <article class="road"><div class="status">🔬 RESEARCH</div><h3>HANA Diagnostics</h3></article>
+      <article class="road"><div class="status">🧩 PROPOSED</div><h3>Native J-Runner upstream support</h3><p data-en="Future proposal only; no upstream endorsement implied." data-pl="Wyłącznie przyszłościowa propozycja; bez sugerowania poparcia upstream.">Future proposal only; no upstream endorsement implied.</p></article>
+    </div>
+  </div></section>
+
+  <section class="section" id="credits"><div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">CREDITS</div><h2 data-en="Built on years of community work" data-pl="Projekt oparty na latach pracy społeczności">Built on years of community work</h2></div></div>
+    <div class="credits">
+      <div class="credit"><b>Team Jungle / Team Xecuter</b><span data-en="Historical J-Runner / Xbox 360 tooling heritage." data-pl="Historyczne fundamenty narzędzi J-Runner / Xbox 360.">Historical J-Runner / Xbox 360 tooling heritage.</span></div>
+      <div class="credit"><b>Octal450</b><span>J-Runner with Extras</span></div>
+      <div class="credit"><b>J-Runner-With-Extras contributors</b><span>Mitchell Waite / mitchellwaite · Pheeeeenom / Mena · community contributors</span></div>
+      <div class="credit"><b>Balázs Triszka / balika011</b><span>Original PicoFlasher</span></div>
+      <div class="credit"><b>X360Tools contributors</b><span>PicoFlasher development</span></div>
+      <div class="credit"><b>MODI Diagnostic Lab / Modyfikator89</b><span data-en="MODI integration & project direction" data-pl="Integracja MODI i kierunek projektu">MODI integration & project direction</span></div>
+    </div>
+  </div></section>
 </main>
-
-<footer><div class="wrap">MODI Diagnostic Lab · Modyfikator89 · Independent community project · <a href="DISCLAIMER.md">Disclaimer</a> · <a href="CREDITS.md">Credits</a></div></footer>
+<footer class="footer"><div class="wrap footer-inner"><span>MODI Diagnostic Lab · Modyfikator89 · Independent community project</span><span><a href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo">GitHub</a> · <a href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/blob/main/DISCLAIMER.md">Disclaimer</a> · <a href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/blob/main/CREDITS.md">Credits</a></span></div></footer>
+<div class="mobile-download"><a class="button primary" href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases"><span data-en="DOWNLOAD / RELEASES" data-pl="POBIERZ / WYDANIA">DOWNLOAD / RELEASES</span><span class="arrow">→</span></a></div>
 <script>
-const buttons={en:document.getElementById('en'),pl:document.getElementById('pl')};
-function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll('[data-en][data-pl]').forEach(el=>el.textContent=el.dataset[lang]);buttons.en.classList.toggle('active',lang==='en');buttons.pl.classList.toggle('active',lang==='pl');localStorage.setItem('modi-lang',lang)}
-buttons.en.onclick=()=>setLang('en');buttons.pl.onclick=()=>setLang('pl');setLang(localStorage.getItem('modi-lang')||'en');
+const btn={pl:document.getElementById('pl'),en:document.getElementById('en')};
+function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll('[data-en][data-pl]').forEach(el=>el.textContent=el.dataset[lang]);btn.pl.classList.toggle('active',lang==='pl');btn.en.classList.toggle('active',lang==='en');btn.pl.setAttribute('aria-pressed',lang==='pl');btn.en.setAttribute('aria-pressed',lang==='en');localStorage.setItem('modi-x360-lang',lang)}
+btn.pl.onclick=()=>setLang('pl');btn.en.onclick=()=>setLang('en');
+const saved=localStorage.getItem('modi-x360-lang');const auto=(navigator.language||'').toLowerCase().startsWith('pl')?'pl':'en';setLang(saved||auto);
 </script>
-</body></html>
-
+</body>
+</html>
