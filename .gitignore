@@ -1,0 +1,34 @@
+# Development / build output
+work/
+src/
+build/
+bin/
+obj/
+.cache/
+.nuget/
+packages/
+sdk/
+
+# Private service data / dumps
+*.nand
+*.ecc
+*.dump
+*.dmp
+*.key
+*.cpukey
+*.kv
+*.log
+
+# Local installer/test output
+JRunner.MODI.exe
+MODI-Setup.exe
+*.uf2
+*.zip
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Note: public binaries belong in GitHub Releases, not normal repo commits.
