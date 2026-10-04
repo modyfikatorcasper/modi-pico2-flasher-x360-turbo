@@ -18,6 +18,7 @@
 @media(max-width:900px){.wrap{padding:0 20px}.header-inner{flex-wrap:wrap;padding:10px 0}.nav{order:3;flex-basis:100%;justify-content:flex-start}.lang{margin-left:auto}.hero-grid{grid-template-columns:1fr}.hero-panel{max-width:720px}.stats-strip{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr 1fr}.turbo{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.story{grid-template-columns:1fr}.credits{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){html{scroll-padding-top:128px}.wrap{padding:0 15px}.brand{font-size:14px}.brand-mark{width:37px;height:37px;font-size:20px}.brand-sub{font-size:8px}.hero{padding-top:30px}.hero h1{font-size:40px}.hero-copy{font-size:16px}.hero-actions .button{flex:1 1 100%}.hero-panel{padding:10px}.stats-strip{grid-template-columns:1fr 1fr}.stat{padding:13px}.stat b{font-size:23px}.section{padding:31px 0}.section-head{display:block}.section-head p{margin-top:8px}.grid3,.steps,.credits,.roadmap{grid-template-columns:1fr}.turbo-copy{padding-left:15px}.mobile-download{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;padding-bottom:env(safe-area-inset-bottom)}.mobile-download .button{width:100%;box-shadow:0 8px 28px #000a}.footer{padding-bottom:92px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.wiring-grid img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:5px;margin:12px 0}.wiring-order{font:13px/1.8 var(--mono);color:var(--green);overflow-wrap:anywhere}.wiring-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px}
 </style>
 </head>
 <body>
@@ -27,6 +28,7 @@
     <nav class="nav" aria-label="Main navigation">
       <a href="#performance" data-en="Speed" data-pl="Prędkość">Speed</a>
       <a href="#start" data-en="Quick start" data-pl="Szybki start">Quick start</a>
+      <a href="#wiring" data-en="Wiring" data-pl="Połączenia">Wiring</a>
       <a href="#story" data-en="Why" data-pl="Dlaczego">Why</a>
       <a href="#flashship">FLASHSHIP</a>
       <a href="#credits" data-en="Credits" data-pl="Podziękowania">Credits</a>
@@ -87,6 +89,18 @@
       <article class="step"><b>READ → BACKUP → VERIFY</b><p data-en="Always create and verify a backup before any write operation." data-pl="Przed zapisem zawsze wykonaj i zweryfikuj backup.">Always create and verify a backup before any write operation.</p></article>
     </div>
     <div class="download-bar" style="margin-top:16px"><a class="button primary" href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO.uf2"><span data-en="DOWNLOAD UF2" data-pl="POBIERZ UF2">DOWNLOAD UF2</span><span class="arrow">→</span></a><a class="button" href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip"><span data-en="DOWNLOAD COMPLETE PACKAGE" data-pl="POBIERZ PEŁNĄ PACZKĘ">DOWNLOAD COMPLETE PACKAGE</span></a><a class="button" href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/blob/main/docs/INSTALL_PL.md" data-en="POLISH MANUAL" data-pl="INSTRUKCJA PL">POLISH MANUAL</a><a class="button" href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/blob/main/docs/INSTALL.md">MANUAL EN</a></div>
+  </div></section>
+
+  <section class="section" id="wiring"><div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">RP2350-PLUS · MODI HEADER</div><h2 data-en="Pinout and wiring" data-pl="Pinout i połączenia">Pinout and wiring</h2></div><p data-en="Wire colors and header order checked against our real front and rear photographs. Open a diagram for full-size pad labels." data-pl="Kolory i kolejność headera sprawdzone na naszych zdjęciach przodu i tyłu. Otwórz diagram, żeby powiększyć oznaczenia punktów.">Wire colors and header order checked against our real front and rear photographs. Open a diagram for full-size pad labels.</p></div>
+    <div class="grid3 wiring-grid">
+      <article class="card"><h3>Corona</h3><a href="assets/wiring/wiring-corona-rp2350-plus.png" aria-label="corona wiring diagram full size"><img src="assets/wiring/wiring-corona-rp2350-plus.png" alt="corona motherboard wiring to MODI RP2350-Plus" width="2000" height="1500" loading="lazy"></a><p>J2C1 + J2C3</p></article>
+      <article class="card"><h3>Trinity</h3><a href="assets/wiring/wiring-trinity-rp2350-plus.png" aria-label="trinity wiring diagram full size"><img src="assets/wiring/wiring-trinity-rp2350-plus.png" alt="trinity motherboard wiring to MODI RP2350-Plus" width="2000" height="1500" loading="lazy"></a><p>J2C1 + J2C3</p></article>
+      <article class="card"><h3>Falcon / Fat</h3><a href="assets/wiring/wiring-falcon-rp2350-plus.png" aria-label="falcon wiring diagram full size"><img src="assets/wiring/wiring-falcon-rp2350-plus.png" alt="falcon motherboard wiring to MODI RP2350-Plus" width="2000" height="1500" loading="lazy"></a><p>J1D2 + J2B1</p></article>
+    </div>
+    <p class="wiring-order" data-en="From USB down: orange GP0 → brown GP1 → yellow GND → red GP2 → black GP3 → blue GP4 → green GP5." data-pl="Od USB w dół: pomarańczowy GP0 → brązowy GP1 → żółty GND → czerwony GP2 → czarny GP3 → niebieski GP4 → zielony GP5.">From USB down: orange GP0 → brown GP1 → yellow GND → red GP2 → black GP3 → blue GP4 → green GP5.</p>
+    <p data-en="Yellow is ground; black is MOSI. Verify your motherboard revision and pad numbers. Our Corona 4 GB firmware uses the same SPI header. The Falcon diagram uses a common Fat reference photograph." data-pl="Żółty to masa; czarny to MOSI. Sprawdź rewizję płyty i numery punktów. Nasz firmware Corona 4 GB używa tego samego headera SPI. Diagram Falcon korzysta ze zdjęcia referencyjnego wspólnego układu Fat.">Yellow is ground; black is MOSI. Verify your motherboard revision and pad numbers. Our Corona 4 GB firmware uses the same SPI header. The Falcon diagram uses a common Fat reference photograph.</p>
+    <div class="wiring-links"><a href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/blob/main/docs/WIRING_PL.md">PINOUT / MANUAL PL</a><a href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/blob/main/docs/WIRING.md">PINOUT / MANUAL EN</a><a href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/blob/main/assets/wiring/README.md" data-en="Image credits / references" data-pl="Autorzy zdjęć / źródła">Image credits / references</a></div>
   </div></section>
 
   <section class="section" id="story"><div class="wrap">

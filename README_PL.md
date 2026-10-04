@@ -69,6 +69,16 @@ Projekt celuje w niedrogie płytki Pico 2 / RP2350. Samą płytkę bazową możn
 
 Szczegółowa instrukcja: [Instalacja PL](docs/INSTALL_PL.md) · [English](docs/INSTALL.md)
 
+## Pinout / okablowanie
+
+[Manual okablowania MODI — PL](docs/WIRING_PL.md) · [English](docs/WIRING.md)
+
+**GP0 = SPI_MISO · GP1 = SPI_SS_N · GP2 = SPI_CLK · GP3 = SPI_MOSI · GP4 = SMC_DBG_EN · GP5 = SMC_RST_XDK_N · GND = GND.**
+
+Na naszym siedmiopozycyjnym headerze RP2350-Plus, od USB w dół: **pomarańczowy GP0 → brązowy GP1 → żółty GND → czerwony GP2 → czarny GP3 → niebieski GP4 → zielony GP5**.
+
+Diagramy: [Corona](assets/wiring/wiring-corona-rp2350-plus.png) · [Trinity](assets/wiring/wiring-trinity-rp2350-plus.png) · [Falcon / Fat](assets/wiring/wiring-falcon-rp2350-plus.png). Sprawdź rewizję i punkty przed podłączeniem. Corona 4 GB w naszej wersji korzysta z tej samej drogi SPI.
+
 ## Co publikujemy
 
 W publicznym wydaniu mają znaleźć się wyłącznie rzeczy potrzebne użytkownikowi:

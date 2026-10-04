@@ -19,6 +19,28 @@ Flash [the Pico 2 UF2](https://github.com/modyfikatorcasper/modi-pico2-flasher-x
 
 The installer interface is Polish. Original `JRunner.exe`, support files and third-party libraries remain in place. Setup does not require administrator privileges for a writable installation folder.
 
+## Pinout / Header — MODI Pico 2 Flasher X360 TURBO
+
+Our NAND/SPI header pins on Waveshare RP2350-Plus:
+
+| Header position¹ | Wire color | RP2350 pin | Signal | Corona / Trinity pad | Falcon / Fat pad |
+|---:|---|---|---|---|---|
+| 1 | Orange | GP0 | SPI_MISO | J2C1.4 | J1D2.4 |
+| 2 | Brown | GP1 | SPI_SS_N | J2C1.2 | J1D2.2 |
+| 3 | Yellow | GND | GND | J2C1.6 | J1D2.6 |
+| 4 | Red | GP2 | SPI_CLK | J2C1.3 | J1D2.3 |
+| 5 | Black | GP3 | SPI_MOSI | J2C1.1 | J1D2.1 |
+| 6 | Blue | GP4 | SMC_DBG_EN | J2C3.6 | J2B1.6 |
+| 7 | Green | GP5 | SMC_RST_XDK_N | J2C3.5 | J2B1.5 |
+
+¹ Count down from the USB end of the pictured **seven-position MODI header**. With USB at the top, the header is on the **left when viewing the front** (components / BOOT / RESET) and on the **right when viewing the rear** (GPIO silkscreen).
+
+Physical order: **GP0 → GP1 → GND → GP2 → GP3 → GP4 → GP5**.
+
+**Yellow is GND. Black is SPI_MOSI.** GPIO numbers are not header-position numbers. The ground contact is between GP1 and GP2. `J2C1.4` means pad 4 of J2C1, not GPIO 4. Find pad 1 from the board marking / square pad and follow the pictured orientation; do not count using wire position alone.
+
+Diagrams and connection procedure: [Corona, Trinity and Falcon / Fat](WIRING.md).
+
 ## Compatibility and repeat installation
 
 Required original SHA256: `44F647B213B80489DBA0E396DDA262609BDF59D6F271DB416CDFE02507F8B39F`.

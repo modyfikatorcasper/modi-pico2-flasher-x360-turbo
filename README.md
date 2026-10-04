@@ -69,6 +69,16 @@ The project targets inexpensive Pico 2 / RP2350-class development boards. The co
 
 Detailed guide: [Installation](docs/INSTALL.md) · [Polski](docs/INSTALL_PL.md)
 
+## Pinout / wiring
+
+[MODI wiring manual — EN](docs/WIRING.md) · [Polski](docs/WIRING_PL.md)
+
+**GP0 = SPI_MISO · GP1 = SPI_SS_N · GP2 = SPI_CLK · GP3 = SPI_MOSI · GP4 = SMC_DBG_EN · GP5 = SMC_RST_XDK_N · GND = GND.**
+
+On our seven-position RP2350-Plus header, down from USB: **orange GP0 → brown GP1 → yellow GND → red GP2 → black GP3 → blue GP4 → green GP5**.
+
+Diagrams: [Corona](assets/wiring/wiring-corona-rp2350-plus.png) · [Trinity](assets/wiring/wiring-trinity-rp2350-plus.png) · [Falcon / Fat](assets/wiring/wiring-falcon-rp2350-plus.png). Verify motherboard revision and pads before connecting. Our Corona 4 GB implementation uses the same SPI route.
+
 ## Downloads
 
 Public releases should contain only the files an end user needs:
