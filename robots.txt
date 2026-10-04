@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/sitemap.xml
