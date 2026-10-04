@@ -17,7 +17,7 @@ Acknowledgements include:
 
 MODI integration is independent and must not be presented as an official upstream J-Runner with Extras feature unless that changes in the future.
 
-The public MODI distribution should avoid redistributing a full third-party J-Runner package when license status of bundled dependencies is unclear. The preferred model is `MODI-Setup.exe`, which works from the user's compatible J-Runner installation and creates the MODI build locally.
+The public MODI distribution should avoid redistributing a full third-party J-Runner package when license status of bundled dependencies is unclear. The preferred model is `MODI-Setup.exe`, which works from the user's compatible J-Runner installation and patches an audited copy offline.
 
 ## PicoFlasher
 
@@ -57,7 +57,13 @@ The firmware source archive retains the additional notices inside the original
 SDK/TinyUSB archives and existing source headers. GCC/newlib are general-purpose
 toolchain/system-library inputs; compiler binaries are not redistributed here.
 Source lineage also includes 15432 and MayaTelLabs/Pico2Flasher. Credits do not
-imply endorsement. Setup embeds the limited extractable MIT/MODI source overlay
-needed for the local build; separate J-Runner source files are not published.
+imply endorsement. Setup embeds a compiled IL payload containing only audited MIT/MODI types and its own logo/build resources. Separate J-Runner source files are not published.
 
 Additional runtime notices: licenses/LICENSE-Newlib.txt (newlib 4.4.0), LICENSE-GCC-RUNTIME-EXCEPTION.txt, and LICENSE-GPL-2.0.txt. PicoFlasher source headers specify GPLv2 although the inherited LICENSE is GPLv3. Original notices are retained; no upstream relicensing is claimed. Resolve provenance before final firmware publication.
+
+
+## Mono.Cecil 0.11.6
+
+The patcher embeds Mono.Cecil 0.11.6, copyright Jb Evain and Novell, under MIT. Original notice: `licenses/LICENSE-Cecil.txt`. Source: https://github.com/jbevain/cecil/tree/0.11.6 .
+
+Existing third-party DLLs and restricted/unclear audio, registry and ZIP code are read from the user installation and preserved locally; they are absent from the public patch payload. No full J-Runner executable is redistributed.

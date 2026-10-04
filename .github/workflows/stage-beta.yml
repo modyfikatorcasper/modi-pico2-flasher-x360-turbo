@@ -1,4 +1,4 @@
-name: Stage MODI Beta release
+name: Stage MODI one-click Beta release
 on:
   push:
     branches: [main]
@@ -17,20 +17,19 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
     steps:
-      - name: Download pinned release blobs and verify SHA256
+      - name: Download pinned release blobs and verify the exact final ZIP
         shell: bash
         run: |
           python3 - <<'PY'
-          import base64, hashlib, json, os, pathlib, subprocess
-          repo=os.environ['GH_REPO']
-          ref=os.environ['GITHUB_SHA']
+          import base64, hashlib, json, os, pathlib, subprocess, zipfile
+          repo=os.environ['GH_REPO'];ref=os.environ['GITHUB_SHA']
           def api(path):
               return json.loads(subprocess.run(['gh','api',f'repos/{repo}/{path}'],check=True,capture_output=True,text=True).stdout)
           def content(path):
               return base64.b64decode(api(f'contents/{path}?ref={ref}')['content'])
           manifest=json.loads(content('.github/release-assets.json'))
-          assert manifest['tag']=='v0.9.0-beta'
-          assert set(manifest['files'])=={'MODI-Setup.exe','MODI-Pico2-Flasher-X360-TURBO.uf2','MODI-Pico2-Flasher-X360-TURBO-corresponding-source-v0.9.0.zip'}
+          assert manifest['tag']=='v0.9.1-beta'
+          assert set(manifest['files'])=={'MODI-Setup.exe','MODI-Pico2-Flasher-X360-TURBO.uf2','MODI-Pico2-Flasher-X360-TURBO-corresponding-source-v0.9.1.zip','MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip'}
           out=pathlib.Path('release');out.mkdir()
           for name,item in manifest['files'].items():
               assert pathlib.Path(name).name==name
@@ -38,20 +37,29 @@ jobs:
               assert len(data)==item['bytes'],name
               assert hashlib.sha256(data).hexdigest().upper()==item['sha256'],name
               (out/name).write_bytes(data)
-          for path in ['SHA256SUMS.txt','licenses/LICENSE-JRunner.txt','licenses/LICENSE-MODI.txt','licenses/LICENSE-Firmware-GPL-3.0.txt','licenses/LICENSE-Pico-SDK.txt','licenses/LICENSE-TinyUSB.txt','licenses/LICENSE-GPL-2.0.txt','licenses/LICENSE-Newlib.txt','licenses/LICENSE-GCC-RUNTIME-EXCEPTION.txt','THIRD-PARTY-NOTICES.md']:
+          for path in ['SHA256SUMS.txt','licenses/LICENSE-JRunner.txt','licenses/LICENSE-MODI.txt','licenses/LICENSE-Cecil.txt','licenses/LICENSE-Firmware-GPL-3.0.txt','licenses/LICENSE-Pico-SDK.txt','licenses/LICENSE-TinyUSB.txt','licenses/LICENSE-GPL-2.0.txt','licenses/LICENSE-Newlib.txt','licenses/LICENSE-GCC-RUNTIME-EXCEPTION.txt','THIRD-PARTY-NOTICES.md']:
               (out/pathlib.Path(path).name).write_bytes(content(path))
           for line in (out/'SHA256SUMS.txt').read_text().splitlines():
               expected,name=line.split('  ',1)
               assert hashlib.sha256((out/name).read_bytes()).hexdigest().upper()==expected,name
-          notes=content('docs/RELEASE_NOTES.md')
-          pathlib.Path('release-notes.md').write_bytes(notes)
-          print('PASS: release binaries and firmware source hashes; no rebuild performed.')
+          with zipfile.ZipFile(out/'MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip') as z:
+              names=z.namelist()
+              assert {'MODI-Setup.exe','MODI-Pico2-Flasher-X360-TURBO.uf2','START-HERE-PL.txt','START-HERE-EN.txt','SHA256SUMS.txt','LICENSE-Cecil.txt'}<=set(names)
+              assert all(pathlib.Path(n).name==n for n in names)
+              assert not any(n.endswith(('.cs','.py','.ps1','.dll','.bin')) for n in names)
+              for line in z.read('SHA256SUMS.txt').decode('utf-8').splitlines():
+                  expected,name=line.split('  ',1)
+                  assert hashlib.sha256(z.read(name)).hexdigest().upper()==expected,name
+              for name in ['MODI-Setup.exe','MODI-Pico2-Flasher-X360-TURBO.uf2']:
+                  assert z.read(name)==(out/name).read_bytes(),name
+          pathlib.Path('release-notes.md').write_bytes(content('docs/RELEASE_NOTES.md'))
+          print('PASS: exact ZIP, installer, UF2, matching source and notices. No application rebuild performed.')
           PY
-      - name: Create a draft Beta with matching source and license notices
+      - name: Stage a draft Beta without replacing the existing baseline
         shell: bash
         run: |
-          if gh release view v0.9.0-beta --repo "$GH_REPO" >/dev/null 2>&1; then
+          if gh release view v0.9.1-beta --repo "$GH_REPO" >/dev/null 2>&1; then
             echo 'Existing release found; stopping without replacing its assets.'
             exit 1
           fi
-          gh release create v0.9.0-beta release/* --repo "$GH_REPO" --target "$GITHUB_SHA" --draft --prerelease --title 'MODI Pico 2 Flasher X360 TURBO — 0.9.0 Beta' --notes-file release-notes.md
+          gh release create v0.9.1-beta release/* --repo "$GH_REPO" --target "$GITHUB_SHA" --draft --prerelease --title 'MODI Pico 2 Flasher X360 TURBO — 0.9.1 One-click Beta' --notes-file release-notes.md

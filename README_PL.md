@@ -5,13 +5,12 @@
 > **Szybki programator serwisowy NAND i eMMC dla Xbox 360**  
 > tani sprzęt RP2350 · integracja z J-Runner with Extras · projekt społecznościowy nastawiony na naprawę
 
-> **STATUS WYDANIA:** materiały projektu i hashe kandydata 0.9.0 Beta są dodane. Binaria są dodane do szkicu GitHub Release; końcowy test sprzętowy dokładnej wersji z instalatora i prawdziwy screenshot nadal czekają.
+> **STATUS WYDANIA:** 0.9.1 Beta ma instalator offline i jeden ZIP dla użytkownika. Instalacja w czystym folderze oraz testy integracji bez sprzętu przeszły. Końcowy test sprzętowy dokładnej paczki i prawdziwy screenshot nadal czekają; pliki są w szkicu wydania.
 
 ![MODI Pico 2 Flasher X360 TURBO](assets/logo/modi-turbo.png)
 
 ![HIGH SPEED → TURBO](assets/gif/high-speed-to-turbo.gif)
 
-Film: [High Speed → TURBO (1080p)](assets/video/high-speed-to-turbo-1080p.mp4)
 
 ---
 
@@ -51,12 +50,12 @@ Projekt celuje w niedrogie płytki Pico 2 / RP2350. Samą płytkę bazową możn
 
 ## Szybki start
 
-1. Pobierz **MODI Pico 2 TURBO UF2** z odpowiedniego GitHub Release.
+1. Pobierz i rozpakuj **MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip** z odpowiedniego GitHub Release.
 2. Uruchom Pico 2 / zgodną płytkę RP2350 w trybie **BOOTSEL** i skopiuj plik UF2 na wykryty dysk.
 3. Podłącz programator do właściwych punktów NAND/eMMC na płycie Xbox 360.
-4. Pobierz i uruchom **MODI-Setup.exe**.
-5. Wskaż zgodną instalację **J-Runner with Extras 3.4.0.7**.
-6. MODI Setup lokalnie buduje `JRunner.MODI.exe` i pozostawia oryginalny `JRunner.exe` bez zmian.
+4. Uruchom **MODI-Setup.exe** z rozpakowanej paczki.
+5. Wybierz wykrytą instalację **J-Runner with Extras 3.4.0.7** albo wskaż ją przyciskiem **Wybierz JRunner.exe**.
+6. Kliknij **Zainstaluj MODI TURBO**. Instalator modyfikuje zweryfikowaną kopię offline i tworzy gotowy `JRunner.MODI.exe`; oryginał pozostaje bez zmian.
 7. Podłącz MODI Pico 2 Flasher X360 TURBO.
 8. **READ → BACKUP → COMPARE/VERIFY przed każdym WRITE.**
 
@@ -66,13 +65,13 @@ Szczegółowa instrukcja: [Instalacja PL](docs/INSTALL_PL.md) · [English](docs/
 
 W publicznym wydaniu mają znaleźć się wyłącznie rzeczy potrzebne użytkownikowi:
 
-- `MODI-Setup.exe`
+- jeden ZIP z `MODI-Setup.exe`, UF2 oraz START-HERE PL/EN
 - `MODI-Pico2-Flasher-X360-TURBO.uf2`
 - `SHA256SUMS.txt`
 - instrukcje / release notes
 - odpowiadające źródło firmware lub czytelny link do niego zgodny z GPL
 
-**Nie publikujemy pełnego zmodyfikowanego drzewa J-Runnera, workspace deweloperskiego, prywatnych dumpów, CPU key, cache, SDK, cache NuGet ani zewnętrznych DLL o niejasnych prawach redystrybucji.**
+**Nie publikujemy pełnego zmodyfikowanego drzewa J-Runnera, workspace deweloperskiego, prywatnych dumpów, CPU key, cache ani zewnętrznych DLL o niejasnych prawach redystrybucji.**
 
 ## MODI FLASHSHIP — Co dalej
 
@@ -122,3 +121,4 @@ Pełny disclaimer: [DISCLAIMER.md](DISCLAIMER.md)
 ## Stan paczki i źródła firmware
 
 [Status wydania i hashe](docs/RELEASE_STATUS_PL.md) · [Odpowiadające źródła firmware](docs/FIRMWARE_SOURCE.md)
+

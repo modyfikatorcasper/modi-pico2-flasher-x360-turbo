@@ -4,103 +4,31 @@
 
 ## Wymagania
 
-- Windows x64
-- .NET Framework 4.8
-- zgodna instalacja J-Runner with Extras 3.4.0.7
-- Raspberry Pi Pico 2 / zgodna płytka RP2350
-- odpowiedni plik `MODI-Pico2-Flasher-X360-TURBO.uf2`
-- przewody i poprawne punkty serwisowe dla danej płyty Xbox 360
-- połączenie z Internetem podczas pierwszego uruchomienia MODI Setup
+Windows z .NET Framework 4.8, pełna oficjalna instalacja J-Runner with Extras 3.4.0.7 oraz Pico 2 / zgodna płytka RP2350. Foldery `common` i `xeBuild` muszą zostać obok oryginalnego `JRunner.exe`.
 
-## 1. Flashowanie Pico 2
+## Instalacja
 
-1. Odłącz Pico 2 od USB.
-2. Przytrzymaj przycisk **BOOTSEL**.
-3. Podłącz USB, nadal trzymając BOOTSEL.
-4. Zwolnij przycisk po pojawieniu się dysku USB.
-5. Skopiuj plik `MODI-Pico2-Flasher-X360-TURBO.uf2` na wykryty dysk.
-6. Płytka automatycznie uruchomi się ponownie z firmware MODI.
+1. Pobierz i rozpakuj `MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip`.
+2. Podłącz Pico 2 z przytrzymanym BOOTSEL i skopiuj dołączony UF2 na wykryty dysk. Poczekaj na restart.
+3. Uruchom `MODI-Setup.exe`. Wybierz wykrytą zgodną instalację albo kliknij **Wybierz JRunner.exe** i wskaż oryginał.
+4. Kliknij **Zainstaluj MODI TURBO**. Instalator działa offline, sprawdza dokładny SHA256 oryginału i tworzy gotowy `JRunner.MODI.exe` obok niego.
+5. Kliknij **Uruchom MODI** albo uruchom ten plik bezpośrednio.
+6. Podłącz przewody i zasilanie zgodnie z procedurą serwisową danej płyty. Sprawdź urządzenie i typ pamięci; wykonaj dwa READ i porównaj je przed WRITE.
 
-Zawsze używaj UF2 z tego samego wydania co dokumentacja i sprawdź SHA256 przed użyciem.
+Oryginalny `JRunner.exe`, pliki pomocnicze i biblioteki zewnętrzne pozostają na miejscu. Instalator nie wymaga uprawnień administratora, jeśli folder instalacji pozwala na zapis.
 
-## 2. Przygotowanie J-Runnera
+## Zgodność i ponowna instalacja
 
-MODI Setup **nie nadpisuje** oryginalnego `JRunner.exe`.
+Wymagany SHA256 oryginału: `44F647B213B80489DBA0E396DDA262609BDF59D6F271DB416CDFE02507F8B39F`.
 
-1. Pobierz `MODI-Setup.exe` z GitHub Releases.
-2. Uruchom instalator.
-3. Wskaż istniejący, zgodny `JRunner.exe` w wersji 3.4.0.7.
-4. Instalator zweryfikuje wymagane pliki i wersje.
-5. Przy pierwszym uruchomieniu pobierze wymagane, przypięte komponenty builda.
-6. Prywatne .NET SDK jest używane lokalnie — instalator nie zmienia globalnego PATH.
-7. Po zakończeniu obok oryginału powstanie `JRunner.MODI.exe`.
+Ponowny start sprawdza identyczną instalację MODI. Niezgodny oryginał, brak folderów pomocniczych lub inny istniejący `JRunner.MODI.exe` powodują przerwanie bez podmiany pliku. Aby zainstalować nową wersję obok starszej, rozpakuj świeżą oficjalną kopię J-Runnera do innego folderu i wskaż jej oryginalny plik.
 
-Oryginalny `JRunner.exe` pozostaje bez zmian.
+Zachowaj `MODI-install-receipt.txt`. Aby wrócić do wersji stock, uruchom niezmieniony oryginał. Zamknij obie wersje przed przełączeniem.
 
-## 3. Pierwsze uruchomienie
+## Kontrola
 
-1. Uruchom `JRunner.MODI.exe`.
-2. Podłącz MODI Pico 2 Flasher X360 TURBO.
-3. Sprawdź, czy program rozpoznaje urządzenie jako MODI.
-4. Potwierdź wykryty typ pamięci przed operacją.
+Sprawdź SHA256 paczki. Zachowaj zweryfikowany backup. Porównanie plików nie potwierdza fizycznego odczytu po zapisie. Po WRITE wykonaj READ BACK, porównaj wybrany zakres i potwierdź start konsoli.
 
-## 4. Najważniejsza zasada
+## Zgłoszenie problemu
 
-**Zawsze najpierw wykonaj READ i backup.**
-
-Zalecany workflow:
-
-1. READ / backup 1
-2. READ / backup 2, jeśli workflow tego wymaga
-3. COMPARE / VERIFY plików
-4. dopiero wtedy WRITE
-5. po zapisie wykonaj odczyt kontrolny / porównanie, jeżeli wymaga tego dana procedura serwisowa
-
-`VERIFY` dotyczący porównania plików nie zawsze oznacza automatyczny fizyczny odczyt kontrolny po WRITE.
-
-## 5. Cache i logi
-
-MODI Setup używa katalogów w `%LOCALAPPDATA%\MODI\Setup\`.
-
-Przykładowo:
-
-- cache: `%LOCALAPPDATA%\MODI\Setup\downloads`
-- log przebiegu: `%LOCALAPPDATA%\MODI\Setup\run-ID\setup.log`
-
-## 6. Usunięcie MODI
-
-Ponieważ oryginalny J-Runner nie jest nadpisywany, powrót do wersji stock jest prosty:
-
-- zamknij J-Runner,
-- usuń `JRunner.MODI.exe`, jeśli nie chcesz go dalej używać,
-- opcjonalnie usuń cache / receipt MODI Setup,
-- uruchom ponownie oryginalny `JRunner.exe`.
-
-## 7. Bezpieczeństwo
-
-- nie zapisuj przypadkowego obrazu NAND/eMMC,
-- nie udostępniaj publicznie CPU key ani prywatnych dumpów,
-- sprawdzaj SHA256 pobranych plików,
-- przed WRITE zawsze upewnij się, że masz poprawny i zweryfikowany backup,
-- błędne podłączenie lub zasilanie może uszkodzić sprzęt.
-
-## 8. Gdy instalator zgłasza błąd
-
-Zachowaj `setup.log` i przy zgłoszeniu podaj:
-
-- wersję Windows,
-- wersję MODI Setup,
-- wersję J-Runner,
-- wersję firmware MODI,
-- płytę Xbox 360,
-- typ pamięci,
-- etap, na którym wystąpił błąd.
-
-Nie dołączaj prywatnych dumpów ani CPU key.
-
-
-## Uwagi do instalatora 0.9.0 Beta
-
-Instalator ma polski interfejs. Pierwsze uruchomienie może wymagać dużego pobrania SDK. Gdy pobieranie HTTPS przez Windows nie działa, instalator próbuje użyć już zainstalowanego Python 3.10/3.11; Python nie jest dołączony ani instalowany. Szczegóły są w setup.log. Przed publicznym wysłaniem logu usuń prywatne ścieżki i informacje systemowe.
-
-Ponowne uruchomienie z poprawnym receipt weryfikuje i zachowuje obecną instalację; nie wykonuje aktualizacji do innego buildu. Nieznany istniejący JRunner.MODI.exe lub niezgodny J-Runner zostają odrzucone. Instalator osadza możliwy do wyodrębnienia patch źródłowy MIT/MODI wymagany przez jego lokalny build. Nie dołączamy osobnego drzewa źródeł J-Runnera ani zewnętrznych DLL.
+Podaj treść błędu, Windows, wersję Setup, J-Runnera, firmware, płytę i pamięć. Nie dołączaj CPU key ani prywatnych dumpów. To nadal szkic wydania przed końcowym testem sprzętowym.

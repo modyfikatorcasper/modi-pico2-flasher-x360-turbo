@@ -1,20 +1,25 @@
 {
-  "tag": "v0.9.0-beta",
+  "tag": "v0.9.1-beta",
   "files": {
-    "MODI-Pico2-Flasher-X360-TURBO-corresponding-source-v0.9.0.zip": {
-      "bytes": 6510302,
-      "sha256": "042CAC51B051FD565C6AAAB0629FA50098E2082A01972BCE74746BDD9A84FFE8",
-      "blob": "246d1d21de4e86088255c070e1a3124571af84dd"
+    "MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip": {
+      "bytes": 2851168,
+      "sha256": "BCE31A9EE63BBB1AE9AD601A472C64E6928BFC5701D1BBE6C0A95455A67D5B16",
+      "blob": "464ef6a481a1886fc86d49da88d42cd5ebe6fb56"
+    },
+    "MODI-Setup.exe": {
+      "bytes": 3001344,
+      "sha256": "40EC3430563DA2FC5B261A8D2BC3F62E6684D9CCB02453A2FFCCA03420CA2C2D",
+      "blob": "96f1e8fe74bc6de96806910c35833d03eee9cff0"
     },
     "MODI-Pico2-Flasher-X360-TURBO.uf2": {
       "bytes": 92160,
       "sha256": "FAFACB8FDF912B9B335013B7B653942A347564DF5A9AB62D1BBE895BDCCBDD53",
       "blob": "c752d7fcbb4a49fd1970be97e5f15a7ec216d517"
     },
-    "MODI-Setup.exe": {
-      "bytes": 1957376,
-      "sha256": "61CC8E46CFB7EBB5C96B0B5AEE93EA1EB5743FB7646024B6FFCA9B5F5042331E",
-      "blob": "f54dc9167b5bd1bff86c6a747d176596f7b0b6f5"
+    "MODI-Pico2-Flasher-X360-TURBO-corresponding-source-v0.9.1.zip": {
+      "bytes": 6510302,
+      "sha256": "042CAC51B051FD565C6AAAB0629FA50098E2082A01972BCE74746BDD9A84FFE8",
+      "blob": "246d1d21de4e86088255c070e1a3124571af84dd"
     }
   }
 }

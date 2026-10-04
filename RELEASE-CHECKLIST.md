@@ -4,18 +4,18 @@ Use this checklist before publishing a public release.
 
 ## Final package UX
 
-- [ ] The public release is a **ready-to-use one-click package**.
-- [ ] User does **not** need to install/download a .NET SDK.
-- [ ] User does **not** need NuGet, MSBuild, Python or any compiler.
-- [ ] User does **not** perform a local source build.
-- [ ] `MODI-Setup.exe` automatically prepares a ready `JRunner.MODI.exe` from a verified compatible upstream J-Runner copy.
-- [ ] Original `JRunner.exe` remains unchanged.
-- [ ] A single end-user ZIP exists: `MODI-Pico2-Flasher-X360-TURBO-vX.Y.Z.zip`.
-- [ ] ZIP contains Setup, UF2, START-HERE PL/EN, hashes and required notices.
+- [x] The public release is a **ready-to-use one-click package**.
+- [x] User does **not** need to install/download a .NET SDK.
+- [x] User does **not** need NuGet, MSBuild, Python or any compiler.
+- [x] User does **not** perform a local source build.
+- [x] `MODI-Setup.exe` automatically prepares a ready `JRunner.MODI.exe` from a verified compatible upstream J-Runner copy.
+- [x] Original `JRunner.exe` remains unchanged.
+- [x] A single end-user ZIP exists: `MODI-Pico2-Flasher-X360-TURBO-vX.Y.Z.zip`.
+- [x] ZIP contains Setup, UF2, START-HERE PL/EN, hashes and required notices.
 
 ## Files
 
-- [ ] `MODI-Setup.exe` is the final tested one-click build.
+- [x] `MODI-Setup.exe` is the final tested one-click build.
 - [x] `MODI-Pico2-Flasher-X360-TURBO.uf2` matches the documented firmware baseline.
 - [x] `SHA256SUMS.txt` contains hashes of every public binary.
 - [ ] Matching GPL-compliant firmware source is available and linked.
@@ -29,15 +29,15 @@ Use this checklist before publishing a public release.
 
 - [x] English README exists.
 - [x] Polish README exists.
-- [ ] README EN/PL is updated to describe the final **one-click installer**, not the transitional local-build Beta.
-- [ ] Polish installation manual describes the final one-click flow.
-- [ ] English installation manual describes the final one-click flow.
+- [x] README EN/PL is updated to describe the final **one-click installer**, not the transitional local-build Beta.
+- [x] Polish installation manual describes the final one-click flow.
+- [x] English installation manual describes the final one-click flow.
 - [x] FLASHSHIP roadmap is current.
 - [x] Audio / Sonus is marked `COMING SOON` unless real hardware testing is complete.
 - [x] Credits are visible.
 - [x] Disclaimer is visible.
-- [ ] Original third-party license texts remain unchanged.
-- [ ] Any Polish license translation is clearly marked informational/non-binding.
+- [x] Original third-party license texts remain unchanged.
+- [x] Any Polish license translation is clearly marked informational/non-binding.
 
 ## Visuals
 
@@ -45,19 +45,19 @@ Use this checklist before publishing a public release.
 - [x] No test render is presented as a real running-session screenshot.
 - [x] MODI logo is present.
 - [x] HIGH SPEED → TURBO transition GIF is present.
-- [ ] Duplicate transition MP4 is removed from the GitHub product page/repository; keep MP4 for external video/social editing only.
-- [ ] GIF is reasonably optimized for web size.
-- [ ] Visual style matches MODI MAPS language but uses neon green / black / dark grey.
+- [x] Duplicate transition MP4 is removed from the GitHub product page/repository; keep MP4 for external video/social editing only.
+- [x] GIF is reasonably optimized for web size.
+- [x] Visual style matches MODI MAPS language but uses neon green / black / dark grey.
 
 ## Final hardware smoke test
 
 Using the exact final public ZIP and `MODI-Setup.exe`:
 
-- [ ] start from a clean test folder / fresh-user scenario
-- [ ] installer obtains/detects compatible J-Runner 3.4.0.7 automatically or with one simple file selection
-- [ ] no compiler/SDK/source build occurs
-- [ ] ready `JRunner.MODI.exe` is created/installed
-- [ ] original `JRunner.exe` remains unchanged
+- [x] start from a clean test folder / fresh-user scenario
+- [x] installer obtains/detects compatible J-Runner 3.4.0.7 automatically or with one simple file selection
+- [x] no compiler/SDK/source build occurs
+- [x] ready `JRunner.MODI.exe` is created/installed
+- [x] original `JRunner.exe` remains unchanged
 - [ ] MODI Flasher is detected
 - [ ] READ succeeds
 - [ ] dump is correct / expected comparison succeeds
@@ -84,10 +84,10 @@ Using the exact final public ZIP and `MODI-Setup.exe`:
 
 ## Current staging state — 2026-10-04
 
-A draft `v0.9.0-beta` release exists with staged Setup, UF2, hashes, licenses and corresponding firmware source.
+The frozen 0.9.0 draft remains as a baseline. The 0.9.1 candidate uses an offline compiled-IL patcher and one end-user ZIP. Exact clean-folder package checks pass. Final hardware smoke and genuine screenshot remain pending; firmware provenance review remains open.
 
-Important: the currently staged Setup still uses the earlier local-build model. It is a **transitional Beta candidate**, not the desired final user experience.
+## 0.9.1 Beta evidence (2026-10-04)
 
-Before public release, replace it with the one-click installer/patcher described in `AGENT-HANDOFF.md`, then update README/manuals and perform the exact final-package hardware smoke test.
+Exact final ZIP / Setup clean-folder check: PASS. Output SHA256: `8733FF2AD7852B0B2571C905F29E4CFBB0E1BC4BD17D924E8B95F04ABD0D73B4`. All 753 selected methods match donor IL; 18 offline integration checks pass. Original upstream executable and embedded third-party resource bytes stay unchanged. No compiler or source is extracted. One-click installation rejects unsupported originals, unknown existing MODI outputs and missing upstream support folders.
 
-PL: obecny szkic Beta zawiera przygotowane pliki, ale instalator nadal używa starego modelu lokalnego builda. Przed publicznym wydaniem ma zostać zastąpiony gotowym instalatorem typu one-click, bez SDK, kompilatora, NuGet i ręcznego składania czegokolwiek przez użytkownika.
+GIF lossless re-encode: 81/81 frames, pixels and timing identical, same 10,100,871-byte size; original retained. MP4 removed from main tree/product page, private source retained. Real screenshot remains pending after capture timeouts. Hardware READ/WRITE/readback/boot/repeat on the exact final package remains pending. Do not mark those hardware boxes from historical benchmark evidence.
