@@ -2,7 +2,7 @@
 
 Offline one-click patcher and one end-user ZIP are prepared. Tested from a fresh folder with Unicode/spaces: pinned upstream verification, automatic copy patching, original preservation, repeat installation, incompatible original rejection, unknown existing output preservation and missing support-folder rejection.
 
-The exact Setup-produced application passes 753 donor method comparisons and 18 offline integration checks. Protected upstream code and original embedded third-party DLL resources are preserved. No hardware operation was run on this exact final package.
+The exact Setup-produced application passes 753 donor method comparisons and 18 offline integration checks. Protected upstream code and original embedded third-party DLL resources are preserved. The final application launches and identifies the attached Pico as MODI Turbo. Physical NAND/eMMC READ, WRITE and readback have not yet been run on this exact package.
 
 | File | Bytes | SHA256 |
 |---|---:|---|
@@ -13,7 +13,9 @@ The exact Setup-produced application passes 753 donor method comparisons and 18 
 
 The frozen firmware is unchanged (same UF2 and source bytes as 0.9.0). Installation remains dependent on the user's complete pinned J-Runner 3.4.0.7 installation. No full J-Runner, separate application source, or unclear external DLL is bundled.
 
-Pending: exact ZIP → Setup → device detect → READ → known-good WRITE → physical READ BACK/compare → console boot → another operation without restart. Genuine window capture is pending because the capture helper returned FrameArrived timeout and window capture timeout. No test render is substituted. The GIF passed an exact 81-frame pixel/timing check; lossless re-encoding gave no size reduction, so the original is retained. MP4 is excluded from this repository, with the local original retained privately.
+Pending: READ → known-good WRITE → physical READ BACK/compare → console boot → another operation without restart. Genuine window capture is pending because the capture helper returned FrameArrived timeout and window capture timeout. No test render is substituted. The GIF passed an exact 81-frame pixel/timing check; lossless re-encoding gave no size reduction, so the original is retained. MP4 is excluded from this repository, with the local original retained privately.
+
+The v0.9.1-beta draft assets were uploaded successfully by Actions run 37221805338. All four binary/archive GitHub asset digests match the table below. GitHub Pages deployment is separately blocked because the site is not enabled and the workflow token cannot create it (`Resource not accessible by integration`); owner enablement of Pages with GitHub Actions source is still required.
 
 Inherited firmware GPLv2 header / GPLv3 LICENSE provenance review remains open. Both original texts remain included. This is a draft Beta, not a final Stable release.
 

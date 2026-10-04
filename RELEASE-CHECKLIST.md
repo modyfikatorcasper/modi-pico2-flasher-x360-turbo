@@ -19,7 +19,7 @@ Use this checklist before publishing a public release.
 - [x] `MODI-Pico2-Flasher-X360-TURBO.uf2` matches the documented firmware baseline.
 - [x] `SHA256SUMS.txt` contains hashes of every public binary.
 - [ ] Matching GPL-compliant firmware source is available and linked.
-- [ ] Final one-click ZIP is uploaded and hashed.
+- [x] Final one-click ZIP is uploaded and hashed.
 - [x] No full J-Runner package is included unless redistribution is explicitly cleared.
 - [x] No application development workspace/source tree is included.
 - [x] No private dumps, CPU keys, customer files, build cache, SDK or NuGet cache are included.
@@ -58,7 +58,7 @@ Using the exact final public ZIP and `MODI-Setup.exe`:
 - [x] no compiler/SDK/source build occurs
 - [x] ready `JRunner.MODI.exe` is created/installed
 - [x] original `JRunner.exe` remains unchanged
-- [ ] MODI Flasher is detected
+- [x] MODI Flasher is detected
 - [ ] READ succeeds
 - [ ] dump is correct / expected comparison succeeds
 - [ ] WRITE known-good image succeeds
@@ -76,7 +76,7 @@ Using the exact final public ZIP and `MODI-Setup.exe`:
 
 ## Release integrity
 
-- [ ] GitHub Release hashes match `SHA256SUMS.txt` exactly.
+- [x] GitHub Release hashes match `SHA256SUMS.txt` exactly.
 - [ ] Release notes list final Setup and firmware versions.
 - [ ] Release notes link the exact corresponding firmware source.
 - [ ] Changelog is updated.
@@ -91,3 +91,5 @@ The frozen 0.9.0 draft remains as a baseline. The 0.9.1 candidate uses an offlin
 Exact final ZIP / Setup clean-folder check: PASS. Output SHA256: `8733FF2AD7852B0B2571C905F29E4CFBB0E1BC4BD17D924E8B95F04ABD0D73B4`. All 753 selected methods match donor IL; 18 offline integration checks pass. Original upstream executable and embedded third-party resource bytes stay unchanged. No compiler or source is extracted. One-click installation rejects unsupported originals, unknown existing MODI outputs and missing upstream support folders.
 
 GIF lossless re-encode: 81/81 frames, pixels and timing identical, same 10,100,871-byte size; original retained. MP4 removed from main tree/product page, private source retained. Real screenshot remains pending after capture timeouts. Hardware READ/WRITE/readback/boot/repeat on the exact final package remains pending. Do not mark those hardware boxes from historical benchmark evidence.
+
+Final GUI launch / MODI Turbo device detection: PASS. Release upload and all four GitHub asset SHA256 digests: PASS. READ/WRITE/readback/boot/repeat and genuine screenshot remain pending. Pages requires owner enablement; its token cannot create the site.
