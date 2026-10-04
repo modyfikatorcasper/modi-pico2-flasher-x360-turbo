@@ -97,3 +97,10 @@ Keep `setup.log` and include:
 - stage where the failure occurred.
 
 Do not attach private NAND dumps or CPU keys.
+
+
+## Notes for installer 0.9.0 Beta
+
+The installer GUI is Polish. First use can require a large SDK download. If Windows HTTPS downloads fail, setup attempts to use an already installed Python 3.10/3.11; Python is neither bundled nor installed. Details are in setup.log. Redact private paths and system information before publicly sharing a log.
+
+A repeated run with a valid receipt verifies and preserves the current installation; it does not upgrade to another build. Unknown existing JRunner.MODI.exe files and incompatible J-Runner copies are rejected. Setup embeds an extractable MIT/MODI source patch required by its local-build mechanism. A separate full J-Runner source tree and third-party DLLs are not included.

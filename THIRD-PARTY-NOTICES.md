@@ -42,3 +42,22 @@ Any Polish translation is only an informational convenience translation and must
 ## No endorsement implied
 
 Listing a project, author or contributor here does not imply sponsorship, endorsement or affiliation with MODI Diagnostic Lab / Modyfikator89.
+
+
+## Included notices / Dołączone informacje prawne
+
+Original legal texts are copied byte-for-byte to `licenses/`:
+- LICENSE-JRunner.txt — MIT notice for the limited modified J-Runner portions in Setup.
+- LICENSE-MODI.txt — MODI integration/installer notice.
+- LICENSE-Firmware-GPL-3.0.txt — original PicoFlasher GPLv3.
+- LICENSE-Pico-SDK.txt — Raspberry Pi Pico SDK BSD terms.
+- LICENSE-TinyUSB.txt — TinyUSB MIT notice.
+
+The firmware source archive retains the additional notices inside the original
+SDK/TinyUSB archives and existing source headers. GCC/newlib are general-purpose
+toolchain/system-library inputs; compiler binaries are not redistributed here.
+Source lineage also includes 15432 and MayaTelLabs/Pico2Flasher. Credits do not
+imply endorsement. Setup embeds the limited extractable MIT/MODI source overlay
+needed for the local build; separate J-Runner source files are not published.
+
+Additional runtime notices: licenses/LICENSE-Newlib.txt (newlib 4.4.0), LICENSE-GCC-RUNTIME-EXCEPTION.txt, and LICENSE-GPL-2.0.txt. PicoFlasher source headers specify GPLv2 although the inherited LICENSE is GPLv3. Original notices are retained; no upstream relicensing is claimed. Resolve provenance before final firmware publication.

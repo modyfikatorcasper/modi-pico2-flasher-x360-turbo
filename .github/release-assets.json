@@ -1,0 +1,20 @@
+{
+  "tag": "v0.9.0-beta",
+  "files": {
+    "MODI-Pico2-Flasher-X360-TURBO-corresponding-source-v0.9.0.zip": {
+      "bytes": 6510302,
+      "sha256": "042CAC51B051FD565C6AAAB0629FA50098E2082A01972BCE74746BDD9A84FFE8",
+      "blob": "246d1d21de4e86088255c070e1a3124571af84dd"
+    },
+    "MODI-Pico2-Flasher-X360-TURBO.uf2": {
+      "bytes": 92160,
+      "sha256": "FAFACB8FDF912B9B335013B7B653942A347564DF5A9AB62D1BBE895BDCCBDD53",
+      "blob": "c752d7fcbb4a49fd1970be97e5f15a7ec216d517"
+    },
+    "MODI-Setup.exe": {
+      "bytes": 1957376,
+      "sha256": "61CC8E46CFB7EBB5C96B0B5AEE93EA1EB5743FB7646024B6FFCA9B5F5042331E",
+      "blob": "f54dc9167b5bd1bff86c6a747d176596f7b0b6f5"
+    }
+  }
+}

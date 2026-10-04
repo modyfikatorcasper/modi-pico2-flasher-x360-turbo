@@ -97,3 +97,10 @@ Zachowaj `setup.log` i przy zgłoszeniu podaj:
 - etap, na którym wystąpił błąd.
 
 Nie dołączaj prywatnych dumpów ani CPU key.
+
+
+## Uwagi do instalatora 0.9.0 Beta
+
+Instalator ma polski interfejs. Pierwsze uruchomienie może wymagać dużego pobrania SDK. Gdy pobieranie HTTPS przez Windows nie działa, instalator próbuje użyć już zainstalowanego Python 3.10/3.11; Python nie jest dołączony ani instalowany. Szczegóły są w setup.log. Przed publicznym wysłaniem logu usuń prywatne ścieżki i informacje systemowe.
+
+Ponowne uruchomienie z poprawnym receipt weryfikuje i zachowuje obecną instalację; nie wykonuje aktualizacji do innego buildu. Nieznany istniejący JRunner.MODI.exe lub niezgodny J-Runner zostają odrzucone. Instalator osadza możliwy do wyodrębnienia patch źródłowy MIT/MODI wymagany przez jego lokalny build. Nie dołączamy osobnego drzewa źródeł J-Runnera ani zewnętrznych DLL.

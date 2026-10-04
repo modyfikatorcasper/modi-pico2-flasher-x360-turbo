@@ -5,7 +5,13 @@
 > **Szybki programator serwisowy NAND i eMMC dla Xbox 360**  
 > tani sprzęt RP2350 · integracja z J-Runner with Extras · projekt społecznościowy nastawiony na naprawę
 
-> **STATUS WYDANIA:** struktura publicznego repozytorium jest gotowa. Finalne binaria, firmware UF2, prawdziwy screenshot aplikacji i hashe wydania należy dodać dopiero po końcowym release QA.
+> **STATUS WYDANIA:** materiały projektu i hashe kandydata 0.9.0 Beta są dodane. Binaria przygotowujemy jako szkic GitHub Release; końcowy test sprzętowy dokładnej wersji z instalatora i prawdziwy screenshot nadal czekają.
+
+![MODI Pico 2 Flasher X360 TURBO](assets/logo/modi-turbo.png)
+
+![HIGH SPEED → TURBO](assets/gif/high-speed-to-turbo.gif)
+
+Film: [High Speed → TURBO (1080p)](assets/video/high-speed-to-turbo-1080p.mp4)
 
 ---
 
@@ -111,3 +117,8 @@ Zobacz: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)
 **Niezależny projekt fanowski i społecznościowy.** MODI Pico 2 Flasher X360 TURBO i MODI Diagnostic Lab nie są powiązane, sponsorowane, wspierane ani zatwierdzone przez Microsoft lub Xbox. Nazwy i znaki Xbox należą do ich właścicieli i są używane wyłącznie do identyfikacji kompatybilnego sprzętu oraz dokumentacji technicznej i serwisowej.
 
 Pełny disclaimer: [DISCLAIMER.md](DISCLAIMER.md)
+
+
+## Stan paczki i źródła firmware
+
+[Status wydania i hashe](docs/RELEASE_STATUS_PL.md) · [Odpowiadające źródła firmware](docs/FIRMWARE_SOURCE.md)
