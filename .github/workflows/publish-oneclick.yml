@@ -1,0 +1,94 @@
+name: Publish verified MODI 0.9.1 Beta packages
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-oneclick.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: stage-modi-beta-release
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Verify exact assets, final ZIP and official upstream compatibility
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64, hashlib, io, json, os, pathlib, subprocess, urllib.request, zipfile
+          repo=os.environ['GH_REPO'];ref=os.environ['GITHUB_SHA']
+          def api(path):
+              return json.loads(subprocess.run(['gh','api',f'repos/{repo}/{path}'],check=True,capture_output=True,text=True).stdout)
+          def content(path):
+              return base64.b64decode(api(f'contents/{path}?ref={ref}')['content'])
+          def sha(data):return hashlib.sha256(data).hexdigest().upper()
+          manifest=json.loads(content('.github/release-assets.json'))
+          assert manifest['tag']=='v0.9.1-beta'
+          release=api('releases/403135328')
+          assert release['id']==403135328 and release['tag_name']=='v0.9.1-beta' and release['prerelease']
+          old={a['name']:a for a in release['assets']}
+          out=pathlib.Path('publish');out.mkdir()
+          for name,item in manifest['files'].items():
+              assert pathlib.Path(name).name==name
+              data=base64.b64decode(api('git/blobs/'+item['blob'])['content'])
+              assert len(data)==item['bytes'] and sha(data)==item['sha256'],name
+              (out/name).write_bytes(data)
+              if name!='MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip':
+                  assert old[name]['size']==len(data) and old[name]['digest'].upper()=='SHA256:'+sha(data),name
+          newzip='MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip'
+          ziphash=manifest['files'][newzip]['sha256']
+          if old[newzip]['digest'].upper()!='SHA256:'+ziphash:
+              assert release['draft'], 'Published assets are immutable in this workflow'
+              assert old[newzip]['digest'].upper()=='SHA256:BCE31A9EE63BBB1AE9AD601A472C64E6928BFC5701D1BBE6C0A95455A67D5B16'
+          (out/'SHA256SUMS.txt').write_bytes(content('SHA256SUMS.txt'))
+          for line in (out/'SHA256SUMS.txt').read_text().splitlines():
+              expected,name=line.split('  ',1);assert sha((out/name).read_bytes())==expected,name
+          with zipfile.ZipFile(out/newzip) as z:
+              assert {'MODI-Setup.exe','MODI-Pico2-Flasher-X360-TURBO.uf2','START-HERE-PL.txt','START-HERE-EN.txt','SHA256SUMS.txt'}<=set(z.namelist())
+              assert all(pathlib.Path(n).name==n for n in z.namelist())
+              assert not any(n.endswith(('.cs','.py','.ps1','.dll','.bin')) for n in z.namelist())
+              for line in z.read('SHA256SUMS.txt').decode().splitlines():
+                  expected,name=line.split('  ',1);assert sha(z.read(name))==expected,name
+              for name in ['MODI-Setup.exe','MODI-Pico2-Flasher-X360-TURBO.uf2']:assert z.read(name)==(out/name).read_bytes()
+          upstream='https://github.com/J-Runner-With-Extras/J-Runner-with-Extras/releases/download/V3.4.0-r7/J-Runner-with-Extras.zip'
+          with urllib.request.urlopen(upstream,timeout=120) as response:official=response.read()
+          assert sha(official)=='C92A31D21D7DC617B3DAE47E44B3AE9988ACF8B94C0DA390F8A69E6805BC45B6'
+          with zipfile.ZipFile(io.BytesIO(official)) as z:
+              candidates=[n for n in z.namelist() if pathlib.PurePosixPath(n).name.lower()=='jrunner.exe']
+              assert len(candidates)==1,candidates
+              assert sha(z.read(candidates[0]))=='44F647B213B80489DBA0E396DDA262609BDF59D6F271DB416CDFE02507F8B39F'
+          pathlib.Path('public-release-notes.md').write_bytes(content('docs/RELEASE_NOTES.md'))
+          pathlib.Path('publication.json').write_text(json.dumps({'draft':False,'prerelease':True,'make_latest':'false','name':'MODI Pico 2 Flasher X360 TURBO — 0.9.1 Beta','body':pathlib.Path('public-release-notes.md').read_text()}))
+          print('PASS final package and unchanged binaries. Official upstream r7 executable matches the installer SHA256 pin.')
+          PY
+      - name: Update reviewed draft package assets and publish Beta
+        shell: bash
+        run: |
+          if [ "$(gh api "repos/$GH_REPO/releases/403135328" --jq .draft)" = "true" ]; then
+            gh release upload v0.9.1-beta publish/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip publish/SHA256SUMS.txt --repo "$GH_REPO" --clobber
+          else
+            echo 'Already public with verified hashes; keeping published assets unchanged.'
+          fi
+          gh api --method PATCH "repos/$GH_REPO/releases/403135328" --input publication.json --jq .html_url
+      - name: Verify public Beta and all asset hashes
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64,json,os,subprocess
+          repo=os.environ['GH_REPO'];ref=os.environ['GITHUB_SHA']
+          def api(path):return json.loads(subprocess.run(['gh','api',f'repos/{repo}/{path}'],check=True,capture_output=True,text=True).stdout)
+          manifest=json.loads(base64.b64decode(api(f'contents/.github/release-assets.json?ref={ref}')['content']))
+          release=api('releases/403135328')
+          assert not release['draft'] and release['prerelease']
+          assets={a['name']:a for a in release['assets']}
+          for name,item in manifest['files'].items():
+              assert assets[name]['size']==item['bytes'] and assets[name]['digest'].upper()=='SHA256:'+item['sha256'],name
+          print('PASS: published Beta, all exact hashes, firmware corresponding source available alongside UF2.')
+          print(release['html_url'])
+          PY

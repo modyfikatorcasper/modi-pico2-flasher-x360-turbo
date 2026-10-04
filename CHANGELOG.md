@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.9.1 Beta — 2026-10-04
+
+- Offline one-click compiled-IL patcher; no end-user build tooling.
+- One ready ZIP with Setup, unchanged TURBO UF2, START-HERE PL/EN, hashes and notices.
+- Official upstream J-Runner 3.4.0 r7 link and exact original SHA256 pin.
+- Preserved original J-Runner and embedded third-party resources.
+- Verified clean-folder install, 753 donor method matches and 18 offline integration tests.
+- Actual final application launch and MODI Turbo device recognition.
+- Matching GPL firmware source supplied separately with unchanged source bytes.
+- Static logo and one GIF retained; duplicate MP4 removed from the repository.
+- Full physical final-package smoke test and genuine screenshot remain pending before v1.0.
+
+
 ## v0.9.0 Beta — planned public release
 
 - MODI Pico 2 Flasher X360 TURBO branding.
@@ -25,3 +38,4 @@ These are historical tested-hardware results, not installer benchmarks.
 ### Before v1.0
 
 A final hardware smoke test must be performed using the exact public MODI Setup build and resulting `JRunner.MODI.exe`.
+
