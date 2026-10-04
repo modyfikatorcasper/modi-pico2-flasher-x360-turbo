@@ -5,7 +5,7 @@
 > **Szybki programator serwisowy NAND i eMMC dla Xbox 360**  
 > tani sprzęt RP2350 · integracja z J-Runner with Extras · projekt społecznościowy nastawiony na naprawę
 
-> **STATUS WYDANIA:** materiały projektu i hashe kandydata 0.9.0 Beta są dodane. Binaria przygotowujemy jako szkic GitHub Release; końcowy test sprzętowy dokładnej wersji z instalatora i prawdziwy screenshot nadal czekają.
+> **STATUS WYDANIA:** materiały projektu i hashe kandydata 0.9.0 Beta są dodane. Binaria są dodane do szkicu GitHub Release; końcowy test sprzętowy dokładnej wersji z instalatora i prawdziwy screenshot nadal czekają.
 
 ![MODI Pico 2 Flasher X360 TURBO](assets/logo/modi-turbo.png)
 
