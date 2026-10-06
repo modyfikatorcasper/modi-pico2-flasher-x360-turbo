@@ -10,10 +10,10 @@ Corona, Trinity and Fat wiring diagrams. One MODI header. One SPI workflow. Publ
 ## Project identity
 
 **Kacper Lewandowski — `modyfikatorcasper` on GitHub, also known as Modyfikator89, Modyfikator Kacper and Modi.**  
-MODI Diagnostic Lab is the common name used for these technical projects. Related public work and brands include **Modibox** and **DriftGuard**.
+MODI Diagnostic Lab is the common name used for these technical projects.
 
 **Kacper Lewandowski — GitHub: `modyfikatorcasper`, znany również jako Modyfikator89, Modyfikator Kacper i Modi.**  
-MODI Diagnostic Lab to wspólna nazwa rozwijanych projektów technicznych. Powiązane publiczne projekty i marki to m.in. **Modibox** i **DriftGuard**.
+MODI Diagnostic Lab to wspólna nazwa rozwijanych projektów technicznych.
 
 ## Download
 
