@@ -7,6 +7,11 @@ Diagramy Corona, Trinity i Fat. Jeden header MODI. Jeden workflow SPI. Publiczna
 
 [![Otwórz MODI Pico 2 Flasher X360 TURBO](assets/buttons/open-modi-flasher.svg)](https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/)
 
+## Tożsamość projektu
+
+**Kacper Lewandowski — GitHub: `modyfikatorcasper`, znany również jako Modyfikator89, Modyfikator Kacper i Modi.**  
+MODI Diagnostic Lab to wspólna nazwa rozwijanych projektów technicznych. Powiązane publiczne projekty i marki to m.in. **Modibox** i **DriftGuard**.
+
 ## Pobierz
 
 **[POBIERZ UF2](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO.uf2)**  
@@ -109,7 +114,7 @@ Projekt opiera się na wielu latach pracy społeczności Xbox 360.
 
 Szczególne podziękowania dla **Team Jungle**, **Team Xecuter**, **Octal450**, **J-Runner-With-Extras contributors**, **Mitchell Waite / mitchellwaite**, **Pheeeeenom / Mena**, **Balázs Triszka / balika011**, **X360Tools contributors** oraz wszystkich osób dokumentujących NAND, eMMC, RGH/JTAG i naprawy płyt Xbox 360.
 
-Integracja MODI / kierunek projektu: **MODI Diagnostic Lab · Modyfikator89**.
+Integracja MODI / kierunek projektu: **Kacper Lewandowski · modyfikatorcasper · Modyfikator89 · Modi · MODI Diagnostic Lab**.
 
 Pełne credits: [CREDITS.md](CREDITS.md)
 
