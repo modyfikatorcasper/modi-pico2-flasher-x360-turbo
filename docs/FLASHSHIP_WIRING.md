@@ -4,11 +4,13 @@
 
 These connections belong to the new preview profiles. Audio, DirtyJTAG and LIVE require physical hardware validation. One Pico runs one active UF2 profile in this build. Restore the tested TURBO profile for NAND/eMMC.
 
-Diagram colours are illustrative and do not specify the existing NAND GP0–GP5 cable colours. Connection maps use signal and pad names; they do not represent physical pad distances or every board revision. Check your board labels before soldering.
+Diagram colours are illustrative and do not specify the existing NAND GP0–GP5 cable colours. The photographs show selected board revisions with marked pads. Separate SVG signal schematics do not represent physical pad distances or every board revision. Check your board labels before soldering.
 
 ## RP2350 Plus header
 
-![Additional Audio JTAG and LIVE pins](../assets/wiring/wiring-flashship-header-rp2350-plus.svg)
+![Additional Audio JTAG and LIVE pins](../assets/wiring/photo-flashship-header.png)
+
+[Signal schematic](../assets/wiring/wiring-flashship-header-rp2350-plus.svg)
 
 Rear view, USB at the top. Audio uses GP12–GP15 plus GP22. DirtyJTAG uses GP16–GP19; GP20/GP21 are optional resets. LIVE uses GP9–GP11 as inputs. Common ground and 3.3 V logic are required. Do not connect 5 V or RS-232 to GPIO. Power the target according to its documentation.
 
@@ -27,9 +29,13 @@ Rear view, USB at the top. Audio uses GP12–GP15 plus GP22. DirtyJTAG uses GP16
 
 **MODI RDY is GP22.** The original X360Tools table uses GP11; MODI reserves GP11 for passive SMB_DATA capture.
 
-![Trinity Audio](../assets/wiring/wiring-audio-trinity-rp2350-plus.svg)
+![Trinity Audio](../assets/wiring/photo-audio-trinity.png)
 
-![Corona Audio](../assets/wiring/wiring-audio-corona-rp2350-plus.svg)
+[Signal schematic](../assets/wiring/wiring-audio-trinity-rp2350-plus.svg)
+
+![Corona Audio](../assets/wiring/photo-audio-corona.png)
+
+[Signal schematic](../assets/wiring/wiring-audio-corona-rp2350-plus.svg)
 
 Console pad names come from the [PicoFlasher author's Audio/Sonus table](https://github.com/X360Tools/PicoFlasher/blob/master/README.md); GP22 follows our firmware. Before the first write, obtain and preserve two matching full Audio backups. PLAY depends on the voice indexes in the image.
 
@@ -51,17 +57,23 @@ VCC is not a GPIO pin. Supply chip power separately as its instructions require.
 
 ### X360ACE V3
 
-![ACE V3](../assets/wiring/wiring-dirtyjtag-ace-v3-rp2350-plus.svg)
+![ACE V3](../assets/wiring/photo-dirtyjtag-ace-v3.png)
+
+[Signal schematic](../assets/wiring/wiring-dirtyjtag-ace-v3-rp2350-plus.svg)
 
 ### CoolRunner
 
-![CoolRunner](../assets/wiring/wiring-dirtyjtag-coolrunner-rp2350-plus.svg)
+![CoolRunner](../assets/wiring/photo-dirtyjtag-coolrunner.png)
+
+[Signal schematic](../assets/wiring/wiring-dirtyjtag-coolrunner-rp2350-plus.svg)
 
 Select PRG on variants with a programming switch.
 
 ### Matrix Glitcher
 
-![Matrix](../assets/wiring/wiring-dirtyjtag-matrix-rp2350-plus.svg)
+![Matrix](../assets/wiring/photo-dirtyjtag-matrix.png)
+
+[Signal schematic](../assets/wiring/wiring-dirtyjtag-matrix-rp2350-plus.svg)
 
 Use printed TDI/TDO/TCK/TMS/GND labels. The diagram does not establish one physical pad order for all Matrix revisions.
 
@@ -73,4 +85,4 @@ ACE V3 Xilinx and ACE V3+ / V4 / V5 Gowin need different programming paths. Gowi
 
 ## Printable diagrams
 
-[Audio and DirtyJTAG PDF](../assets/wiring/MODI-AUDIO-DIRTYJTAG-WIRING.pdf). SVGs remain sharp when enlarged. These are MODI technical connection maps, not photographs of a particular chip revision.
+[Audio and DirtyJTAG PDF](../assets/wiring/MODI-AUDIO-DIRTYJTAG-WIRING.pdf). SVGs remain sharp when enlarged. The close-ups above contain hardware photographs with MODI overlays. The PDF and separate SVG files contain signal schematics. [Photo sources and attribution](PHOTO-CREDITS.md).
