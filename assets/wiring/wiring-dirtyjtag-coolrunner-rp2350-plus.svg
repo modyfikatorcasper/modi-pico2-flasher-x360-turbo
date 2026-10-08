@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900"><g font-family="Arial, sans-serif">
 <rect x="0" y="0" width="1440" height="900" rx="0" fill="#091109" stroke="#091109"/>
 <text x="48" y="63" fill="#78f541" font-size="22" font-weight="700">MODI FLASHSHIP / PRE-FINAL</text>
-<text x="48" y="111" fill="#edf4ed" font-size="36" font-weight="700">DirtyJTAG — CoolRunner</text>
+<text x="48" y="111" fill="#edf4ed" font-size="36" font-weight="700">MODI Chip Flasher — CoolRunner</text>
 <text x="48" y="153" fill="#aebfae" font-size="22" font-weight="400">Set PRG switch if present • confirm revision and matching SVF/XSVF</text>
 <rect x="48" y="185" width="550" height="530" rx="12" fill="#142014" stroke="#395139"/>
 <rect x="845" y="185" width="547" height="530" rx="12" fill="#142014" stroke="#395139"/>

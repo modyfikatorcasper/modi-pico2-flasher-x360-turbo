@@ -106,7 +106,7 @@
 <text x="48" y="630" fill="#edf4ed" font-size="22" font-weight="400">GP9 = UART RX</text>
 <text x="48" y="665" fill="#edf4ed" font-size="22" font-weight="400">GP10 = SMB_CLK</text>
 <text x="48" y="700" fill="#edf4ed" font-size="22" font-weight="400">GP11 = SMB_DATA</text>
-<text x="48" y="758" fill="#ffdb59" font-size="22" font-weight="700">One active UF2 profile at a time • Audio / DirtyJTAG cannot run together with LIVE in this build.</text>
+<text x="48" y="758" fill="#ffdb59" font-size="22" font-weight="700">One active UF2 profile at a time • Audio / MODI Chip Flasher cannot run together with LIVE in this build.</text>
 <text x="48" y="800" fill="#aebfae" font-size="20" font-weight="400">No 5 V / RS-232 on GPIO • Target power separately • GND must be common.</text>
 <text x="48" y="834" fill="#aebfae" font-size="19" font-weight="400">Schemat połączeń / connection map. Pozycje padów sprawdź dla rewizji / verify pad locations.</text>
 <text x="48" y="868" fill="#aebfae" font-size="17" font-weight="400">References: user rear-board photo • frozen MODI firmware GPIO definitions</text>

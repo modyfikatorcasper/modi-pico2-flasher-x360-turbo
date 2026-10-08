@@ -37,3 +37,10 @@ Szczególne podziękowania dla:
 Integracja MODI i kierunek projektu: **MODI Diagnostic Lab / Modyfikator89**.
 
 Powyższe podziękowania **nie oznaczają** oficjalnego wsparcia, sponsoringu ani powiązania któregoś z projektów lub autorów z MODI.
+
+
+## MODI Chip Flasher — underlying technology
+
+The MODI chip-programming feature uses the DirtyJTAG solution and its upstream contributors, with the existing SVF/XSVF helper. Original credits and licenses are preserved. MODI provides the integration and user workflow.
+
+Funkcja MODI Chip Flasher wykorzystuje rozwiązanie DirtyJTAG i pracę jego autorów oraz istniejący helper SVF/XSVF. Zachowujemy autorstwo i licencje; MODI dostarcza integrację i workflow użytkownika.

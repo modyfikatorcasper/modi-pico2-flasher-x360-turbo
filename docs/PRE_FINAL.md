@@ -10,7 +10,6 @@ The Stable channel preserves the tested TURBO v0.9.1-beta binaries. The Alpha ch
 |---|---|---|
 | TURBO NAND / eMMC | **TESTED** | Tested NAND/eMMC ranges. Binary bytes and timings unchanged. |
 | Audio / Sonus | **PREVIEW · HARDWARE VALIDATION PENDING** | Digital ISD2100. MODI RDY = GP22. |
-| Glitch Chip Programmer / DirtyJTAG | **PREVIEW · HARDWARE VALIDATION PENDING** | SVF/XSVF for ACE V3, CoolRunner and Matrix. Gowin .fs is not supported yet. |
 | UART / COM Monitor | **PREVIEW · HARDWARE VALIDATION PENDING** | Live receive, logs and spoken notifications. |
 | XeLL CPU Key Assistant | **PREVIEW** | Current LAN panel; target UART/LIVE key capture is in development. |
 | HANA / SMBus LIVE Monitor | **PREVIEW · HARDWARE VALIDATION PENDING** | Passive SMBus capture. Full HDMI diagnostics need separate validation. |
@@ -18,9 +17,9 @@ The Stable channel preserves the tested TURBO v0.9.1-beta binaries. The Alpha ch
 | Memory Conversions | **IN DEVELOPMENT** | Planned images for physical memory replacement with 16 MB NAND. |
 | Xbox 360 DVD Remarry | **RESEARCH** | Future research module; no remarry function in current firmware. |
 
-**Current state:** one Pico runs one UF2 profile. Audio, DirtyJTAG, UART and LIVE are separate builds. LIVE can receive UART and SMBus concurrently; this does not combine all flashing modes. Automatic mode switching in one firmware and one shared application are development goals.
+**Current state:** one Pico runs one UF2 profile. Audio, MODI Chip Flasher, UART and LIVE are separate builds. LIVE can receive UART and SMBus concurrently; this does not combine all flashing modes. Automatic mode switching in one firmware and one shared application are development goals.
 
-The full local JRunner LIVE preview is excluded from the public package. Alpha contains the MODI-Flashship companion for Audio, DirtyJTAG, standalone UART and XeLL LAN; the raw LIVE profile needs the compatible MLIV host from local development. A public updater combining these modes with J-Runner remains to be completed.
+The full local JRunner LIVE preview is excluded from the public package. Alpha contains the MODI-Flashship companion for Audio, MODI Chip Flasher, standalone UART and XeLL LAN; the raw LIVE profile needs the compatible MLIV host from local development. A public updater combining these modes with J-Runner remains to be completed.
 
 Tested TURBO and Setup were not rebuilt. Alpha packages existing profile builds; it is not a new unified firmware. No new hardware test was performed during release preparation.
 
@@ -31,3 +30,4 @@ Before 1.0: unified firmware and safe mode switching; public host updater; hardw
 [Conversions](CONVERSIONS.md) · [Wiring](FLASHSHIP_WIRING.md) · [Alpha instructions](ALPHA.md)
 
 The SOURCE archive contains only required firmware source and dependency source/notices. Private Setup, JRunner.MODI and MODI application source remains non-public.
+

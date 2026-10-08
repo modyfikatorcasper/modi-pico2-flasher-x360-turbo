@@ -2,7 +2,7 @@
 
 [Polski](FLASHSHIP_WIRING_PL.md) · [Pre-final status](PRE_FINAL.md) · [NAND and eMMC](WIRING.md)
 
-These connections belong to the new preview profiles. Audio, DirtyJTAG and LIVE require physical hardware validation. One Pico runs one active UF2 profile in this build. Restore the tested TURBO profile for NAND/eMMC.
+These connections belong to the new preview profiles. Audio, MODI Chip Flasher and LIVE require physical hardware validation. One Pico runs one active UF2 profile in this build. Restore the tested TURBO profile for NAND/eMMC.
 
 Diagram colours are illustrative and do not specify the existing NAND GP0–GP5 cable colours. The photographs show selected board revisions with marked pads. Separate SVG signal schematics do not represent physical pad distances or every board revision. Check your board labels before soldering.
 
@@ -12,7 +12,7 @@ Diagram colours are illustrative and do not specify the existing NAND GP0–GP5 
 
 [Signal schematic](../assets/wiring/wiring-flashship-header-rp2350-plus.svg)
 
-Rear view, USB at the top. Audio uses GP12–GP15 plus GP22. DirtyJTAG uses GP16–GP19; GP20/GP21 are optional resets. LIVE uses GP9–GP11 as inputs. Common ground and 3.3 V logic are required. Do not connect 5 V or RS-232 to GPIO. Power the target according to its documentation.
+Rear view, USB at the top. Audio uses GP12–GP15 plus GP22. MODI Chip Flasher uses GP16–GP19; GP20/GP21 are optional resets. LIVE uses GP9–GP11 as inputs. Common ground and 3.3 V logic are required. Do not connect 5 V or RS-232 to GPIO. Power the target according to its documentation.
 
 ## Trinity and Corona Audio Sonus
 
@@ -39,7 +39,7 @@ Rear view, USB at the top. Audio uses GP12–GP15 plus GP22. DirtyJTAG uses GP16
 
 Console pad names come from the [PicoFlasher author's Audio/Sonus table](https://github.com/X360Tools/PicoFlasher/blob/master/README.md); GP22 follows our firmware. Before the first write, obtain and preserve two matching full Audio backups. PLAY depends on the voice indexes in the image.
 
-## DirtyJTAG glitch chip programming
+## MODI Chip Flasher
 
 `MODI-DirtyJTAG-PREVIEW.uf2` uses the user's existing `xsvftool-dirtyjtag.exe` installation for SVF/XSVF. Start at 100 kHz and obtain a stable IDCODE. Use timing files for the exact model and revision.
 
@@ -77,15 +77,10 @@ Select PRG on variants with a programming switch.
 
 Use printed TDI/TDO/TCK/TMS/GND labels. The diagram does not establish one physical pad order for all Matrix revisions.
 
-### ACE family and Gowin
-
-![ACE family](../assets/wiring/wiring-dirtyjtag-ace-family.svg)
-
-ACE V3 Xilinx and ACE V3+ / V4 / V5 Gowin need different programming paths. Gowin `.fs` programming is **not implemented** in this preview. Do not apply ACE V3 pad positions to Gowin. References: [Gowin ACE instructions](https://consolemods.org/wiki/Xbox_360:Programming_Gowin-based_X360ACE_Chips), [xFlasher 360 User Guide](https://themodshop.co/xFlasher_360_User_Guide.pdf), [xvc-pico developer](https://github.com/kholia/xvc-pico/tree/ng).
 
 ## Printable diagrams
 
-[Audio and DirtyJTAG PDF](../assets/wiring/MODI-AUDIO-DIRTYJTAG-WIRING.pdf). SVGs remain sharp when enlarged. The close-ups above contain hardware photographs with MODI overlays. The PDF and separate SVG files contain signal schematics. [Photo sources and attribution](PHOTO-CREDITS.md).
+Open the full-size image above to enlarge or print. SVGs remain sharp when enlarged. The close-ups above contain hardware photographs with MODI overlays. The PDF and separate SVG files contain signal schematics. [Photo sources and attribution](PHOTO-CREDITS.md).
 
 ## Target MODI maps
 
@@ -94,3 +89,4 @@ Current reference photographs are temporary; authors and notices are retained. W
 One device, one target service header, one application and successive service modes. Operations do not all run concurrently. The existing NAND GP0–GP5 header does not contain the additional Audio/JTAG/LIVE pins; the shared header must expose them according to the pin map.
 
 [ULTIMATE](ULTIMATE.md) · [Alpha](ALPHA.md)
+

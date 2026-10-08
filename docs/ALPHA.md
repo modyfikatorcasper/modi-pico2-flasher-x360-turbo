@@ -17,16 +17,18 @@ This packages existing builds from 5 October 2026, published on 8 October. It is
 |---|---|
 | MODI-Pico2-Flasher-X360-TURBO.uf2 | Stable JRunner.MODI; NAND/eMMC |
 | MODI-Audio-Sonus-PREVIEW.uf2 | MODI-Flashship → Audio / Sonus; GP12–15, **RDY GP22** |
-| MODI-DirtyJTAG-PREVIEW.uf2 | MODI-Flashship → DirtyJTAG; GP16–19; xsvftool helper and driver from your own installation |
+| MODI-DirtyJTAG-PREVIEW.uf2 | MODI-Flashship → MODI Chip Flasher; GP16–19; xsvftool helper and driver from your own installation |
 | MODI-UART-MONITOR-PREVIEW.uf2 | MODI-Flashship → COM / UART; MUAR; GP9 RX |
 | MODI-LIVE-UART-HANA-PREVIEW.uf2 | Advanced UART+SMBus profile; requires the local-preview MLIV host, not included in this public ZIP |
 
 The primary MODI-X360-ULTIMATE-UART-ALPHA.uf2 download has identical bytes to MODI-UART-MONITOR-PREVIEW.uf2. It provides UART receive only, not the entire ULTIMATE feature set.
 
-XeLL LAN is a separate application panel; CPU Key capture without LAN and full Automatic RGH are not completed. Memory conversions, DVD Remarry, Gowin .fs and a full HDMI test are unavailable. No full JRunner.exe or external DLLs/helpers are bundled.
+
+XeLL LAN remains a separate application panel. Automatic RGH, CPU Key through UART/LIVE, memory conversions and DVD Remarry remain in development. Passive SMBus capture is not a full HDMI test.
 
 ## Tests and source
 
 Companion offline tests exited with code 0; UF2 structures, ZIP CRC and hashes were checked. This is not a hardware test. Audio, JTAG, UART and SMBus require physical validation. One SOURCE archive contains corresponding source for all five profiles and required dependencies/licenses. It contains no private application source.
 
 [Wiring](FLASHSHIP_WIRING.md) · [Photo credits](PHOTO-CREDITS.md)
+

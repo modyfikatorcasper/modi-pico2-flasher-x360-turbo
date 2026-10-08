@@ -110,7 +110,6 @@ TURBO pozostaje sprawdzonym modułem flashowania. ULTIMATE rozwija go w docelow�
 |---|---|---|
 | TURBO NAND / eMMC | **TESTED** | Sprawdzony zakres NAND/eMMC. Binaria i czasy bez zmian. |
 | Audio / Sonus | **PREVIEW · HARDWARE VALIDATION PENDING** | Cyfrowe ISD2100. MODI RDY = GP22. |
-| Glitch Chip Programmer / DirtyJTAG | **PREVIEW · HARDWARE VALIDATION PENDING** | SVF/XSVF dla ACE V3, CoolRunner i Matrix. Gowin .fs jeszcze nieobsługiwany. |
 | UART / COM Monitor | **PREVIEW · HARDWARE VALIDATION PENDING** | Odbiór na żywo, logi i komunikaty głosowe. |
 | XeLL CPU Key Assistant | **PREVIEW** | Obecny panel LAN; docelowe przechwycenie przez UART/LIVE w rozwoju. |
 | HANA / SMBus LIVE Monitor | **PREVIEW · HARDWARE VALIDATION PENDING** | Pasywny nasłuch SMBus. Pełna diagnostyka HDMI wymaga osobnej walidacji. |
@@ -118,7 +117,7 @@ TURBO pozostaje sprawdzonym modułem flashowania. ULTIMATE rozwija go w docelow�
 | Memory Conversions | **IN DEVELOPMENT** | Planowane obrazy pod fizyczną wymianę układu pamięci na NAND 16 MB. |
 | Xbox 360 DVD Remarry | **RESEARCH** | Przyszły moduł badawczy; brak funkcji remarry w obecnym firmware. |
 
-**Stan obecny:** jeden Pico uruchamia jeden profil UF2. Audio, DirtyJTAG, UART oraz LIVE są oddzielnymi buildami. LIVE może odbierać UART i SMBus jednocześnie; nie łączy to wszystkich trybów flashowania. Automatyczne przełączanie trybów w jednym firmware i jeden wspólny program są celem rozwoju.
+**Stan obecny:** jeden Pico uruchamia jeden profil UF2. Audio, MODI Chip Flasher, UART oraz LIVE są oddzielnymi buildami. LIVE może odbierać UART i SMBus jednocześnie; nie łączy to wszystkich trybów flashowania. Automatyczne przełączanie trybów w jednym firmware i jeden wspólny program są celem rozwoju.
 
 [ULTIMATE](docs/ULTIMATE_PL.md) · [Conversions](docs/CONVERSIONS_PL.md) · [Alpha](docs/ALPHA_PL.md) · [Wiring](docs/FLASHSHIP_WIRING_PL.md)
 
@@ -152,3 +151,4 @@ Zobacz też: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)
 [Pełny disclaimer](DISCLAIMER.md) · [Status wydania i hashe](docs/RELEASE_STATUS_PL.md)
 
 **Strona projektu:** https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/
+

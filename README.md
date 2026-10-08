@@ -113,7 +113,6 @@ TURBO remains the tested flashing module. ULTIMATE expands it into a target serv
 |---|---|---|
 | TURBO NAND / eMMC | **TESTED** | Tested NAND/eMMC ranges. Binary bytes and timings unchanged. |
 | Audio / Sonus | **PREVIEW · HARDWARE VALIDATION PENDING** | Digital ISD2100. MODI RDY = GP22. |
-| Glitch Chip Programmer / DirtyJTAG | **PREVIEW · HARDWARE VALIDATION PENDING** | SVF/XSVF for ACE V3, CoolRunner and Matrix. Gowin .fs is not supported yet. |
 | UART / COM Monitor | **PREVIEW · HARDWARE VALIDATION PENDING** | Live receive, logs and spoken notifications. |
 | XeLL CPU Key Assistant | **PREVIEW** | Current LAN panel; target UART/LIVE key capture is in development. |
 | HANA / SMBus LIVE Monitor | **PREVIEW · HARDWARE VALIDATION PENDING** | Passive SMBus capture. Full HDMI diagnostics need separate validation. |
@@ -121,7 +120,7 @@ TURBO remains the tested flashing module. ULTIMATE expands it into a target serv
 | Memory Conversions | **IN DEVELOPMENT** | Planned images for physical memory replacement with 16 MB NAND. |
 | Xbox 360 DVD Remarry | **RESEARCH** | Future research module; no remarry function in current firmware. |
 
-**Current state:** one Pico runs one UF2 profile. Audio, DirtyJTAG, UART and LIVE are separate builds. LIVE can receive UART and SMBus concurrently; this does not combine all flashing modes. Automatic mode switching in one firmware and one shared application are development goals.
+**Current state:** one Pico runs one UF2 profile. Audio, MODI Chip Flasher, UART and LIVE are separate builds. LIVE can receive UART and SMBus concurrently; this does not combine all flashing modes. Automatic mode switching in one firmware and one shared application are development goals.
 
 [ULTIMATE](docs/ULTIMATE.md) · [Conversions](docs/CONVERSIONS.md) · [Alpha](docs/ALPHA.md) · [Wiring](docs/FLASHSHIP_WIRING.md)
 
@@ -155,3 +154,4 @@ See also: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)
 [Full disclaimer](DISCLAIMER.md) · [Release status and hashes](docs/RELEASE_STATUS.md)
 
 **Project page:** https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/
+

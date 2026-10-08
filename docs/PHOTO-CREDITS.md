@@ -26,3 +26,8 @@ Pozostałe fotografie zachowują prawa ich autorów. Podanie źródła nie nadaj
 ## Scope
 
 Colours in the new Audio and JTAG graphics identify signals in those graphics. They do not redefine the verified GP0–GP5 NAND cable colours. The photographs do not imply hardware validation of the preview modules. ACE V3+ / V4 / V5 Gowin programming remains unsupported in this preview.
+
+
+## Updated Waveshare board reference
+
+Chip/Audio diagrams use the official Waveshare RP2350-Plus pinout photograph: https://www.waveshare.com/img/devkit/RP2350-Plus/RP2350-Plus-details-inter.jpg . Source: https://www.waveshare.com/product/rp2350-plus.htm . Board image copyright Waveshare; MODI signal overlays. The RP2350-Plus image matches the project hardware; RP2040-Plus is a different model.
