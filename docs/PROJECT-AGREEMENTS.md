@@ -15,7 +15,7 @@ Established by the project owner on **8 October 2026**. “Back to FLASHSHIP / U
 
 **ONE DEVICE. ONE HEADER. ONE SOFTWARE.**
 
-Levy's principle: do not reinvent the wheel. Use proven community components, preserve authorship, and improve integration, automation, speed and simplicity.
+An original project should make a meaningful contribution: new capabilities, wider access or improvements that were previously missing. Research and reverse engineering take time, often weeks or years before a small advance opens the next path. MODI develops a coherent service tool and its own solutions while acknowledging the work of others.
 
 This is the target architecture. Current Alpha uses separate UF2 profiles; unified firmware and automatic mode switching still require implementation and validation.
 
@@ -73,3 +73,7 @@ First major entry: from a few-dollar flasher to **FLASHSHIP + X360 ULTIMATE**.
 ## Publishing
 
 Users receive ready files and a simple installation. Private MODI application code stays private. Required corresponding firmware sources and notices remain available under applicable licenses. These agreements do not change tested UF2/Setup bytes or test results.
+
+## Levy's principle
+
+Do not reinvent the wheel.

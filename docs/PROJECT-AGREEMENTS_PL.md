@@ -15,7 +15,7 @@ Ustalone przez właściciela projektu: **8 października 2026**. Hasło „wraca
 
 **ONE DEVICE. ONE HEADER. ONE SOFTWARE.**
 
-Zasada od Lewego: nie wymyślamy koła na nowo. Korzystamy ze sprawdzonych elementów sceny i zachowujemy autorstwo. Przewagę budujemy integracją, automatyzacją, szybkością i prostotą.
+Własny projekt powinien wnosić rzeczywisty wkład: nowe możliwości, lepszą dostępność albo usprawnienia, których wcześniej brakowało. Research i reverse engineering wymagają czasu, często tygodni lub lat, zanim mały krok otworzy drogę do następnego. W MODI rozwijamy spójne narzędzie serwisowe i własne rozwiązania, a cudzą pracę opisujemy z zachowaniem autorstwa.
 
 To docelowa architektura. Obecny Alpha nadal używa osobnych profili UF2; jedno wspólne firmware i automatyczne przełączanie trybów wymagają realizacji i testów.
 
@@ -73,3 +73,7 @@ Pierwszy większy wpis: od prostego flashera za kilka dolarów do **FLASHSHIP + 
 ## Publikacja
 
 Użytkownik dostaje gotowe pliki i prostą instalację. Prywatny kod aplikacji MODI pozostaje prywatny. Wymagane źródła odpowiadające rozpowszechnianemu firmware i notices pozostają dostępne zgodnie z licencjami. Ustalenia nie zmieniają bajtów przetestowanych UF2/Setup ani wyników testów.
+
+## Zasada od Lewego
+
+Nie wymyślaj koła na nowo.

@@ -49,9 +49,9 @@ Konwersje obejmują osobne Corona V2/V4 4 GB, Winchester z wymaganymi danymi kon
 
 Własne zdjęcia przodu/tyłu FLASHSHIP i makra punktów zastąpią tymczasowe fotografie referencyjne. Do tego czasu źródła i autorzy pozostają widoczni. Na docelowych grafikach płytkę podpisujemy MODI FLASHSHIP.
 
-### Zasada od Lewego
+### Własny wkład
 
-Nie wymyślamy koła na nowo. Budujemy na sprawdzonych rozwiązaniach sceny, zachowując autorstwo. Nasza praca skupia się na integracji, automatyzacji, szybkości i prostocie.
+Własny projekt powinien wnosić rzeczywisty wkład: nowe możliwości, lepszą dostępność albo usprawnienia, których wcześniej brakowało. Research i reverse engineering wymagają czasu, często tygodni lub lat, zanim mały krok otworzy drogę do następnego. W MODI rozwijamy spójne narzędzie serwisowe i własne rozwiązania, a cudzą pracę opisujemy z zachowaniem autorstwa.
 
 ### Następny krok / warunek VERIFIED
 
@@ -67,3 +67,7 @@ Wspólne tryby wymagają testów sprzętowych: Audio backup/write/readback/play,
 - Wynik i dowód:
 - Porażka / rozwiązanie:
 - Następny krok:
+
+## Zasada od Lewego
+
+Nie wymyślaj koła na nowo.

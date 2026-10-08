@@ -49,9 +49,9 @@ Conversions cover separate Corona V2/V4 4 GB paths, Winchester with required con
 
 Our own FLASHSHIP front/back photographs and point macros will replace temporary reference photographs. Preserve sources and attribution until replacement. Label the device MODI FLASHSHIP on final diagrams.
 
-### Levy's principle
+### Our own contribution
 
-Do not reinvent the wheel. Build on proven community solutions and preserve authorship. Focus our work on integration, automation, speed and simplicity.
+An original project should make a meaningful contribution: new capabilities, wider access or improvements that were previously missing. Research and reverse engineering take time, often weeks or years before a small advance opens the next path. MODI develops a coherent service tool and its own solutions while acknowledging the work of others.
 
 ### Next step / VERIFIED gate
 
@@ -67,3 +67,7 @@ Shared modes require hardware validation: Audio backup/write/readback/play, chip
 - Result and evidence:
 - Failure / solution:
 - Next step:
+
+## Levy's principle
+
+Do not reinvent the wheel.
