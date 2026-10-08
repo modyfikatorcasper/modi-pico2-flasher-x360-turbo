@@ -1,39 +1,33 @@
-# MODI pre-final and final release milestone
+# MODI X360 ULTIMATE — pre-final / Alpha
 
-[Polski](PRE_FINAL_PL.md) · [Audio and DirtyJTAG wiring](FLASHSHIP_WIRING.md)
+[Polski](PRE_FINAL_PL.md) · [ULTIMATE](ULTIMATE.md)
 
-The local pre-final package dated 8 October 2026 consolidates the tested TURBO baseline with existing Audio, DirtyJTAG and LIVE previews. [v0.9.1-beta](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/tag/v0.9.1-beta) remains the public release. Preview documentation and diagrams are public; full local JRunner.exe preview distribution still requires an audit.
+**ULTIMATE PREVIEW / IN DEVELOPMENT — 2026-10-08**
 
-## Package scope
+The Stable channel preserves the tested TURBO v0.9.1-beta binaries. The Alpha channel exposes separate preview profiles and their corresponding source. The previous v0.9.1-beta name, files and tag remain preserved.
 
-| Component | Status |
-|---|---|
-| TURBO NAND/eMMC and MODI-Setup.exe | Tested binaries; original bytes and hashes preserved |
-| Audio Sonus | Builds and offline tests passed; physical tests pending |
-| DirtyJTAG ACE V3 / CoolRunner / Matrix | SVF/XSVF preview; chip tests pending |
-| ACE V3+ / V4 / V5 Gowin | .fs backend not implemented |
-| UART plus passive SMBus/HANA | Concurrent capture implemented in LIVE; hardware validation pending |
-| XeLL over LAN | Local preview panel, key validation and local save |
-| Image for physical replacement with NAND 16 MB | Final planned development feature; not implemented |
+| Module | Status | Scope |
+|---|---|---|
+| TURBO NAND / eMMC | **TESTED** | Tested NAND/eMMC ranges. Binary bytes and timings unchanged. |
+| Audio / Sonus | **PREVIEW · HARDWARE VALIDATION PENDING** | Digital ISD2100. MODI RDY = GP22. |
+| Glitch Chip Programmer / DirtyJTAG | **PREVIEW · HARDWARE VALIDATION PENDING** | SVF/XSVF for ACE V3, CoolRunner and Matrix. Gowin .fs is not supported yet. |
+| UART / COM Monitor | **PREVIEW · HARDWARE VALIDATION PENDING** | Live receive, logs and spoken notifications. |
+| XeLL CPU Key Assistant | **PREVIEW** | Current LAN panel; target UART/LIVE key capture is in development. |
+| HANA / SMBus LIVE Monitor | **PREVIEW · HARDWARE VALIDATION PENDING** | Passive SMBus capture. Full HDMI diagnostics need separate validation. |
+| Automatic RGH Assistant | **IN DEVELOPMENT** | Planned single workflow with two backups and final readback. |
+| Memory Conversions | **IN DEVELOPMENT** | Planned images for physical memory replacement with 16 MB NAND. |
+| Xbox 360 DVD Remarry | **RESEARCH** | Future research module; no remarry function in current firmware. |
 
-Setup still installs the existing baseline. The LIVE EXE is an additional preview for a separate copy of a complete installation. Audio/DirtyJTAG use the MODI-Flashship companion. One Pico runs one UF2 profile; no single firmware currently combines all programmers and capture functions.
+**Current state:** one Pico runs one UF2 profile. Audio, DirtyJTAG, UART and LIVE are separate builds. LIVE can receive UART and SMBus concurrently; this does not combine all flashing modes. Automatic mode switching in one firmware and one shared application are development goals.
 
-## Final development feature
+The full local JRunner LIVE preview is excluded from the public package. Alpha contains the MODI-Flashship companion for Audio, DirtyJTAG, standalone UART and XeLL LAN; the raw LIVE profile needs the compatible MLIV host from local development. A public updater combining these modes with J-Runner remains to be completed.
 
-Confirmed scope: one click prepares an image for **physical replacement** of Corona eMMC or Jasper 256/512 MB NAND with a compatible 16 MB NAND. Each motherboard revision and target chip must have verified support before this function is offered.
+Tested TURBO and Setup were not rebuilt. Alpha packages existing profile builds; it is not a new unified firmware. No new hardware test was performed during release preparation.
 
-Planned workflow:
+## 1.0 requirements
 
-1. Preserve original backups and require independently matching reads and hashes.
-2. Identify revision, source geometry, ECC/spare, remaps and console identity; validate the CPU Key when required.
-3. Establish compatibility of the physical 16 MB target, wiring, board configuration, bootloader and SMC.
-4. Generate an image using this console's valid data and the target geometry, ECC and remapping.
-5. Independently validate, write a new output file and produce a hash report. Unsupported combinations stop.
+Before 1.0: unified firmware and safe mode switching; public host updater; hardware tests for Audio (ID/backup/write/readback/play), JTAG (IDCODE/program/verify), UART and concurrent SMBus; CPU Key and full RGH validation; each conversion combination with full readback and console boot; original photos; mobile/PL/EN QA; source and license compliance. DVD Remarry remains research outside the 1.0 commitment.
 
-A compatible image must be rebuilt; truncation alone is insufficient. Software cannot change the physical memory interface or board configuration. Image preparation does not automatically flash the console. Target programming and full readback are separate operations after hardware verification.
+[Conversions](CONVERSIONS.md) · [Wiring](FLASHSHIP_WIRING.md) · [Alpha instructions](ALPHA.md)
 
-## Final release requirements
-
-Conversion needs image fixtures plus full write, matching readback and a real console boot for supported revisions. New modules require physical Audio, JTAG and simultaneous UART/SMBus tests. Host redistribution needs a completed audit or a patch/updater distribution.
-
-The public release keeps four assets: primary UF2, complete installation ZIP, one SOURCE ZIP covering every distributed firmware profile, and SHA256SUMS.txt. Private MODI-Setup, J-Runner and MODI integration source remains outside the public repository.
+The SOURCE archive contains only required firmware source and dependency source/notices. Private Setup, JRunner.MODI and MODI application source remains non-public.

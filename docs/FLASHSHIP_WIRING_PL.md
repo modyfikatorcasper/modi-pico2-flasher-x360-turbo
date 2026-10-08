@@ -1,4 +1,4 @@
-# Podłączenia MODI Audio i DirtyJTAG
+# MODI X360 ULTIMATE — podłączenia preview
 
 [English](FLASHSHIP_WIRING.md) · [Status pre-final](PRE_FINAL_PL.md) · [NAND i eMMC](WIRING_PL.md)
 
@@ -86,3 +86,11 @@ ACE V3 Xilinx oraz ACE V3+ / V4 / V5 Gowin wymagają innych ścieżek programowa
 ## Pliki do druku
 
 [Diagramy Audio i DirtyJTAG w PDF](../assets/wiring/MODI-AUDIO-DIRTYJTAG-WIRING.pdf). SVG można powiększać bez utraty ostrości. Zbliżenia powyżej zawierają kadry zdjęć sprzętu i oznaczenia MODI. PDF oraz osobne SVG zawierają schematy sygnałów. [Źródła fotografii i autorzy](PHOTO-CREDITS.md).
+
+## Docelowe mapy MODI
+
+Obecne fotografie referencyjne są tymczasowe; zachowujemy autorów i oznaczenia. Potrzebujemy własnych zdjęć MODI: całych płyt Corona (osobno rewizje), Trinity i Fat; makro padów Audio, UART/SMBus i punktów konwersji; przodu/tyłu chipów ACE, CoolRunner i Matrix; RP2350 Plus z kompletnym headerem. Docelowy układ: **lewa — pełna płyta z lokalizacją; środek — makro padów; prawa — rzeczywisty Pico z GPIO**. Na grafikach krótkie nazwy sygnałów, opisy PL/EN pod spodem; na telefonie pojedyncza kolumna i powiększenie.
+
+Jedno urządzenie, jeden docelowy header serwisowy, jeden program i kolejne tryby pracy. Nie wszystkie operacje równocześnie. Istniejący header NAND GP0–GP5 nie zawiera dodatkowych pinów Audio/JTAG/LIVE; wspólny header wymaga ich wyprowadzenia zgodnie z mapą.
+
+[ULTIMATE](ULTIMATE_PL.md) · [Alpha](ALPHA_PL.md)

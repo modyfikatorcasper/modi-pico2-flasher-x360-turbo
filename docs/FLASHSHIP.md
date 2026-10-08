@@ -1,27 +1,25 @@
-# MODI FLASHSHIP and pre-final status
+# MODI X360 ULTIMATE — service modules
 
 [Polski](FLASHSHIP_PL.md)
 
-The local pre-final contains built Audio/Sonus, DirtyJTAG and LIVE UART/HANA previews with XeLL LAN panels. New modules passed offline tests and need physical validation. The public NAND/eMMC v0.9.1-beta baseline retains its existing binaries.
+**ULTIMATE PREVIEW / IN DEVELOPMENT.** TURBO remains the tested flashing module. ULTIMATE expands it into a target service platform: backup, RGH, CPU Key, Audio/Sonus, glitch-chip programming, LIVE and memory conversions.
 
-[Package status and final 16 MB conversion milestone](PRE_FINAL.md) · [Wiring diagrams and connections](FLASHSHIP_WIRING.md)
+| Module | Status | Scope |
+|---|---|---|
+| TURBO NAND / eMMC | **TESTED** | Tested NAND/eMMC ranges. Binary bytes and timings unchanged. |
+| Audio / Sonus | **PREVIEW · HARDWARE VALIDATION PENDING** | Digital ISD2100. MODI RDY = GP22. |
+| Glitch Chip Programmer / DirtyJTAG | **PREVIEW · HARDWARE VALIDATION PENDING** | SVF/XSVF for ACE V3, CoolRunner and Matrix. Gowin .fs is not supported yet. |
+| UART / COM Monitor | **PREVIEW · HARDWARE VALIDATION PENDING** | Live receive, logs and spoken notifications. |
+| XeLL CPU Key Assistant | **PREVIEW** | Current LAN panel; target UART/LIVE key capture is in development. |
+| HANA / SMBus LIVE Monitor | **PREVIEW · HARDWARE VALIDATION PENDING** | Passive SMBus capture. Full HDMI diagnostics need separate validation. |
+| Automatic RGH Assistant | **IN DEVELOPMENT** | Planned single workflow with two backups and final readback. |
+| Memory Conversions | **IN DEVELOPMENT** | Planned images for physical memory replacement with 16 MB NAND. |
+| Xbox 360 DVD Remarry | **RESEARCH** | Future research module; no remarry function in current firmware. |
 
-## Audio Sonus
+**Current state:** one Pico runs one UF2 profile. Audio, DirtyJTAG, UART and LIVE are separate builds. LIVE can receive UART and SMBus concurrently; this does not combine all flashing modes. Automatic mode switching in one firmware and one shared application are development goals.
 
-Digital ISD2100: GP12 MISO, GP13 SSB, GP14 SCLK, GP15 MOSI, **GP22 RDY/BSYB**, GND. Separate UF2 and MODI-Flashship companion. This does not target analog 5 V ISD1200 devices.
+One device, one target service header, one application and successive service modes. Operations do not all run concurrently. The existing NAND GP0–GP5 header does not contain the additional Audio/JTAG/LIVE pins; the shared header must expose them according to the pin map.
 
-## DirtyJTAG
+[ULTIMATE](ULTIMATE.md) · [Conversions](CONVERSIONS.md) · [Wiring](FLASHSHIP_WIRING.md) · [Pre-final](PRE_FINAL.md) · [Alpha](ALPHA.md)
 
-GP16 TDI, GP17 TDO, GP18 TCK, GP19 TMS, GND; GP20/21 optional resets. SVF/XSVF Xilinx programming path preview. ACE V3+ / V4 / V5 Gowin .fs needs a separate integration.
-
-## LIVE UART HANA and XeLL
-
-LIVE captures UART on GP9 and passive SMBus on GP10/GP11 concurrently. XeLL over LAN can run on the PC at the same time. Captured HANA traffic is not a full HDMI health test. Audio and DirtyJTAG remain separate profiles.
-
-## Final planned development feature
-
-Automatic image preparation for physical eMMC or Jasper 256/512 MB replacement with NAND 16 MB. Not implemented yet; scope and requirements are in the pre-final status.
-
-## Upstream J-Runner support
-
-Optional upstream integration remains a proposal. MODI does not imply maintainer acceptance or endorsement.
+**MODI Audio RDY = GP22; GP11 = passive SMB_DATA.** HANA / SMBus LIVE capture is not a validated HDMI health test. Gowin ACE V3+ / V4 / V5 .fs programming remains unsupported. Native upstream J-Runner support remains a proposal.

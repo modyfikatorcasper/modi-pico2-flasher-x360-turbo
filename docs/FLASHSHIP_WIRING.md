@@ -1,4 +1,4 @@
-# MODI Audio and DirtyJTAG wiring
+# MODI X360 ULTIMATE — preview wiring
 
 [Polski](FLASHSHIP_WIRING_PL.md) · [Pre-final status](PRE_FINAL.md) · [NAND and eMMC](WIRING.md)
 
@@ -86,3 +86,11 @@ ACE V3 Xilinx and ACE V3+ / V4 / V5 Gowin need different programming paths. Gowi
 ## Printable diagrams
 
 [Audio and DirtyJTAG PDF](../assets/wiring/MODI-AUDIO-DIRTYJTAG-WIRING.pdf). SVGs remain sharp when enlarged. The close-ups above contain hardware photographs with MODI overlays. The PDF and separate SVG files contain signal schematics. [Photo sources and attribution](PHOTO-CREDITS.md).
+
+## Target MODI maps
+
+Current reference photographs are temporary; authors and notices are retained. We need original MODI photos: full Corona boards by revision, Trinity and Fat; macros of Audio, UART/SMBus and conversion pads; both sides of ACE, CoolRunner and Matrix chips; RP2350 Plus with the complete header. Target layout: **left — full board with location; centre — pad macro; right — actual Pico with GPIO**. Use short signal labels in graphics and PL/EN explanations below; phones use one column with enlargement.
+
+One device, one target service header, one application and successive service modes. Operations do not all run concurrently. The existing NAND GP0–GP5 header does not contain the additional Audio/JTAG/LIVE pins; the shared header must expose them according to the pin map.
+
+[ULTIMATE](ULTIMATE.md) · [Alpha](ALPHA.md)

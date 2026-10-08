@@ -99,22 +99,36 @@ The project is focused on:
 
 The project targets inexpensive RP2350 / Pico 2-class boards. The core development board can often be found for roughly **USD $5–6**, depending on region and supplier. This price refers to the board only and excludes wiring, adapters and shipping.
 
-## MODI FLASHSHIP
+## THE NEXT STEP: MODI X360 ULTIMATE
 
-| Feature | Status |
-|---|---|
-| Audio / Sonus | **Local preview; hardware validation pending** |
-| DirtyJTAG / glitch-chip programmer | **Local preview; hardware validation pending** |
-| UART / COM monitor | **Local preview; hardware validation pending** |
-| HANA diagnostics | **Passive LIVE capture preview; hardware validation pending** |
-| Native upstream J-Runner support | 🧩 **PROPOSED** |
+**All-in-One Xbox 360 Service Tool · ULTIMATE PREVIEW / IN DEVELOPMENT**
 
-Roadmap: [MODI FLASHSHIP](docs/FLASHSHIP.md) · [Polski](docs/FLASHSHIP_PL.md)
+![MODI X360 ULTIMATE](assets/logo/modi-x360-ultimate-transparent.png)
 
+TURBO remains the tested flashing module. ULTIMATE expands it into a target service platform: backup, RGH, CPU Key, Audio/Sonus, glitch-chip programming, LIVE and memory conversions.
 
-[Pre-final and 16 MB memory conversion milestone](docs/PRE_FINAL.md) · [Audio and DirtyJTAG wiring](docs/FLASHSHIP_WIRING.md)
+**ONE DEVICE. ONE HEADER. ONE SOFTWARE. FULL XBOX 360 SERVICE WORKFLOW.**
 
-New modules use separate UF2 profiles. ACE V3+ / V4 / V5 Gowin needs a further backend; the current programmer uses SVF/XSVF.
+| Module | Status | Scope |
+|---|---|---|
+| TURBO NAND / eMMC | **TESTED** | Tested NAND/eMMC ranges. Binary bytes and timings unchanged. |
+| Audio / Sonus | **PREVIEW · HARDWARE VALIDATION PENDING** | Digital ISD2100. MODI RDY = GP22. |
+| Glitch Chip Programmer / DirtyJTAG | **PREVIEW · HARDWARE VALIDATION PENDING** | SVF/XSVF for ACE V3, CoolRunner and Matrix. Gowin .fs is not supported yet. |
+| UART / COM Monitor | **PREVIEW · HARDWARE VALIDATION PENDING** | Live receive, logs and spoken notifications. |
+| XeLL CPU Key Assistant | **PREVIEW** | Current LAN panel; target UART/LIVE key capture is in development. |
+| HANA / SMBus LIVE Monitor | **PREVIEW · HARDWARE VALIDATION PENDING** | Passive SMBus capture. Full HDMI diagnostics need separate validation. |
+| Automatic RGH Assistant | **IN DEVELOPMENT** | Planned single workflow with two backups and final readback. |
+| Memory Conversions | **IN DEVELOPMENT** | Planned images for physical memory replacement with 16 MB NAND. |
+| Xbox 360 DVD Remarry | **RESEARCH** | Future research module; no remarry function in current firmware. |
+
+**Current state:** one Pico runs one UF2 profile. Audio, DirtyJTAG, UART and LIVE are separate builds. LIVE can receive UART and SMBus concurrently; this does not combine all flashing modes. Automatic mode switching in one firmware and one shared application are development goals.
+
+[ULTIMATE](docs/ULTIMATE.md) · [Conversions](docs/CONVERSIONS.md) · [Alpha](docs/ALPHA.md) · [Wiring](docs/FLASHSHIP_WIRING.md)
+
+**MODI Audio RDY = GP22; GP11 = passive SMB_DATA.**
+
+Stable: tested TURBO baseline. Alpha: new modules requiring hardware validation.
+
 
 ## Credits
 
