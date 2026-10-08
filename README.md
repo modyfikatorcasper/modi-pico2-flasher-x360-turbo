@@ -103,13 +103,18 @@ The project targets inexpensive RP2350 / Pico 2-class boards. The core developme
 
 | Feature | Status |
 |---|---|
-| Audio / Sonus | 🔜 **COMING SOON** |
-| DirtyJTAG / glitch-chip programmer | 💡 **PLANNED** |
-| UART / COM monitor | 💡 **PLANNED** |
-| HANA diagnostics | 🔬 **RESEARCH** |
+| Audio / Sonus | **Local preview; hardware validation pending** |
+| DirtyJTAG / glitch-chip programmer | **Local preview; hardware validation pending** |
+| UART / COM monitor | **Local preview; hardware validation pending** |
+| HANA diagnostics | **Passive LIVE capture preview; hardware validation pending** |
 | Native upstream J-Runner support | 🧩 **PROPOSED** |
 
 Roadmap: [MODI FLASHSHIP](docs/FLASHSHIP.md) · [Polski](docs/FLASHSHIP_PL.md)
+
+
+[Pre-final and 16 MB memory conversion milestone](docs/PRE_FINAL.md) · [Audio and DirtyJTAG wiring](docs/FLASHSHIP_WIRING.md)
+
+New modules use separate UF2 profiles. ACE V3+ / V4 / V5 Gowin needs a further backend; the current programmer uses SVF/XSVF.
 
 ## Credits
 

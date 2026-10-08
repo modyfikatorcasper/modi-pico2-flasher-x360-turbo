@@ -56,3 +56,9 @@ Sprawdź SHA256 paczki. Zachowaj zweryfikowany backup. Porównanie plików nie p
 ## Zgłoszenie problemu
 
 Podaj treść błędu, Windows, wersję Setup, J-Runnera, firmware, płytę i pamięć. Nie dołączaj CPU key ani prywatnych dumpów. To publiczna 0.9.1 Beta; użytkownik potwierdził testy sprzętowe 2026-10-04.
+
+## Nowe moduły pre-final
+
+[Audio Trinity i Corona oraz DirtyJTAG ACE, CoolRunner i Matrix](FLASHSHIP_WIRING_PL.md) · [Status i ostatni etap konwersji do 16 MB](PRE_FINAL_PL.md)
+
+Nowe połączenia dotyczą osobnych profili preview. Audio RDY używa GP22. Testy sprzętowe nowych modułów są do wykonania; publiczny instalator nadal dostarcza sprawdzoną bazę v0.9.1-beta.

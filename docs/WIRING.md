@@ -67,3 +67,9 @@ The table targets Falcon's J1D2 / J2B1 connections. The solder-area photograph i
 - [Falcon schematic](https://xbox360hub.com/wp-content/uploads/2021/02/Xbox_360_Falcon_Schematic.pdf): J1D2 / J2B1 header identification.
 
 Motherboard photography belongs to the credited sources. MODI adds the wiring overlay and tables. The RP2350-Plus insert is an AI-assisted cutout based on the owner's photograph; electrical mapping was checked against the original photographs and firmware, not generated labels. These diagrams document the existing build; they do not constitute a new hardware test.
+
+## New pre-final modules
+
+[Trinity and Corona Audio, plus ACE, CoolRunner and Matrix DirtyJTAG](FLASHSHIP_WIRING.md) · [Status and final 16 MB conversion milestone](PRE_FINAL.md)
+
+New connections use separate preview profiles. Audio RDY is GP22. Hardware validation of new modules is pending; the public installer still provides the tested v0.9.1-beta baseline.

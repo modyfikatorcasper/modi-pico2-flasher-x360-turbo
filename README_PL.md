@@ -100,13 +100,18 @@ Projekt celuje w niedrogie płytki RP2350 / Pico 2. Samą płytkę bazową możn
 
 | Funkcja | Status |
 |---|---|
-| Audio / Sonus | 🔜 **COMING SOON** |
-| DirtyJTAG / programator glitch chipów | 💡 **PLANNED** |
-| UART / COM monitor | 💡 **PLANNED** |
-| Diagnostyka HANA | 🔬 **RESEARCH** |
+| Audio / Sonus | **Lokalny preview; testy sprzętowe do wykonania** |
+| DirtyJTAG / programator glitch chipów | **Lokalny preview; testy sprzętowe do wykonania** |
+| UART / COM monitor | **Lokalny preview; testy sprzętowe do wykonania** |
+| Diagnostyka HANA | **Pasywny nasłuch LIVE preview; testy sprzętowe do wykonania** |
 | Natywne wsparcie upstream J-Runner | 🧩 **PROPOSED** |
 
 Roadmap: [MODI FLASHSHIP PL](docs/FLASHSHIP_PL.md) · [English](docs/FLASHSHIP.md)
+
+
+[Pre-final i konwersja pamięci do 16 MB](docs/PRE_FINAL_PL.md) · [Podłączenia Audio i DirtyJTAG](docs/FLASHSHIP_WIRING_PL.md)
+
+Nowe moduły mają oddzielne profile UF2. ACE V3+ / V4 / V5 Gowin wymagają dodatkowego backendu; obecny programator korzysta z SVF/XSVF.
 
 ## Podziękowania
 

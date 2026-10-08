@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900"><g font-family="Arial, sans-serif">
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#091109" stroke="#091109"/>
+<text x="48" y="63" fill="#78f541" font-size="22" font-weight="700">MODI FLASHSHIP / PRE-FINAL</text>
+<text x="48" y="111" fill="#edf4ed" font-size="36" font-weight="700">RP2350 Plus — additional headers</text>
+<text x="48" y="153" fill="#aebfae" font-size="22" font-weight="400">Rear view / tył • USB at top • labels take priority over position</text>
+<rect x="550" y="192" width="310" height="547" rx="12" fill="#142014" stroke="#395139"/>
+<rect x="635" y="188" width="140" height="35" rx="12" fill="#546054" stroke="#395139"/>
+<circle cx="552" cy="240" r="8" fill="#607060"/>
+<text x="382" y="246" fill="#607060" font-size="19" font-weight="400">VBUS</text>
+<circle cx="552" cy="264" r="8" fill="#607060"/>
+<text x="382" y="270" fill="#607060" font-size="19" font-weight="400">VSYS</text>
+<circle cx="552" cy="288" r="8" fill="#78f541"/>
+<text x="382" y="294" fill="#78f541" font-size="19" font-weight="400">GND</text>
+<circle cx="552" cy="312" r="8" fill="#607060"/>
+<text x="382" y="318" fill="#607060" font-size="19" font-weight="400">3V3_EN</text>
+<circle cx="552" cy="336" r="8" fill="#607060"/>
+<text x="382" y="342" fill="#607060" font-size="19" font-weight="400">3V3</text>
+<circle cx="552" cy="360" r="8" fill="#607060"/>
+<text x="382" y="366" fill="#607060" font-size="19" font-weight="400">ADC_VREF</text>
+<circle cx="552" cy="384" r="8" fill="#607060"/>
+<text x="382" y="390" fill="#607060" font-size="19" font-weight="400">GP28</text>
+<circle cx="552" cy="408" r="8" fill="#607060"/>
+<text x="382" y="414" fill="#607060" font-size="19" font-weight="400">AGND</text>
+<circle cx="552" cy="432" r="8" fill="#607060"/>
+<text x="382" y="438" fill="#607060" font-size="19" font-weight="400">GP27</text>
+<circle cx="552" cy="456" r="8" fill="#607060"/>
+<text x="382" y="462" fill="#607060" font-size="19" font-weight="400">GP26</text>
+<circle cx="552" cy="480" r="8" fill="#607060"/>
+<text x="382" y="486" fill="#607060" font-size="19" font-weight="400">RUN</text>
+<circle cx="552" cy="504" r="8" fill="#5aaeff"/>
+<text x="382" y="510" fill="#5aaeff" font-size="19" font-weight="700">GP22</text>
+<circle cx="552" cy="528" r="8" fill="#78f541"/>
+<text x="382" y="534" fill="#78f541" font-size="19" font-weight="400">GND</text>
+<circle cx="552" cy="552" r="8" fill="#607060"/>
+<text x="382" y="558" fill="#607060" font-size="19" font-weight="400">GP21</text>
+<circle cx="552" cy="576" r="8" fill="#607060"/>
+<text x="382" y="582" fill="#607060" font-size="19" font-weight="400">GP20</text>
+<circle cx="552" cy="600" r="8" fill="#46e59a"/>
+<text x="382" y="606" fill="#46e59a" font-size="19" font-weight="700">GP19</text>
+<circle cx="552" cy="624" r="8" fill="#ffdb59"/>
+<text x="382" y="630" fill="#ffdb59" font-size="19" font-weight="700">GP18</text>
+<circle cx="552" cy="648" r="8" fill="#78f541"/>
+<text x="382" y="654" fill="#78f541" font-size="19" font-weight="400">GND</text>
+<circle cx="552" cy="672" r="8" fill="#5aaeff"/>
+<text x="382" y="678" fill="#5aaeff" font-size="19" font-weight="700">GP17</text>
+<circle cx="552" cy="696" r="8" fill="#ff914a"/>
+<text x="382" y="702" fill="#ff914a" font-size="19" font-weight="700">GP16</text>
+<circle cx="858" cy="240" r="8" fill="#607060"/>
+<text x="886" y="246" fill="#607060" font-size="19" font-weight="400">GP0</text>
+<circle cx="858" cy="264" r="8" fill="#607060"/>
+<text x="886" y="270" fill="#607060" font-size="19" font-weight="400">GP1</text>
+<circle cx="858" cy="288" r="8" fill="#78f541"/>
+<text x="886" y="294" fill="#78f541" font-size="19" font-weight="400">GND</text>
+<circle cx="858" cy="312" r="8" fill="#607060"/>
+<text x="886" y="318" fill="#607060" font-size="19" font-weight="400">GP2</text>
+<circle cx="858" cy="336" r="8" fill="#607060"/>
+<text x="886" y="342" fill="#607060" font-size="19" font-weight="400">GP3</text>
+<circle cx="858" cy="360" r="8" fill="#607060"/>
+<text x="886" y="366" fill="#607060" font-size="19" font-weight="400">GP4</text>
+<circle cx="858" cy="384" r="8" fill="#607060"/>
+<text x="886" y="390" fill="#607060" font-size="19" font-weight="400">GP5</text>
+<circle cx="858" cy="408" r="8" fill="#78f541"/>
+<text x="886" y="414" fill="#78f541" font-size="19" font-weight="400">GND</text>
+<circle cx="858" cy="432" r="8" fill="#607060"/>
+<text x="886" y="438" fill="#607060" font-size="19" font-weight="400">GP6</text>
+<circle cx="858" cy="456" r="8" fill="#607060"/>
+<text x="886" y="462" fill="#607060" font-size="19" font-weight="400">GP7</text>
+<circle cx="858" cy="480" r="8" fill="#607060"/>
+<text x="886" y="486" fill="#607060" font-size="19" font-weight="400">GP8</text>
+<circle cx="858" cy="504" r="8" fill="#dca8ff"/>
+<text x="886" y="510" fill="#dca8ff" font-size="19" font-weight="700">GP9</text>
+<circle cx="858" cy="528" r="8" fill="#78f541"/>
+<text x="886" y="534" fill="#78f541" font-size="19" font-weight="400">GND</text>
+<circle cx="858" cy="552" r="8" fill="#dca8ff"/>
+<text x="886" y="558" fill="#dca8ff" font-size="19" font-weight="700">GP10</text>
+<circle cx="858" cy="576" r="8" fill="#dca8ff"/>
+<text x="886" y="582" fill="#dca8ff" font-size="19" font-weight="700">GP11</text>
+<circle cx="858" cy="600" r="8" fill="#ff914a"/>
+<text x="886" y="606" fill="#ff914a" font-size="19" font-weight="700">GP12</text>
+<circle cx="858" cy="624" r="8" fill="#bd8a64"/>
+<text x="886" y="630" fill="#bd8a64" font-size="19" font-weight="700">GP13</text>
+<circle cx="858" cy="648" r="8" fill="#78f541"/>
+<text x="886" y="654" fill="#78f541" font-size="19" font-weight="400">GND</text>
+<circle cx="858" cy="672" r="8" fill="#ffdb59"/>
+<text x="886" y="678" fill="#ffdb59" font-size="19" font-weight="700">GP14</text>
+<circle cx="858" cy="696" r="8" fill="#ff6572"/>
+<text x="886" y="702" fill="#ff6572" font-size="19" font-weight="700">GP15</text>
+<text x="588" y="465" fill="#78f541" font-size="25" font-weight="700">RP2350</text>
+<text x="588" y="498" fill="#78f541" font-size="25" font-weight="700">PLUS</text>
+<text x="48" y="240" fill="#78f541" font-size="27" font-weight="700">AUDIO</text>
+<text x="48" y="284" fill="#ff914a" font-size="22" font-weight="700">GP12 = MISO</text>
+<text x="48" y="328" fill="#bd8a64" font-size="22" font-weight="700">GP13 = SSB / CS_N</text>
+<text x="48" y="372" fill="#ffdb59" font-size="22" font-weight="700">GP14 = SCLK</text>
+<text x="48" y="416" fill="#ff6572" font-size="22" font-weight="700">GP15 = MOSI</text>
+<text x="48" y="460" fill="#5aaeff" font-size="22" font-weight="700">GP22 = RDY / BSYB</text>
+<text x="48" y="504" fill="#c1cec1" font-size="22" font-weight="700">GND = GND</text>
+<text x="1047" y="240" fill="#78f541" font-size="27" font-weight="700">DIRTYJTAG</text>
+<text x="1047" y="284" fill="#c1cec1" font-size="22" font-weight="700">GND = GND</text>
+<text x="1047" y="328" fill="#ffdb59" font-size="22" font-weight="700">GP18 = TCK</text>
+<text x="1047" y="372" fill="#5aaeff" font-size="22" font-weight="700">GP17 = TDO</text>
+<text x="1047" y="416" fill="#ff914a" font-size="22" font-weight="700">GP16 = TDI</text>
+<text x="1047" y="460" fill="#46e59a" font-size="22" font-weight="700">GP19 = TMS</text>
+<text x="1047" y="529" fill="#aebfae" font-size="20" font-weight="400">GP20 = SRST (optional)</text>
+<text x="1047" y="563" fill="#aebfae" font-size="20" font-weight="400">GP21 = TRST (optional)</text>
+<text x="48" y="591" fill="#dca8ff" font-size="24" font-weight="700">LIVE INPUTS</text>
+<text x="48" y="630" fill="#edf4ed" font-size="22" font-weight="400">GP9 = UART RX</text>
+<text x="48" y="665" fill="#edf4ed" font-size="22" font-weight="400">GP10 = SMB_CLK</text>
+<text x="48" y="700" fill="#edf4ed" font-size="22" font-weight="400">GP11 = SMB_DATA</text>
+<text x="48" y="758" fill="#ffdb59" font-size="22" font-weight="700">One active UF2 profile at a time • Audio / DirtyJTAG cannot run together with LIVE in this build.</text>
+<text x="48" y="800" fill="#aebfae" font-size="20" font-weight="400">No 5 V / RS-232 on GPIO • Target power separately • GND must be common.</text>
+<text x="48" y="834" fill="#aebfae" font-size="19" font-weight="400">Schemat połączeń / connection map. Pozycje padów sprawdź dla rewizji / verify pad locations.</text>
+<text x="48" y="868" fill="#aebfae" font-size="17" font-weight="400">References: user rear-board photo • frozen MODI firmware GPIO definitions</text>
+</g></svg>

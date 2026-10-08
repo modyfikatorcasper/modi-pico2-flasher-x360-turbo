@@ -103,3 +103,18 @@ GIF check: 81 identical frames and durations; original retained. MP4 removed fro
 - [x] SOURCE ZIP contains firmware inputs, required source dependencies, build instructions and original notices; no application/integration source.
 - [x] README and Pages use UF2 → complete package → manual; source compliance has a small footer link.
 - [x] Obsolete staging workflow using a wildcard is removed; publication uses an explicit four-file allowlist.
+
+## Pre-final module gates added 8 October 2026
+
+- [x] Local package freezes existing TURBO, Setup, Audio, DirtyJTAG and LIVE binary bytes.
+- [x] New Audio Trinity/Corona and JTAG ACE V3/CoolRunner/Matrix connection diagrams.
+- [x] One firmware source archive consolidates all four UF2 profiles, dependencies and notices.
+- [ ] Physical Audio detect, two matching backups, playback, same-image write and full verification.
+- [ ] Physical DirtyJTAG IDCODE, matching SVF/XSVF, programming and functional test.
+- [ ] Concurrent physical UART and passive SMBus capture; confirm gap reporting.
+- [ ] Separate Gowin backend if claiming ACE V3+ / V4 / V5 support.
+- [ ] Implement and validate 16 MB target image preparation for physical memory replacement.
+- [ ] Verify target write, full readback and actual boot for each supported conversion.
+- [ ] Complete host distribution audit or deliver new integration through patch/updater.
+
+The local pre-final includes a private full preview JRunner.exe. It is not a public release asset. Stable v0.9.1-beta remains the public download. Image generation and archive checks do not count as hardware tests. See [pre-final scope](docs/PRE_FINAL.md).

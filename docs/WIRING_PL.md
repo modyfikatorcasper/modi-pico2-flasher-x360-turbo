@@ -67,3 +67,9 @@ Tabela dotyczy połączeń Falcona J1D2 / J2B1. Zdjęcie punktów jest **referen
 - [Schemat Falcon](https://xbox360hub.com/wp-content/uploads/2021/02/Xbox_360_Falcon_Schematic.pdf): potwierdzenie oznaczeń J1D2 / J2B1.
 
 Zdjęcia płyt należą do wskazanych autorów. MODI dodaje nakładkę przewodów i tabele. Wstawka RP2350-Plus jest wycięciem wspomaganym przez AI na podstawie zdjęcia właściciela; przypisanie elektryczne sprawdzono na oryginalnych zdjęciach i w firmware, nie na wygenerowanych napisach. Diagramy opisują istniejącą wersję i nie są nowym testem sprzętowym.
+
+## Nowe moduły pre-final
+
+[Audio Trinity i Corona oraz DirtyJTAG ACE, CoolRunner i Matrix](FLASHSHIP_WIRING_PL.md) · [Status i ostatni etap konwersji do 16 MB](PRE_FINAL_PL.md)
+
+Nowe połączenia dotyczą osobnych profili preview. Audio RDY używa GP22. Testy sprzętowe nowych modułów są do wykonania; publiczny instalator nadal dostarcza sprawdzoną bazę v0.9.1-beta.

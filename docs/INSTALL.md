@@ -56,3 +56,9 @@ Check package SHA256. Always preserve a known-good backup. File comparison alone
 ## Reporting a problem
 
 Include the error text, Windows version, Setup version, upstream version, firmware, motherboard and memory type. Do not attach CPU keys or private dumps. This is the public 0.9.1 Beta; hardware tests were confirmed by the user on 2026-10-04.
+
+## New pre-final modules
+
+[Trinity and Corona Audio, plus ACE, CoolRunner and Matrix DirtyJTAG](FLASHSHIP_WIRING.md) · [Status and final 16 MB conversion milestone](PRE_FINAL.md)
+
+New connections use separate preview profiles. Audio RDY is GP22. Hardware validation of new modules is pending; the public installer still provides the tested v0.9.1-beta baseline.

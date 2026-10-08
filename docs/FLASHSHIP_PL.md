@@ -1,47 +1,27 @@
-# MODI FLASHSHIP — Co dalej
+# MODI FLASHSHIP i stan pre-final
 
 [English](FLASHSHIP.md)
 
-MODI FLASHSHIP to wspólna nazwa roadmapy kolejnych możliwości MODI Pico 2 Flasher X360 TURBO.
+Lokalny pre-final zawiera gotowe buildy Audio/Sonus, DirtyJTAG oraz LIVE UART/HANA z panelem XeLL po LAN. Nowe moduły mają zaliczone testy offline i wymagają walidacji sprzętowej. Publiczna baza NAND/eMMC v0.9.1-beta zachowuje dotychczasowe binaria.
 
-Roadmapa jest celowo oddzielona od wersji Stable. Funkcje przyszłościowe nie mogą opóźniać ani destabilizować pewnej obsługi NAND/eMMC.
+[Stan paczki i ostatnia funkcja konwersji do 16 MB](PRE_FINAL_PL.md) · [Diagramy i podłączenia](FLASHSHIP_WIRING_PL.md)
 
-## 🔜 Audio / Sonus — COMING SOON
+## Audio Sonus
 
-Planowana obsługa audio/Sonus przy użyciu tego samego sprzętu MODI.
+Cyfrowe ISD2100: GP12 MISO, GP13 SSB, GP14 SCLK, GP15 MOSI, **GP22 RDY/BSYB**, GND. Osobny profil UF2 i panel MODI-Flashship. Nie dotyczy analogowego ISD1200 5 V.
 
-**Status:** trwają testy sprzętowe.
+## DirtyJTAG
 
-Nie traktować obecnego planu GPIO jako finalnego, dopóki nie zostanie sprawdzony na realnym sprzęcie. Wcześniejszy plan deweloperski używał GP11–GP15, ale GP11 uczestniczył również w pracach PIO / RDY-BSY. Przed publikacją finalnego pinoutu trzeba ponownie sprawdzić konflikty GPIO i aktualną alokację PIO.
+GP16 TDI, GP17 TDO, GP18 TCK, GP19 TMS, GND; GP20/21 opcjonalne resety. Preview SVF/XSVF dla ścieżki Xilinx. ACE V3+ / V4 / V5 Gowin .fs potrzebują osobnej integracji.
 
-## 💡 DirtyJTAG / Programowanie glitch chipów — PLANNED
+## LIVE UART HANA i XeLL
 
-Przyszłościowa możliwość programowania zewnętrznych glitch chipów z tego samego sprzętu RP2350.
+LIVE odbiera jednocześnie UART na GP9 i pasywny SMBus na GP10/GP11. XeLL po LAN może działać równolegle na PC. Przechwycony ruch HANA nie stanowi pełnego testu sprawności HDMI. Audio i DirtyJTAG pozostają oddzielnymi profilami.
 
-Potencjalne urządzenia: Matrix, CoolRunner, ACE, Squirt i zgodne urządzenia JTAG.
+## Ostatnia planowana funkcja
 
-Potencjalne protokoły: JTAG, SVF i XSVF.
+Automatyczne przygotowanie obrazu pod fizyczną wymianę eMMC albo Jasper 256/512 MB na NAND 16 MB. Funkcja nie jest jeszcze zaimplementowana; zakres i wymagania są w opisie pre-final.
 
-## 💡 UART / COM Monitor — PLANNED
+## Wsparcie upstream J-Runner
 
-Przyszłościowa komunikacja szeregowa i funkcje diagnostyczne na tej samej platformie sprzętowej.
-
-## 🔬 Diagnostyka HANA — RESEARCH
-
-Przyszłe badania nad diagnostyką HANA w Xbox 360 i możliwymi workflow serwisowymi.
-
-## 🧩 Natywne wsparcie w upstream J-Runner — PROPOSED
-
-Jeżeli MODI okaże się stabilne na szerszej liczbie rewizji płyt, długoterminowym celem jest zaproponowanie opcjonalnego natywnego wsparcia MODI Pico 2 maintainerom J-Runner with Extras.
-
-To wyłącznie propozycja. MODI nie sugeruje, że upstream zaakceptował lub oficjalnie wspiera ten projekt.
-
-## Najpierw Stable
-
-Aktualne priorytety pozostają bez zmian:
-
-- pewne wykrywanie urządzenia,
-- czysta integracja z J-Runnerem,
-- szybkie i zweryfikowane operacje NAND/eMMC,
-- czytelna dokumentacja,
-- bezpieczna publiczna dystrybucja.
+Opcjonalna integracja upstream pozostaje propozycją. MODI nie sugeruje akceptacji ani oficjalnego poparcia maintainerów.

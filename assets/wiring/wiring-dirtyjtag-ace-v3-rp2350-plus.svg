@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900"><g font-family="Arial, sans-serif">
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#091109" stroke="#091109"/>
+<text x="48" y="63" fill="#78f541" font-size="22" font-weight="700">MODI FLASHSHIP / PRE-FINAL</text>
+<text x="48" y="111" fill="#edf4ed" font-size="36" font-weight="700">DirtyJTAG — X360ACE V3</text>
+<text x="48" y="153" fill="#aebfae" font-size="22" font-weight="400">Xilinx variant only • V3+ / V4 / V5 are different Gowin devices</text>
+<rect x="48" y="185" width="550" height="530" rx="12" fill="#142014" stroke="#395139"/>
+<rect x="845" y="185" width="547" height="530" rx="12" fill="#142014" stroke="#395139"/>
+<text x="74" y="229" fill="#78f541" font-size="24" font-weight="700">Chip: programming signals</text>
+<text x="870" y="229" fill="#78f541" font-size="24" font-weight="700">Waveshare RP2350 Plus / MODI</text>
+<text x="76" y="290" fill="#edf4ed" font-size="23" font-weight="700">VCC</text>
+<text x="330" y="290" fill="#aebfae" font-size="20" font-weight="400">VCC</text>
+<text x="1070" y="290" fill="#edf4ed" font-size="25" font-weight="700">external power</text>
+<text x="861" y="290" fill="#ff6572" font-size="21" font-weight="700">NO GPIO</text>
+<text x="76" y="354" fill="#edf4ed" font-size="23" font-weight="700">GND</text>
+<text x="330" y="354" fill="#aebfae" font-size="20" font-weight="400">GND</text>
+<text x="1070" y="354" fill="#edf4ed" font-size="25" font-weight="700">GND</text>
+<path d="M586,346 L856,346" fill="none" stroke="#c1cec1" stroke-width="6"/>
+<circle cx="586" cy="346" r="8" fill="#c1cec1"/>
+<circle cx="856" cy="346" r="8" fill="#c1cec1"/>
+<text x="658" y="333" fill="#c1cec1" font-size="25" font-weight="700">—</text>
+<text x="76" y="418" fill="#edf4ed" font-size="23" font-weight="700">TCK</text>
+<text x="330" y="418" fill="#aebfae" font-size="20" font-weight="400">TCK</text>
+<text x="1070" y="418" fill="#edf4ed" font-size="25" font-weight="700">GP18</text>
+<path d="M586,410 L856,410" fill="none" stroke="#ffdb59" stroke-width="6"/>
+<circle cx="586" cy="410" r="8" fill="#ffdb59"/>
+<circle cx="856" cy="410" r="8" fill="#ffdb59"/>
+<text x="658" y="397" fill="#ffdb59" font-size="25" font-weight="700">←</text>
+<text x="76" y="482" fill="#edf4ed" font-size="23" font-weight="700">TDO</text>
+<text x="330" y="482" fill="#aebfae" font-size="20" font-weight="400">TDO</text>
+<text x="1070" y="482" fill="#edf4ed" font-size="25" font-weight="700">GP17</text>
+<path d="M586,474 L856,474" fill="none" stroke="#5aaeff" stroke-width="6"/>
+<circle cx="586" cy="474" r="8" fill="#5aaeff"/>
+<circle cx="856" cy="474" r="8" fill="#5aaeff"/>
+<text x="658" y="461" fill="#5aaeff" font-size="25" font-weight="700">→</text>
+<text x="76" y="546" fill="#edf4ed" font-size="23" font-weight="700">TDI</text>
+<text x="330" y="546" fill="#aebfae" font-size="20" font-weight="400">TDI</text>
+<text x="1070" y="546" fill="#edf4ed" font-size="25" font-weight="700">GP16</text>
+<path d="M586,538 L856,538" fill="none" stroke="#ff914a" stroke-width="6"/>
+<circle cx="586" cy="538" r="8" fill="#ff914a"/>
+<circle cx="856" cy="538" r="8" fill="#ff914a"/>
+<text x="658" y="525" fill="#ff914a" font-size="25" font-weight="700">←</text>
+<text x="76" y="610" fill="#edf4ed" font-size="23" font-weight="700">TMS</text>
+<text x="330" y="610" fill="#aebfae" font-size="20" font-weight="400">TMS</text>
+<text x="1070" y="610" fill="#edf4ed" font-size="25" font-weight="700">GP19</text>
+<path d="M586,602 L856,602" fill="none" stroke="#46e59a" stroke-width="6"/>
+<circle cx="586" cy="602" r="8" fill="#46e59a"/>
+<circle cx="856" cy="602" r="8" fill="#46e59a"/>
+<text x="658" y="589" fill="#46e59a" font-size="25" font-weight="700">←</text>
+<text x="72" y="683" fill="#aebfae" font-size="17" font-weight="400">PAD / SIGNAL</text>
+<text x="871" y="683" fill="#aebfae" font-size="17" font-weight="400">GPIO names; physical header: see pinout page</text>
+<text x="48" y="758" fill="#ffdb59" font-size="21" font-weight="700">3.3 V JTAG logic • Supply chip as its documentation requires • GP20/GP21 normally unused</text>
+<text x="48" y="800" fill="#aebfae" font-size="20" font-weight="400">Kolory pomocnicze diagramu / illustrative colours; match labels, not colours of a different cable.</text>
+<text x="48" y="834" fill="#aebfae" font-size="19" font-weight="400">Schemat połączeń / connection map. Pozycje padów sprawdź dla rewizji / verify pad locations.</text>
+<text x="48" y="868" fill="#aebfae" font-size="17" font-weight="400">References: themodshop.co/xFlasher_360_User_Guide.pdf • github.com/kholia/xvc-pico/tree/ng</text>
+</g></svg>
