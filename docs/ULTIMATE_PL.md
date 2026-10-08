@@ -4,6 +4,10 @@
 
 **ULTIMATE PREVIEW / IN DEVELOPMENT**
 
+[Główne ustalenia FLASHSHIP / ULTIMATE](PROJECT-AGREEMENTS_PL.md) · [DEVLOG / LAB NOTES](DEVLOG_PL.md)
+
+**MODI FLASHSHIP = sprzęt RP2350 (FLASH + FLAGSHIP). MODI X360 ULTIMATE = cały docelowy system. TURBO = moduł NAND/eMMC.**
+
 ![MODI X360 ULTIMATE](../assets/logo/modi-x360-ultimate-transparent.png)
 
 TURBO pozostaje sprawdzonym modułem flashowania. ULTIMATE rozwija go w docelową platformę serwisową: backup, RGH, CPU Key, Audio/Sonus, programowanie chipów, LIVE i konwersje pamięci.

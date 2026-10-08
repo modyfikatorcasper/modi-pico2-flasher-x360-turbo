@@ -73,18 +73,15 @@ SOURCE contains complete modified firmware, required SDK/TinyUSB source material
 
 README/landing page buttons: DOWNLOAD UF2 → DOWNLOAD COMPLETE PACKAGE → MANUAL. A small bottom text link provides Firmware source / license compliance.
 
+## Project agreements — current authority
+
+Follow [PROJECT-AGREEMENTS.md](docs/PROJECT-AGREEMENTS.md) / [Polski](docs/PROJECT-AGREEMENTS_PL.md), established 2026-10-08. FLASHSHIP is the RP2350 hardware (FLASH + FLAGSHIP); X360 ULTIMATE is the complete target system; TURBO is the NAND/eMMC module. Preserve tested binary bytes.
+
+Keep DEVLOG / LAB NOTES on GitHub Pages current with IDEA / RESEARCH / PROTOTYPE / TESTED / VERIFIED, scoped results, failures and next steps. Never promote a development target to a tested capability without evidence.
+
 ## Media policy
 
-Keep the public GitHub clean.
-
-Use:
-
-- one static MODI TURBO logo;
-- one `HIGH SPEED → TURBO` GIF.
-
-Do **not** keep the duplicate 1080p MP4 transition video in the repository/page. The MP4 is for social/video editing, not necessary for the GitHub product page.
-
-The GIF should be optimized for web/GitHub size if possible while keeping the branding readable.
+Use current ULTIMATE branding. The High Speed → TURBO transition GIF/MP4 is retired. Label the board MODI FLASHSHIP. Replace temporary third-party photos with our own front/back RP2350-Plus and point macros before final documentation; retain attribution until replacement.
 
 ## DO NOT upload
 
@@ -147,7 +144,7 @@ Follow the same design language as MODI MAPS:
 
 But this project uses **neon green + black + dark grey** as its visual identity.
 
-Use the existing MODI Pico 2 Flasher X360 HIGH SPEED → TURBO branding.
+Use current MODI X360 ULTIMATE branding, with FLASHSHIP as hardware and TURBO as the flashing module.
 
 ## Public positioning
 
@@ -177,18 +174,8 @@ Always acknowledge:
 
 Do not imply that any upstream contributor endorses MODI.
 
-## Roadmap label
+## Roadmap and status
 
-Use:
+Use **MODI X360 ULTIMATE — What's Next / Co dalej** for the target system. MODI FLASHSHIP identifies the physical hardware.
 
-**MODI FLASHSHIP — What's Next / Co dalej**
-
-Current statuses:
-
-- Audio / Sonus — COMING SOON
-- DirtyJTAG / glitch-chip programmer — PLANNED
-- UART / COM monitor — PLANNED
-- HANA diagnostics — RESEARCH
-- native upstream J-Runner support — PROPOSED
-
-Do not implement or announce Audio as complete until hardware tests are finished.
+Current Alpha additional functions remain prototypes with hardware validation pending. Public feature name: **MODI Chip Flasher**; acknowledge DirtyJTAG technology in credits/licenses. Automatic RGH, memory conversions and unified modes remain development goals. DVD Remarry remains research. Consult [ULTIMATE](docs/ULTIMATE.md) for current scope and [DEVLOG](docs/DEVLOG.md) for evidence. Do not announce Audio/chip programming or full automation as complete without hardware tests.

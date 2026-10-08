@@ -7,6 +7,15 @@ Diagramy Corona, Trinity i Fat. Jeden header MODI. Jeden workflow SPI. Stable TU
 
 [![Otwórz MODI Pico 2 Flasher X360 TURBO](assets/buttons/open-modi-flasher.svg)](https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/)
 
+
+## FLASHSHIP / ULTIMATE — ustalenia i dziennik
+
+**FLASHSHIP = hardware RP2350 · X360 ULTIMATE = cały docelowy system · TURBO = moduł NAND/eMMC.**
+
+**ONE DEVICE. ONE HEADER. ONE SOFTWARE.** Obecny Alpha ma osobne profile UF2; wspólna automatyzacja pozostaje celem rozwoju.
+
+[Ustalenia projektu](docs/PROJECT-AGREEMENTS_PL.md) · [DEVLOG / LAB NOTES](docs/DEVLOG_PL.md) · [Dziennik na stronie](https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/#devlog)
+
 ## Tożsamość projektu
 
 **Kacper Lewandowski — GitHub: `modyfikatorcasper`, znany również jako Modyfikator89, Modyfikator Kacper i Modi.**  
