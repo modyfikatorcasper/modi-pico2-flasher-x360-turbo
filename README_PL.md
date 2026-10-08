@@ -1,7 +1,7 @@
 # MODI Pico 2 Flasher X360 TURBO
 
 **Szybki i tani programator NAND i eMMC dla Xbox 360 na RP2350 / Pico 2 z integracją J-Runner.**  
-Diagramy Corona, Trinity i Fat. Jeden header MODI. Jeden workflow SPI. Publiczna Beta.
+Diagramy Corona, Trinity i Fat. Jeden header MODI. Jeden workflow SPI. Stable TURBO.
 
 **🇵🇱 Polski** · [🇬🇧 English](README.md)
 
@@ -14,8 +14,8 @@ MODI Diagnostic Lab to wspólna nazwa rozwijanych projektów technicznych.
 
 ## Pobierz
 
-**[POBIERZ UF2](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO.uf2)**  
-[POBIERZ PEŁNĄ PACZKĘ](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip)  
+**[POBIERZ UF2](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-stable/MODI-Pico2-Flasher-X360-TURBO.uf2)**  
+[POBIERZ PEŁNĄ PACZKĘ](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-stable/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip)  
 [OTWÓRZ STRONĘ PROJEKTU](https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/) · [INSTRUKCJA](docs/INSTALL_PL.md) · [OKABLOWANIE](docs/WIRING_PL.md)
 
 ![MODI Pico 2 Flasher X360 TURBO](assets/logo/modi-turbo.png)
@@ -141,7 +141,7 @@ Pełne credits: [CREDITS.md](CREDITS.md)
 
 Dystrybuowany UF2 MODI zawiera firmware wywodzący się z prac PicoFlasher. Odpowiadające źródło firmware oraz wymagane informacje third-party pozostają dostępne przy wydaniu w celu zachowania zgodności licencyjnej.
 
-[Pobierz paczkę source / compliance](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-SOURCE-v0.9.1.zip)
+[Pobierz paczkę source / compliance](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-stable/MODI-Pico2-Flasher-X360-TURBO-SOURCE-v0.9.1.zip)
 
 Zobacz też: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)
 

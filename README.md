@@ -1,7 +1,7 @@
 # MODI Pico 2 Flasher X360 TURBO
 
 **Fast low-cost Xbox 360 NAND & eMMC flasher for RP2350 / Pico 2 with J-Runner integration.**  
-Corona, Trinity and Fat wiring diagrams. One MODI header. One SPI workflow. Public Beta.
+Corona, Trinity and Fat wiring diagrams. One MODI header. One SPI workflow. Stable TURBO.
 
 [🇵🇱 Polski](README_PL.md) · **🇬🇧 English**
 
@@ -17,8 +17,8 @@ MODI Diagnostic Lab to wspólna nazwa rozwijanych projektów technicznych.
 
 ## Download
 
-**[DOWNLOAD UF2](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO.uf2)**  
-[DOWNLOAD COMPLETE PACKAGE](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip)  
+**[DOWNLOAD UF2](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-stable/MODI-Pico2-Flasher-X360-TURBO.uf2)**  
+[DOWNLOAD COMPLETE PACKAGE](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-stable/MODI-Pico2-Flasher-X360-TURBO-v0.9.1-beta.zip)  
 [OPEN PROJECT PAGE](https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/) · [MANUAL](docs/INSTALL.md) · [WIRING](docs/WIRING.md)
 
 ![MODI Pico 2 Flasher X360 TURBO](assets/logo/modi-turbo.png)
@@ -144,7 +144,7 @@ Full acknowledgements: [CREDITS.md](CREDITS.md)
 
 The distributed MODI UF2 includes firmware derived from PicoFlasher work. Matching corresponding firmware source and required third-party notices remain available with the release for license compliance.
 
-[Download firmware source / compliance archive](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-beta/MODI-Pico2-Flasher-X360-TURBO-SOURCE-v0.9.1.zip)
+[Download firmware source / compliance archive](https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo/releases/download/v0.9.1-stable/MODI-Pico2-Flasher-X360-TURBO-SOURCE-v0.9.1.zip)
 
 See also: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)
 
